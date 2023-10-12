@@ -18,6 +18,7 @@ Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Dominik Josipović | djosipovi21@foi.hr | 0016152387 | djosipovi21
+Sebastijan Vinko | svinko21@foi.hr | 0016154724 | svinko21
 Ime i prezime | ... | ... | ...
 
 ## Opis domene
