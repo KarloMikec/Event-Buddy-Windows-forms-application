@@ -64,6 +64,7 @@
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Pretraži";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label1
             // 
@@ -200,6 +201,7 @@
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Size = new System.Drawing.Size(127, 28);
             this.cmbLocation.TabIndex = 20;
+            this.cmbLocation.SelectedIndexChanged += new System.EventHandler(this.cmbLocation_SelectedIndexChanged);
             // 
             // frmMain
             // 
@@ -224,6 +226,7 @@
             this.Controls.Add(this.txtSearch);
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,7 +11,7 @@ namespace BusinessLogicLayer.Services
 {
     public class EventServices
     {
-        public List<dogadaj> getAllEvents()
+        public List<dogadaj> GetAllEvents()
         {
             using (var repo = new EventRepository(new EventBuddyModel()))
             {
@@ -25,6 +25,14 @@ namespace BusinessLogicLayer.Services
             using (var repo = new EventRepository(new EventBuddyModel()))
             {
                 return repo.hideEvent(selectedEvent);
+            }
+        }
+
+        public List<string> GetLocations()
+        {
+            using(var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.GetLocations().ToList();
             }
         }
     }

@@ -35,6 +35,12 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        public IQueryable<string> GetLocations()
+        {
+            var query = from e in Entities select e.mjesto;
+            return query.Distinct();
+        }
+
         public override int Update(dogadaj entity, bool saveChanges = true)
         {
             throw new NotImplementedException();

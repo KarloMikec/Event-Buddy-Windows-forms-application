@@ -39,7 +39,7 @@ namespace PresentationLayer
         private void showEvents()
         {
             EventServices eventService = new EventServices();
-            dgvEvents.DataSource = eventService.getAllEvents();
+            dgvEvents.DataSource = eventService.GetAllEvents();
         }
     }
 }
