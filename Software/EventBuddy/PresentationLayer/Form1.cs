@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace PresentationLayer
 {
     public partial class Form1 : Form
-    {S
+    {
         public Form1()
         {
             InitializeComponent();
