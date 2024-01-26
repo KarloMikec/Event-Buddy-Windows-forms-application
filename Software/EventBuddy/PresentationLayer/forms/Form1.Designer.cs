@@ -38,7 +38,7 @@
             this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvents.Location = new System.Drawing.Point(12, 12);
             this.dgvEvents.Name = "dgvEvents";
-            this.dgvEvents.Size = new System.Drawing.Size(1193, 597);
+            this.dgvEvents.Size = new System.Drawing.Size(1085, 597);
             this.dgvEvents.TabIndex = 0;
             // 
             // btnSakrij
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 701);
+            this.ClientSize = new System.Drawing.Size(1115, 701);
             this.Controls.Add(this.btnSakrij);
             this.Controls.Add(this.dgvEvents);
             this.Name = "Form1";
