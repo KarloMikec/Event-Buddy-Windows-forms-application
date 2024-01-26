@@ -75,5 +75,16 @@ namespace PresentationLayer
         {
             RefreshGUI();
         }
+
+        private void btnParticipants_Click(object sender, EventArgs e)
+        {
+            var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;
+            if (_event != null)
+            {
+                frmParticipants _frmParticipants = new frmParticipants(_event);
+                _frmParticipants.ShowDialog();
+                RefreshGUI();
+            }
+        }
     }
 }

@@ -35,5 +35,14 @@ namespace BusinessLogicLayer.Services
                 return repo.GetLocations().ToList();
             }
         }
+
+        public List<korisnik> GetEventParticipants(dogadaj _event)
+        {
+            using(var repo = new EventRepository(new EventBuddyModel()))
+            {
+                var participants = repo.GetEventParticipants(_event).ToList();
+                return participants;
+            }
+        }
     }
 }

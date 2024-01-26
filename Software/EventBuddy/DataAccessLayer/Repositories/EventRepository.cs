@@ -41,6 +41,12 @@ namespace DataAccessLayer.Repositories
             return query.Distinct();
         }
 
+        public ICollection<korisnik> GetEventParticipants(dogadaj _event)
+        {
+            var query = Entities.FirstOrDefault(e => e.ID == _event.ID).korisnik1;
+            return query;
+        }
+
         public override int Update(dogadaj entity, bool saveChanges = true)
         {
             throw new NotImplementedException();
