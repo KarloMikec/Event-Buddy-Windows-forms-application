@@ -15,6 +15,7 @@ namespace PresentationLayer.forms
     public partial class UsersFrm : Form
     {
         UserServices userService = new UserServices();
+        RequestOrganizerService requestOrganizerService = new RequestOrganizerService();
         public UsersFrm()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace PresentationLayer.forms
         private void UsersFrm_Load(object sender, EventArgs e)
         {
             dgvUsers.DataSource = userService.getAllUsers();
+            showRequests();
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
@@ -36,7 +38,33 @@ namespace PresentationLayer.forms
             {
                 var selectedUser = dgvUsers.CurrentRow.DataBoundItem as korisnik;
                 EditUserFrm editUserFrm = new EditUserFrm(selectedUser);
-                editUserFrm.Show();
+                editUserFrm.ShowDialog();
+            }
+        }
+
+        private void btnDecline_Click(object sender, EventArgs e)
+        {
+            if (dgvUserRequests.SelectedRows != null)
+            {
+                var selectedRequst = dgvUserRequests.CurrentRow.DataBoundItem as zahtjev_organizator;
+                requestOrganizerService.declineOrganizerRequest(selectedRequst);
+                showRequests();
+            }
+        }
+
+        private void showRequests()
+        {
+            dgvUserRequests.DataSource = requestOrganizerService.getAllRequests();
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            if (dgvUserRequests.SelectedRows != null)
+            {
+                var selectedRequst = dgvUserRequests.CurrentRow.DataBoundItem as zahtjev_organizator;
+                requestOrganizerService.acceptOrganizerRequest(selectedRequst);
+                userService.addOrganizerRole(selectedRequst.ID_korisnik);
+                showRequests();
             }
         }
     }

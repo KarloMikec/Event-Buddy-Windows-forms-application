@@ -31,7 +31,7 @@ namespace PresentationLayer
             {
                 var selectedEvent = dgvEvents.CurrentRow.DataBoundItem as dogadaj;
                 HideEventFrm hideEventFrm = new HideEventFrm(selectedEvent);
-                hideEventFrm.Show();
+                hideEventFrm.ShowDialog();
                 showEvents();
             }
         }
@@ -46,7 +46,8 @@ namespace PresentationLayer
         {
             UsersFrm usersFrm = new UsersFrm();
             Hide();
-            usersFrm.Show();
+            usersFrm.ShowDialog();
+            Show();
         }
     }
 }

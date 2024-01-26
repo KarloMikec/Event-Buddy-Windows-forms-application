@@ -88,6 +88,7 @@
             this.btnDecline.TabIndex = 4;
             this.btnDecline.Text = "Odbij";
             this.btnDecline.UseVisualStyleBackColor = true;
+            this.btnDecline.Click += new System.EventHandler(this.btnDecline_Click);
             // 
             // dgvUserRequests
             // 
@@ -106,6 +107,7 @@
             this.btnAccept.TabIndex = 6;
             this.btnAccept.Text = "Prihvati";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnShowEvents
             // 
