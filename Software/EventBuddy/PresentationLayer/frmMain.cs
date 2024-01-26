@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace PresentationLayer
 {
@@ -18,6 +19,8 @@ namespace PresentationLayer
         public frmMain()
         {
             InitializeComponent();
+            dtpTime.Format = DateTimePickerFormat.Time;
+            dtpTime.ShowUpDown = true;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -35,21 +38,26 @@ namespace PresentationLayer
         {
             var searched = txtSearch.Text;
             var events = eventServices.GetAllEvents();
-            var filtered = await Task.Run(() => FilterEvents(searched, events));
+            var date = dtpDate.Value.Date + dtpTime.Value.TimeOfDay;
+            var filtered = await Task.Run(() => FilterEvents(searched, date, events));
             dgvEvents.DataSource = filtered;
         }
 
-        private List<dogadaj> FilterEvents(string searched, List<dogadaj> events)
-        {
-            return events.FindAll(x => x.naziv.ToLower().Contains(searched.ToLower()));
-        }
-
-        private List<dogadaj> FilterEvents(string location, string searched, List<dogadaj> events)
+        private List<dogadaj> FilterEvents(string searched, DateTime date, List<dogadaj> events)
         {
             return events.FindAll(
                 x =>
                     x.naziv.ToLower().Contains(searched.ToLower()) &&
-                    x.mjesto == location
+                    x.datum >= date
+            );
+        }
+
+        private List<dogadaj> FilterEvents(string location, string searched, DateTime date, List<dogadaj> events)
+        {
+            return events.FindAll(
+                x =>
+                    x.naziv.ToLower().Contains(searched.ToLower()) &&
+                    x.mjesto == location && x.datum >= date
             );
         }
 
@@ -59,7 +67,13 @@ namespace PresentationLayer
             if (location == null) return;
             var events = eventServices.GetAllEvents();
             var searched = txtSearch.Text;
-            dgvEvents.DataSource = FilterEvents(location, searched, events);
+            var date = dtpDate.Value.Date + dtpTime.Value.TimeOfDay;
+            dgvEvents.DataSource = FilterEvents(location, searched, date, events);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshGUI();
         }
     }
 }
