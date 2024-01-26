@@ -41,6 +41,35 @@ namespace DataAccessLayer.Repositories
             return query.Distinct();
         }
 
+        public ICollection<korisnik> GetEventParticipants(dogadaj _event)
+        {
+            var query = Entities.FirstOrDefault(e => e.ID == _event.ID).korisnik1;
+            return query;
+        }
+
+        public bool RemoveUserFromEvent(dogadaj _event, korisnik user)
+        {
+            using(var context = new EventBuddyModel())
+            {
+                var selectedUser = (from e in context.korisnik select e).FirstOrDefault(e => e.ID == user.ID);
+                var selectedEvent = (from e in context.dogadaj select e).FirstOrDefault(e => e.ID == _event.ID);
+                selectedEvent.korisnik1.Remove(selectedUser);
+                return context.SaveChanges() > 0;
+            }
+        }
+
+        public bool BanUserFromEvent(dogadaj _event, korisnik user)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var selectedUser = (from e in context.korisnik select e).FirstOrDefault(e => e.ID == user.ID);
+                var selectedEvent = (from e in context.dogadaj select e).FirstOrDefault(e => e.ID == _event.ID);
+                selectedEvent.korisnik1.Remove(selectedUser);
+                selectedEvent.korisnik2.Add(selectedUser);
+                return context.SaveChanges() > 0;
+            }
+        }
+
         public override int Update(dogadaj entity, bool saveChanges = true)
         {
             throw new NotImplementedException();

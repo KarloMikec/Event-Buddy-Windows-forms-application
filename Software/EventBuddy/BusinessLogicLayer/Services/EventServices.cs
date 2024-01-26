@@ -35,5 +35,30 @@ namespace BusinessLogicLayer.Services
                 return repo.GetLocations().ToList();
             }
         }
+
+        public List<korisnik> GetEventParticipants(dogadaj _event)
+        {
+            using(var repo = new EventRepository(new EventBuddyModel()))
+            {
+                var participants = repo.GetEventParticipants(_event).ToList();
+                return participants;
+            }
+        }
+
+        public bool RemoveUserFromEvent(dogadaj _event, korisnik user)
+        {
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.RemoveUserFromEvent(_event, user);
+            }
+        }
+
+        public bool BanUserFromEvent(dogadaj _event, korisnik user)
+        {
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.BanUserFromEvent(_event, user);
+            }
+        }
     }
 }

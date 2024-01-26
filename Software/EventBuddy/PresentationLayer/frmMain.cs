@@ -32,6 +32,7 @@ namespace PresentationLayer
         {
             cmbLocation.DataSource = eventServices.GetLocations();
             dgvEvents.DataSource = eventServices.GetAllEvents();
+            HideFields();
         }
 
         private async void btnSearch_Click(object sender, EventArgs e)
@@ -71,9 +72,30 @@ namespace PresentationLayer
             dgvEvents.DataSource = FilterEvents(location, searched, date, events);
         }
 
+        private void HideFields()
+        {
+            dgvEvents.Columns[5].Visible = false;
+            dgvEvents.Columns[6].Visible = false;
+            dgvEvents.Columns[7].Visible = false;
+            dgvEvents.Columns[10].Visible = false;
+            dgvEvents.Columns[11].Visible = false;
+            dgvEvents.Columns[12].Visible = false;
+        }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshGUI();
+        }
+
+        private void btnParticipants_Click(object sender, EventArgs e)
+        {
+            var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;
+            if (_event != null)
+            {
+                frmParticipants _frmParticipants = new frmParticipants(_event);
+                _frmParticipants.ShowDialog();
+                RefreshGUI();
+            }
         }
 
         private void btnProfile_Click(object sender, EventArgs e)

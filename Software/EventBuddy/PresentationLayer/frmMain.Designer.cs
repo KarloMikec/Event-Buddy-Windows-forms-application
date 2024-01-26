@@ -184,6 +184,7 @@
             this.btnParticipants.TabIndex = 18;
             this.btnParticipants.Text = "Sudionici";
             this.btnParticipants.UseVisualStyleBackColor = true;
+            this.btnParticipants.Click += new System.EventHandler(this.btnParticipants_Click);
             // 
             // btnSaveAsPDF
             // 
