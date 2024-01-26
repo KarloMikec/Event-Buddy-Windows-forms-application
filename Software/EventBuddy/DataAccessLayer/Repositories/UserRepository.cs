@@ -29,6 +29,26 @@ namespace DataAccessLayer.Repositories
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
             user.upozorenja += 1;
+            if(user.upozorenja > 1)
+            {
+                revokeOrganizerRole(userID);
+            }
+
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int revokeOrganizerRole(int userID, bool saveChanges = true)
+        {
+            var user = Entities.SingleOrDefault(d => d.ID == userID);
+            var uloga = user.uloga.First(x => x.Naziv == "Organizator") as uloga;
+            user.uloga.Remove(uloga);
 
             if (saveChanges)
             {
