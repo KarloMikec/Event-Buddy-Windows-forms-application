@@ -44,5 +44,23 @@ namespace BusinessLogicLayer.Services
                 return user;
             }
         }
+
+
+
+        public bool checkForOrganizerRole(korisnik user)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.checkForOrganizerRole(user);
+            }
+        }
+
+        public bool checkForModRole(korisnik selectedUser)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.checkForModRole(selectedUser);
+            }
+        }
     }
 }

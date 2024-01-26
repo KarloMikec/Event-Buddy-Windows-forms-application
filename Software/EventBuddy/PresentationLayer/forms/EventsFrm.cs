@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class EventsFrm : Form
     {
-        public Form1()
+        public EventsFrm()
         {
             InitializeComponent();
         }
@@ -40,6 +40,13 @@ namespace PresentationLayer
         {
             EventServices eventService = new EventServices();
             dgvEvents.DataSource = eventService.getAllEvents();
+        }
+
+        private void btnShowUsers_Click(object sender, EventArgs e)
+        {
+            UsersFrm usersFrm = new UsersFrm();
+            Hide();
+            usersFrm.Show();
         }
     }
 }

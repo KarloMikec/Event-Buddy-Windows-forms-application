@@ -59,5 +59,27 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
         }
+
+        public bool checkForOrganizerRole(korisnik selectedUser)
+        {
+            return checkForRole("Organizator", selectedUser);
+        }
+
+        public bool checkForModRole(korisnik selectedUser)
+        {
+            return checkForRole("Moderator", selectedUser);
+        }
+
+        public bool checkForRole(string roleName, korisnik selectedUser)
+        {
+            var user = Entities.SingleOrDefault(d => d.ID == selectedUser.ID);
+
+            if (user != null && user.uloga.Any(x => x.Naziv == roleName))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

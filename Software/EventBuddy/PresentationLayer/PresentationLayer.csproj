@@ -58,8 +58,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forms\Form1.cs">
+    <Compile Include="forms\EditUserFrm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\EditUserFrm.Designer.cs">
+      <DependentUpon>EditUserFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\EventsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UsersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UsersFrm.Designer.cs">
+      <DependentUpon>UsersFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -73,8 +85,8 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\EventsFrm.Designer.cs">
+      <DependentUpon>EventsFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\HideEventFrm.cs">
       <SubType>Form</SubType>
@@ -84,14 +96,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\EditUserFrm.resx">
+      <DependentUpon>EditUserFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UsersFrm.resx">
+      <DependentUpon>UsersFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="forms\EventsFrm.resx">
+      <DependentUpon>EventsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\HideEventFrm.resx">
       <DependentUpon>HideEventFrm.cs</DependentUpon>
