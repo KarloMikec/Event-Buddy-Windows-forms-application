@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer.Services;
+using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace PresentationLayer
     public partial class frmLogin : Form
     {
         private UserServices userServices = new UserServices();
-
+        public static korisnik user = null;
         
         public frmLogin()
         {
@@ -36,10 +37,11 @@ namespace PresentationLayer
                 var LoggedUser = userServices.loginUser(txtUsername.Text, txtPassword.Text);
                 if(LoggedUser != null)
                 {
+                    user = LoggedUser;
                     //MessageBox.Show("Prijavljen " + LoggedUser.ime);
                     frmMain frmMain = new frmMain();
-                    Hide();
                     frmMain.Show();
+                    Hide();
                 }
                 else
                 {

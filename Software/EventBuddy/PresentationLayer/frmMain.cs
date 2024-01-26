@@ -75,5 +75,11 @@ namespace PresentationLayer
         {
             RefreshGUI();
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            frmProfil frmProfil = new frmProfil();
+            frmProfil.ShowDialog();
+        }
     }
 }
