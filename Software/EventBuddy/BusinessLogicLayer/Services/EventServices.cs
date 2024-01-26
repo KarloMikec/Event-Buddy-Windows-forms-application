@@ -44,5 +44,21 @@ namespace BusinessLogicLayer.Services
                 return participants;
             }
         }
+
+        public bool RemoveUserFromEvent(dogadaj _event, korisnik user)
+        {
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.RemoveUserFromEvent(_event, user);
+            }
+        }
+
+        public bool BanUserFromEvent(dogadaj _event, korisnik user)
+        {
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.BanUserFromEvent(_event, user);
+            }
+        }
     }
 }
