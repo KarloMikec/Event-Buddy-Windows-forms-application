@@ -82,6 +82,12 @@
     <Compile Include="forms\HideEventFrm.Designer.cs">
       <DependentUpon>HideEventFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfil.Designer.cs">
+      <DependentUpon>frmProfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\HideEventFrm.resx">
       <DependentUpon>HideEventFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfil.resx">
+      <DependentUpon>frmProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
