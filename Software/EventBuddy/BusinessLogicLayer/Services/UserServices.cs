@@ -18,5 +18,13 @@ namespace BusinessLogicLayer.Services
                 return repo.warnUser(userID);
             }
         }
+
+        public int revokeOrganizerRole(int userID)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.revokeOrganizerRole(userID);
+            }
+        }
     }
 }

@@ -15,15 +15,15 @@ namespace PresentationLayer.forms
     public partial class HideEventFrm : Form
     {
         dogadaj _selectedEvent = null;
-        public HideEventFrm(EntitiesLayer.Entities.dogadaj selectedEvent)
+        EventServices eventServices = new EventServices();
+        UserServices userServices = new UserServices();
+        public HideEventFrm(dogadaj selectedEvent)
         {
             _selectedEvent = selectedEvent;
             InitializeComponent();
         }
         private void btnHideEvent_Click(object sender, EventArgs e)
         {
-            EventServices eventServices = new EventServices();
-            UserServices userServices = new UserServices();
             eventServices.hideEvent(_selectedEvent);
             userServices.warnUser(_selectedEvent.ID_korisnik);
             Close();
@@ -31,7 +31,8 @@ namespace PresentationLayer.forms
 
         private void btnRemoveRole_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Makni ulogu korisnika pod id-om " + _selectedEvent.ID_korisnik);
+            userServices.revokeOrganizerRole(_selectedEvent.ID_korisnik);
+            Close();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
