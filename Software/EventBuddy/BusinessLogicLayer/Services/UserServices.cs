@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace BusinessLogicLayer.Services
 {
@@ -26,7 +27,44 @@ namespace BusinessLogicLayer.Services
                 return repo.revokeOrganizerRole(userID);
             }
         }
-        
+
+        public int revokeModRole(int userID)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.revokeModRole(userID);
+            }
+        }
+
+        public int addOrganizerRole(int userID)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var user = (from e in context.korisnik
+                             select e).FirstOrDefault(r => r.ID == userID);
+
+                var role = (from e in context.uloga
+                             select e).FirstOrDefault(u => u.Naziv == "Organizator");
+
+                user.uloga.Add(role);
+                return context.SaveChanges();
+            }
+        }
+
+        public int addModRole(int userID)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var user = (from e in context.korisnik
+                            select e).FirstOrDefault(r => r.ID == userID);
+
+                var role = (from e in context.uloga
+                            select e).FirstOrDefault(u => u.Naziv == "Moderator");
+
+                user.uloga.Add(role);
+                return context.SaveChanges();
+            }
+        }
         public List<korisnik> getAllUsers()
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -44,8 +82,6 @@ namespace BusinessLogicLayer.Services
                 return user;
             }
         }
-
-
 
         public bool checkForOrganizerRole(korisnik user)
         {

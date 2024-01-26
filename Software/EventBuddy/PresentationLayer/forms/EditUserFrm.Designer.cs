@@ -90,6 +90,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtName.Location = new System.Drawing.Point(43, 38);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(246, 26);
             this.txtName.TabIndex = 4;
             // 
@@ -98,6 +99,7 @@
             this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtSurname.Location = new System.Drawing.Point(43, 90);
             this.txtSurname.Name = "txtSurname";
+            this.txtSurname.ReadOnly = true;
             this.txtSurname.Size = new System.Drawing.Size(246, 26);
             this.txtSurname.TabIndex = 5;
             // 
@@ -106,6 +108,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtUsername.Location = new System.Drawing.Point(43, 143);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(246, 26);
             this.txtUsername.TabIndex = 6;
             // 
@@ -124,7 +127,8 @@
             this.txtNumberOfWarnings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtNumberOfWarnings.Location = new System.Drawing.Point(190, 175);
             this.txtNumberOfWarnings.Name = "txtNumberOfWarnings";
-            this.txtNumberOfWarnings.Size = new System.Drawing.Size(31, 26);
+            this.txtNumberOfWarnings.ReadOnly = true;
+            this.txtNumberOfWarnings.Size = new System.Drawing.Size(45, 26);
             this.txtNumberOfWarnings.TabIndex = 8;
             // 
             // btnOrganizerBox
@@ -156,6 +160,7 @@
             this.btnOrganizer.TabIndex = 11;
             this.btnOrganizer.Text = "Dodaj ulogu";
             this.btnOrganizer.UseVisualStyleBackColor = true;
+            this.btnOrganizer.Click += new System.EventHandler(this.btnOrganizer_Click);
             // 
             // btnMod
             // 
@@ -166,6 +171,7 @@
             this.btnMod.TabIndex = 12;
             this.btnMod.Text = "Dodaj ulogu";
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnQuit
             // 
@@ -187,6 +193,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // EditUserFrm
             // 
