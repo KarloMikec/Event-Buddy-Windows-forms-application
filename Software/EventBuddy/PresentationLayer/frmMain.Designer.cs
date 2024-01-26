@@ -102,6 +102,7 @@
             this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Profil";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // dgvEvents
             // 

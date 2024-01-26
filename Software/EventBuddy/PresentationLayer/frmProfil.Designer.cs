@@ -63,8 +63,10 @@
             // 
             this.txtKorime.Location = new System.Drawing.Point(273, 141);
             this.txtKorime.Name = "txtKorime";
+            this.txtKorime.ReadOnly = true;
             this.txtKorime.Size = new System.Drawing.Size(222, 20);
             this.txtKorime.TabIndex = 2;
+            this.txtKorime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtOldPassword
             // 
@@ -95,6 +97,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -104,6 +107,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDarkTheme
             // 
@@ -150,6 +154,7 @@
             this.Controls.Add(this.cbLanguage);
             this.Name = "frmProfil";
             this.Text = "frmProfil";
+            this.Load += new System.EventHandler(this.frmProfil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

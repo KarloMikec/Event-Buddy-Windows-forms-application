@@ -22,7 +22,12 @@ namespace DataAccessLayer.Repositories
 
         public override int Update(korisnik entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            var user = Entities.First(e => e.ID == entity.ID);
+            if (user != null)
+            {
+                user.lozinka = entity.lozinka;
+            }
+            return saveChanges ? SaveChanges() : 0;
         }
 
         public int warnUser(int userID, bool saveChanges = true)

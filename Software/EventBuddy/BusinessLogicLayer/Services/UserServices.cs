@@ -36,5 +36,13 @@ namespace BusinessLogicLayer.Services
                 return user;
             }
         }
+
+        public bool updateUser(korisnik user)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.Update(user) > 0;
+            }
+        }
     }
 }
