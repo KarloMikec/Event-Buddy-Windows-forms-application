@@ -14,6 +14,12 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        public korisnik loginUser(string username, string password)
+        {
+            var user = Entities.SingleOrDefault(u => u.korime == username && u.lozinka == password);
+            return user;
+        }
+
         public override int Update(korisnik entity, bool saveChanges = true)
         {
             throw new NotImplementedException();
