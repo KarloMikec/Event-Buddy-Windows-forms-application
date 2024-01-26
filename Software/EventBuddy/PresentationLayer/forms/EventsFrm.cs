@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class EventsFrm : Form
     {
-        public Form1()
+        public EventsFrm()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace PresentationLayer
             {
                 var selectedEvent = dgvEvents.CurrentRow.DataBoundItem as dogadaj;
                 HideEventFrm hideEventFrm = new HideEventFrm(selectedEvent);
-                hideEventFrm.Show();
+                hideEventFrm.ShowDialog();
                 showEvents();
             }
         }
@@ -40,6 +40,14 @@ namespace PresentationLayer
         {
             EventServices eventService = new EventServices();
             dgvEvents.DataSource = eventService.GetAllEvents();
+        }
+
+        private void btnShowUsers_Click(object sender, EventArgs e)
+        {
+            UsersFrm usersFrm = new UsersFrm();
+            Hide();
+            usersFrm.ShowDialog();
+            Show();
         }
     }
 }

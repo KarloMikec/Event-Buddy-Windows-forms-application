@@ -14,6 +14,13 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        public override IQueryable<korisnik> GetAll()
+        {
+            var query = from e in Entities.Include("dogadaj").Include("zahtjev_organizator").Include("zahtjev_kategorija")
+                        select e;
+            return query;
+        }
+
         public korisnik loginUser(string username, string password)
         {
             var user = Entities.SingleOrDefault(u => u.korime == username && u.lozinka == password);
@@ -46,8 +53,18 @@ namespace DataAccessLayer.Repositories
 
         public int revokeOrganizerRole(int userID, bool saveChanges = true)
         {
+            return revokeRole(userID, "Organizator");
+        }
+
+        public int revokeModRole(int userID, bool saveChanges = true)
+        {
+            return revokeRole(userID, "Moderator");
+        }
+
+        public int revokeRole(int userID, string roleName, bool saveChanges = true)
+        {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
-            var uloga = user.uloga.First(x => x.Naziv == "Organizator") as uloga;
+            var uloga = user.uloga.First(x => x.Naziv == roleName) as uloga;
             user.uloga.Remove(uloga);
 
             if (saveChanges)
@@ -58,6 +75,28 @@ namespace DataAccessLayer.Repositories
             {
                 return 0;
             }
+        }
+
+        public bool checkForOrganizerRole(korisnik selectedUser)
+        {
+            return checkForRole("Organizator", selectedUser);
+        }
+
+        public bool checkForModRole(korisnik selectedUser)
+        {
+            return checkForRole("Moderator", selectedUser);
+        }
+
+        public bool checkForRole(string roleName, korisnik selectedUser)
+        {
+            var user = Entities.SingleOrDefault(d => d.ID == selectedUser.ID);
+
+            if (user != null && user.uloga.Any(x => x.Naziv == roleName))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
