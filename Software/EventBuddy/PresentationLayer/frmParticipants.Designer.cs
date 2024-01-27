@@ -36,15 +36,19 @@
             // 
             // dgvParticipants
             // 
+            this.dgvParticipants.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParticipants.Location = new System.Drawing.Point(12, 12);
             this.dgvParticipants.Name = "dgvParticipants";
-            this.dgvParticipants.Size = new System.Drawing.Size(505, 284);
+            this.dgvParticipants.Size = new System.Drawing.Size(475, 284);
             this.dgvParticipants.TabIndex = 0;
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(523, 137);
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemove.Location = new System.Drawing.Point(501, 137);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(121, 34);
             this.btnRemove.TabIndex = 1;
@@ -54,7 +58,8 @@
             // 
             // btnBan
             // 
-            this.btnBan.Location = new System.Drawing.Point(523, 97);
+            this.btnBan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBan.Location = new System.Drawing.Point(501, 97);
             this.btnBan.Name = "btnBan";
             this.btnBan.Size = new System.Drawing.Size(121, 34);
             this.btnBan.TabIndex = 2;
@@ -66,11 +71,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 307);
+            this.ClientSize = new System.Drawing.Size(634, 307);
             this.Controls.Add(this.btnBan);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dgvParticipants);
+            this.MinimumSize = new System.Drawing.Size(650, 346);
             this.Name = "frmParticipants";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmParticipants";
             this.Load += new System.EventHandler(this.frmParticipants_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).EndInit();
