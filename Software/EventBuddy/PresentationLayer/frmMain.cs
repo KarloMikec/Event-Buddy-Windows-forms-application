@@ -115,5 +115,13 @@ namespace PresentationLayer
                 RefreshGUI();
             }
         }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            UsersFrm usersFrm = new UsersFrm();
+            Hide();
+            usersFrm.ShowDialog();
+            Show();
+        }
     }
 }

@@ -34,21 +34,11 @@ namespace PresentationLayer.forms
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            if (dgvUsers.SelectedRows != null)
+            var selectedUser = dgvUsers.CurrentRow?.DataBoundItem as korisnik;
+            if (selectedUser != null)
             {
-                var selectedUser = dgvUsers.CurrentRow.DataBoundItem as korisnik;
                 EditUserFrm editUserFrm = new EditUserFrm(selectedUser);
                 editUserFrm.ShowDialog();
-            }
-        }
-
-        private void btnDecline_Click(object sender, EventArgs e)
-        {
-            if (dgvUserRequests.SelectedRows != null)
-            {
-                var selectedRequst = dgvUserRequests.CurrentRow.DataBoundItem as zahtjev_organizator;
-                requestOrganizerService.declineOrganizerRequest(selectedRequst);
-                showRequests();
             }
         }
 
@@ -59,11 +49,21 @@ namespace PresentationLayer.forms
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            if (dgvUserRequests.SelectedRows != null)
+            var selectedRequst = dgvUserRequests.CurrentRow?.DataBoundItem as zahtjev_organizator;
+            if (selectedRequst != null)
             {
-                var selectedRequst = dgvUserRequests.CurrentRow.DataBoundItem as zahtjev_organizator;
                 requestOrganizerService.acceptOrganizerRequest(selectedRequst);
                 userService.addOrganizerRole(selectedRequst.ID_korisnik);
+                showRequests();
+            }
+        }
+
+        private void btnDecline_Click(object sender, EventArgs e)
+        {
+            var selectedRequst = dgvUserRequests.CurrentRow?.DataBoundItem as zahtjev_organizator;
+            if (selectedRequst != null)
+            {
+                requestOrganizerService.declineOrganizerRequest(selectedRequst);
                 showRequests();
             }
         }
