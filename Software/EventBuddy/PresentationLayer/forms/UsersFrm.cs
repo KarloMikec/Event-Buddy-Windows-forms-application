@@ -16,6 +16,7 @@ namespace PresentationLayer.forms
     {
         UserServices userService = new UserServices();
         RequestOrganizerService requestOrganizerService = new RequestOrganizerService();
+        PDFServices pDFServices = new PDFServices();
         public UsersFrm()
         {
             InitializeComponent();
@@ -66,6 +67,11 @@ namespace PresentationLayer.forms
                 requestOrganizerService.declineOrganizerRequest(selectedRequst);
                 showRequests();
             }
+        }
+
+        private void btnSaveAsPDFUsers_Click(object sender, EventArgs e)
+        {
+            pDFServices.saveUsersAsPDF(dgvUsers.DataSource as List<korisnik>, frmLogin.user);
         }
     }
 }

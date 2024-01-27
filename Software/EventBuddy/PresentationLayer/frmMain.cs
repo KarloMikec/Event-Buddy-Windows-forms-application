@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace PresentationLayer
     public partial class frmMain : Form
     {
         EventServices eventServices = new EventServices();
+        PDFServices pDFServices = new PDFServices();
         public frmMain()
         {
             InitializeComponent();
@@ -122,6 +124,11 @@ namespace PresentationLayer
             Hide();
             usersFrm.ShowDialog();
             Show();
+        }
+
+        private void btnSaveAsPDF_Click(object sender, EventArgs e)
+        {
+            pDFServices.saveEventsAsPDF(dgvEvents.DataSource as List<dogadaj>, frmLogin.user);
         }
     }
 }
