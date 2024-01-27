@@ -140,6 +140,7 @@
             this.btnCategories.TabIndex = 13;
             this.btnCategories.Text = "Kategorije";
             this.btnCategories.UseVisualStyleBackColor = true;
+            this.btnCategories.Visible = false;
             // 
             // btnDelete
             // 
@@ -151,6 +152,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Obriši događaj";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Visible = false;
             // 
             // btnEdit
             // 
@@ -162,6 +164,7 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Izmjeni podatke";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Visible = false;
             // 
             // btnDismissEvent
             // 
@@ -250,6 +253,7 @@
             this.btnUsers.TabIndex = 23;
             this.btnUsers.Text = "Korisnici";
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Visible = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // frmMain
