@@ -22,6 +22,11 @@ namespace PresentationLayer
         EventServices eventServices = new EventServices();
         PDFServices pDFServices = new PDFServices();
         MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
+        UserServices userServices = new UserServices();
+
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public frmMain()
         {
             InitializeComponent();
@@ -32,11 +37,26 @@ namespace PresentationLayer
             materialSkinManager.AddFormToManage(this);
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void frmMain_Load(object sender, EventArgs e)
         {
+            var loggedInUser = frmLogin.user;
+            var isAdmin = userServices.checkForAdminRole(loggedInUser);
+            if (isAdmin)
+            {
+                btnEdit.Visible = true;
+                btnDelete.Visible = true;
+                btnCategories.Visible = true;
+                btnUsers.Visible = true;
+            }
             RefreshGUI();
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void RefreshGUI()
         {
             cmbLocation.DataSource = eventServices.GetLocations();
@@ -44,6 +64,9 @@ namespace PresentationLayer
             HideFields();
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private async void btnSearch_Click(object sender, EventArgs e)
         {
             var searched = txtSearch.Text;
@@ -53,6 +76,9 @@ namespace PresentationLayer
             dgvEvents.DataSource = filtered;
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private List<dogadaj> FilterEvents(string searched, DateTime date, List<dogadaj> events)
         {
             return events.FindAll(
@@ -62,6 +88,9 @@ namespace PresentationLayer
             );
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private List<dogadaj> FilterEvents(string location, string searched, DateTime date, List<dogadaj> events)
         {
             return events.FindAll(
@@ -71,6 +100,9 @@ namespace PresentationLayer
             );
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void cmbLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             var location = cmbLocation.SelectedItem as string;
@@ -81,6 +113,9 @@ namespace PresentationLayer
             dgvEvents.DataSource = FilterEvents(location, searched, date, events);
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void HideFields()
         {
             dgvEvents.Columns[5].Visible = false;
@@ -90,11 +125,17 @@ namespace PresentationLayer
             dgvEvents.Columns[12].Visible = false;
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshGUI();
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void btnParticipants_Click(object sender, EventArgs e)
         {
             var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;
@@ -137,6 +178,9 @@ namespace PresentationLayer
             pDFServices.saveEventsAsPDF(dgvEvents.DataSource as List<dogadaj>, frmLogin.user);
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         private void btnDismissEvent_Click(object sender, EventArgs e)
         {
             var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;

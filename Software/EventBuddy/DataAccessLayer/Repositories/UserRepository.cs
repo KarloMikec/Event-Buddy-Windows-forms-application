@@ -92,6 +92,14 @@ namespace DataAccessLayer.Repositories
             return checkForRole("Moderator", selectedUser);
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        public bool checkForAdminRole(korisnik selectedUser)
+        {
+            return checkForRole("Administrator", selectedUser);
+        }
+
         public bool checkForRole(string roleName, korisnik selectedUser)
         {
             var user = Entities.SingleOrDefault(d => d.ID == selectedUser.ID);

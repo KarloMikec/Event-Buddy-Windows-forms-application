@@ -19,6 +19,7 @@ namespace PresentationLayer
     {
         private dogadaj Event { get; set; }
         private EventServices eventServices = new EventServices();
+        PDFServices pDFServices = new PDFServices();
         public frmParticipants(dogadaj _event)
         {
             InitializeComponent();
@@ -82,6 +83,11 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Morate označiti korisnika", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSaveAsPDF_Click(object sender, EventArgs e)
+        {
+            pDFServices.saveParticipantsAsPDF(dgvParticipants.DataSource as List<korisnik>, frmLogin.user ,Event);
         }
     }
 }
