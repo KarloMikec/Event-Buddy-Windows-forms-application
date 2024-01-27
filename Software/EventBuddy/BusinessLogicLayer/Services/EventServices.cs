@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
 using DataAccessLayer.Repositories;
 using EntitiesLayer.Entities;
+using EntitiesLayer.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,6 +82,38 @@ namespace BusinessLogicLayer.Services
             using (var repo = new EventRepository(new EventBuddyModel()))
             {
                 return repo.DismissEvent(_event);
+            }
+        }
+
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        /// <param name="_event"></param>
+        /// <returns></returns>
+        public bool DeleteEvent(dogadaj _event)
+        {
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.DeleteEvent(_event);
+            }
+        }
+
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        /// <param name="_event"></param>
+        /// <returns></returns>
+        public bool UpdateEvent(dogadaj _event)
+        {
+            if (_event.naziv.Trim() == "")
+                throw new EventException("Ime ne smije biti prazno!");
+            if (_event.opis.Trim() == "")
+                throw new EventException("Opis ne smije biti prazan!");
+            if (_event.mjesto.Trim() == "")
+                throw new EventException("Mjesto ne smije biti prazno!");
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.Update(_event) > 0;
             }
         }
     }

@@ -226,5 +226,34 @@ namespace PresentationLayer
             }
             else MessageBox.Show("Morate odabrati neki događaj da biste ga obustavili!", "Obustavljanje", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;
+            if (_event != null)
+            {
+                var dialogResult = MessageBox.Show($"Jeste li sigurni da želite obrisati događaj {_event.ID}", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (eventServices.DeleteEvent(_event))
+                    {
+                        MessageBox.Show($"Događaj {_event.ID} Obrisan!", "Brisanje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefreshGUI();
+                    } else MessageBox.Show($"Greška prilikom brisanja događaja {_event.ID}!", "Brisanje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } else MessageBox.Show("Morate odabrati neki događaj da biste ga obrisali!", "Brisanje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;
+            if (_event != null)
+            {
+                frmEventDetails frmEventDetails = new frmEventDetails(_event);
+                frmEventDetails.ShowDialog();
+                RefreshGUI();
+            }
+            else MessageBox.Show("Morate odabrati događaj", "Izmjena", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
