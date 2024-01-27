@@ -122,5 +122,24 @@ namespace PresentationLayer
             usersFrm.ShowDialog();
             Show();
         }
+
+        private void btnDismissEvent_Click(object sender, EventArgs e)
+        {
+            var _event = dgvEvents.CurrentRow?.DataBoundItem as dogadaj;
+            if (_event != null)
+            {
+                var dialogResult = MessageBox.Show($"Jeste li sigurni da želite obustaviti događaj {_event.ID}", "Obustavljanje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (eventServices.DismissEvent(_event))
+                    {
+                        MessageBox.Show($"Događaj {_event.ID} obustavljen!", "Obustavljanje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefreshGUI();
+                    }
+                    else MessageBox.Show($"Greška prilikom obustavljanja događaja {_event.ID}!", "Obustavljanje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else MessageBox.Show("Morate odabrati neki događaj da biste ga obustavili!", "Obustavljanje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

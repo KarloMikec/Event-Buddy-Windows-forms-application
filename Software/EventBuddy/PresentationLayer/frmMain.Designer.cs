@@ -173,6 +173,7 @@
             this.btnDismissEvent.TabIndex = 16;
             this.btnDismissEvent.Text = "Obustavi";
             this.btnDismissEvent.UseVisualStyleBackColor = true;
+            this.btnDismissEvent.Click += new System.EventHandler(this.btnDismissEvent_Click);
             // 
             // btnHideEvent
             // 
@@ -277,7 +278,8 @@
             this.Controls.Add(this.txtSearch);
             this.MinimumSize = new System.Drawing.Size(816, 555);
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Glavna";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvents)).EndInit();
             this.ResumeLayout(false);

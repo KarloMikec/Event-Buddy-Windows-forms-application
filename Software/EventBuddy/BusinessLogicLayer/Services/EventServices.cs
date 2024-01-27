@@ -60,5 +60,13 @@ namespace BusinessLogicLayer.Services
                 return repo.BanUserFromEvent(_event, user);
             }
         }
+
+        public bool DismissEvent(dogadaj _event)
+        {
+            using (var repo = new EventRepository(new EventBuddyModel()))
+            {
+                return repo.DismissEvent(_event);
+            }
+        }
     }
 }

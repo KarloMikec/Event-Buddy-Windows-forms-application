@@ -70,6 +70,17 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        public bool DismissEvent(dogadaj _event)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var selectedEvent = (from e in context.dogadaj select e).FirstOrDefault(e => e.ID == _event.ID);
+                var selectedStatus = (from e in context.status select e).FirstOrDefault(s => s.naziv == "Obustavljen");
+                selectedEvent.ID_status = selectedStatus.ID;
+                return context.SaveChanges() > 0;
+            }
+        }
+
         public override int Update(dogadaj entity, bool saveChanges = true)
         {
             throw new NotImplementedException();
