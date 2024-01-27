@@ -64,9 +64,6 @@
     <Compile Include="forms\EditUserFrm.Designer.cs">
       <DependentUpon>EditUserFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\EventsFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="forms\UsersFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +81,6 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\EventsFrm.Designer.cs">
-      <DependentUpon>EventsFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\HideEventFrm.cs">
       <SubType>Form</SubType>
@@ -119,9 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\EventsFrm.resx">
-      <DependentUpon>EventsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\HideEventFrm.resx">
       <DependentUpon>HideEventFrm.cs</DependentUpon>

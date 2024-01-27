@@ -174,6 +174,7 @@
             this.btnHideEvent.TabIndex = 17;
             this.btnHideEvent.Text = "Sakrij događaj";
             this.btnHideEvent.UseVisualStyleBackColor = true;
+            this.btnHideEvent.Click += new System.EventHandler(this.btnHideEvent_Click);
             // 
             // btnParticipants
             // 

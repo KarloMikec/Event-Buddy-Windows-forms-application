@@ -87,6 +87,7 @@
             this.Controls.Add(this.btnHideEvent);
             this.Controls.Add(this.label1);
             this.Name = "HideEventFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HideEventFrm";
             this.ResumeLayout(false);
             this.PerformLayout();

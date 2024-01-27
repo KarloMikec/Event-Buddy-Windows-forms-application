@@ -69,17 +69,17 @@ namespace DataAccessLayer.Repositories
         public int revokeRole(int userID, string roleName, bool saveChanges = true)
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
-            var uloga = user.uloga.First(x => x.Naziv == roleName) as uloga;
-            user.uloga.Remove(uloga);
+            var uloga = user.uloga.FirstOrDefault(x => x.Naziv == roleName) as uloga;
+            if(uloga != null)
+            {
+                user.uloga.Remove(uloga);
 
-            if (saveChanges)
-            {
-                return SaveChanges();
+                if (saveChanges)
+                {
+                    return SaveChanges();
+                }
             }
-            else
-            {
-                return 0;
-            }
+            return 0;
         }
 
         public bool checkForOrganizerRole(korisnik selectedUser)

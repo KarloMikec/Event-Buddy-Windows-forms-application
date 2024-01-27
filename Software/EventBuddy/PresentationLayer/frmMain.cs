@@ -1,5 +1,6 @@
 ﻿using BusinessLogicLayer.Services;
 using EntitiesLayer.Entities;
+using PresentationLayer.forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,6 +103,17 @@ namespace PresentationLayer
         {
             frmProfil frmProfil = new frmProfil();
             frmProfil.ShowDialog();
+        }
+
+        private void btnHideEvent_Click(object sender, EventArgs e)
+        {
+            if (dgvEvents.SelectedRows != null)
+            {
+                var selectedEvent = dgvEvents.CurrentRow.DataBoundItem as dogadaj;
+                HideEventFrm hideEventFrm = new HideEventFrm(selectedEvent);
+                hideEventFrm.ShowDialog();
+                RefreshGUI();
+            }
         }
     }
 }

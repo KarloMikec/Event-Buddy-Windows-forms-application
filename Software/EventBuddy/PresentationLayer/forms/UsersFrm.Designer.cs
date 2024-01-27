@@ -35,7 +35,6 @@
             this.btnDecline = new System.Windows.Forms.Button();
             this.dgvUserRequests = new System.Windows.Forms.DataGridView();
             this.btnAccept = new System.Windows.Forms.Button();
-            this.btnShowEvents = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserRequests)).BeginInit();
             this.SuspendLayout();
@@ -109,23 +108,11 @@
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
-            // btnShowEvents
-            // 
-            this.btnShowEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnShowEvents.Location = new System.Drawing.Point(876, 12);
-            this.btnShowEvents.Name = "btnShowEvents";
-            this.btnShowEvents.Size = new System.Drawing.Size(127, 61);
-            this.btnShowEvents.TabIndex = 7;
-            this.btnShowEvents.Text = "Prikazi događaje";
-            this.btnShowEvents.UseVisualStyleBackColor = true;
-            this.btnShowEvents.Click += new System.EventHandler(this.btnShowEvents_Click);
-            // 
             // UsersFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 539);
-            this.Controls.Add(this.btnShowEvents);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDecline);
@@ -152,6 +139,5 @@
         private System.Windows.Forms.Button btnDecline;
         private System.Windows.Forms.DataGridView dgvUserRequests;
         private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Button btnShowEvents;
     }
 }
