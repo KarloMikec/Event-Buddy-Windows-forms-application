@@ -1,5 +1,7 @@
 ﻿using BusinessLogicLayer.Services;
 using EntitiesLayer.Entities;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using PresentationLayer.forms;
 using System;
 using System.Collections.Generic;
@@ -15,15 +17,19 @@ using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace PresentationLayer
 {
-    public partial class frmMain : Form
+    public partial class frmMain : MaterialForm
     {
         EventServices eventServices = new EventServices();
         PDFServices pDFServices = new PDFServices();
+        MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
         public frmMain()
         {
             InitializeComponent();
             dtpTime.Format = DateTimePickerFormat.Time;
             dtpTime.ShowUpDown = true;
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -104,6 +110,7 @@ namespace PresentationLayer
         {
             frmProfil frmProfil = new frmProfil();
             frmProfil.ShowDialog();
+
         }
 
         private void btnHideEvent_Click(object sender, EventArgs e)

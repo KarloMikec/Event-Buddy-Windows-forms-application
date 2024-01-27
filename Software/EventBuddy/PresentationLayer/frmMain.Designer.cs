@@ -53,7 +53,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(12, 12);
+            this.txtSearch.Location = new System.Drawing.Point(15, 71);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(144, 26);
             this.txtSearch.TabIndex = 0;
@@ -61,7 +61,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(162, 12);
+            this.btnSearch.Location = new System.Drawing.Point(165, 71);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 26);
             this.btnSearch.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 16);
+            this.label1.Location = new System.Drawing.Point(256, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(492, 17);
+            this.label2.Location = new System.Drawing.Point(495, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 3;
@@ -92,7 +92,7 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(305, 12);
+            this.dtpDate.Location = new System.Drawing.Point(308, 71);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(181, 26);
             this.dtpDate.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.btnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Location = new System.Drawing.Point(690, 12);
+            this.btnProfile.Location = new System.Drawing.Point(693, 71);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(98, 39);
             this.btnProfile.TabIndex = 5;
@@ -115,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvents.Location = new System.Drawing.Point(12, 117);
+            this.dgvEvents.Location = new System.Drawing.Point(12, 156);
             this.dgvEvents.Name = "dgvEvents";
             this.dgvEvents.Size = new System.Drawing.Size(606, 387);
             this.dgvEvents.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             this.Događaji.AutoSize = true;
             this.Događaji.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Događaji.Location = new System.Drawing.Point(12, 94);
+            this.Događaji.Location = new System.Drawing.Point(8, 130);
             this.Događaji.Name = "Događaji";
             this.Događaji.Size = new System.Drawing.Size(72, 20);
             this.Događaji.TabIndex = 7;
@@ -134,7 +134,7 @@
             // 
             this.btnCategories.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategories.Location = new System.Drawing.Point(624, 391);
+            this.btnCategories.Location = new System.Drawing.Point(624, 421);
             this.btnCategories.Name = "btnCategories";
             this.btnCategories.Size = new System.Drawing.Size(164, 47);
             this.btnCategories.TabIndex = 13;
@@ -145,7 +145,7 @@
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(624, 338);
+            this.btnDelete.Location = new System.Drawing.Point(624, 368);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(164, 47);
             this.btnDelete.TabIndex = 14;
@@ -156,7 +156,7 @@
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(624, 285);
+            this.btnEdit.Location = new System.Drawing.Point(624, 315);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(164, 47);
             this.btnEdit.TabIndex = 15;
@@ -167,7 +167,7 @@
             // 
             this.btnDismissEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDismissEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDismissEvent.Location = new System.Drawing.Point(624, 232);
+            this.btnDismissEvent.Location = new System.Drawing.Point(624, 262);
             this.btnDismissEvent.Name = "btnDismissEvent";
             this.btnDismissEvent.Size = new System.Drawing.Size(164, 47);
             this.btnDismissEvent.TabIndex = 16;
@@ -179,7 +179,7 @@
             // 
             this.btnHideEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHideEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHideEvent.Location = new System.Drawing.Point(624, 179);
+            this.btnHideEvent.Location = new System.Drawing.Point(624, 209);
             this.btnHideEvent.Name = "btnHideEvent";
             this.btnHideEvent.Size = new System.Drawing.Size(164, 47);
             this.btnHideEvent.TabIndex = 17;
@@ -191,7 +191,7 @@
             // 
             this.btnParticipants.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParticipants.Location = new System.Drawing.Point(624, 126);
+            this.btnParticipants.Location = new System.Drawing.Point(624, 156);
             this.btnParticipants.Name = "btnParticipants";
             this.btnParticipants.Size = new System.Drawing.Size(164, 47);
             this.btnParticipants.TabIndex = 18;
@@ -203,7 +203,7 @@
             // 
             this.btnSaveAsPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAsPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDF.Location = new System.Drawing.Point(471, 81);
+            this.btnSaveAsPDF.Location = new System.Drawing.Point(471, 120);
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
             this.btnSaveAsPDF.Size = new System.Drawing.Size(147, 30);
             this.btnSaveAsPDF.TabIndex = 19;
@@ -216,7 +216,7 @@
             this.cmbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLocation.FormattingEnabled = true;
-            this.cmbLocation.Location = new System.Drawing.Point(545, 10);
+            this.cmbLocation.Location = new System.Drawing.Point(548, 69);
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Size = new System.Drawing.Size(127, 28);
             this.cmbLocation.TabIndex = 20;
@@ -225,7 +225,7 @@
             // dtpTime
             // 
             this.dtpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTime.Location = new System.Drawing.Point(305, 44);
+            this.dtpTime.Location = new System.Drawing.Point(308, 103);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(111, 26);
             this.dtpTime.TabIndex = 21;
@@ -233,7 +233,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(162, 44);
+            this.btnRefresh.Location = new System.Drawing.Point(165, 103);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 26);
             this.btnRefresh.TabIndex = 22;
@@ -245,7 +245,7 @@
             // 
             this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.Location = new System.Drawing.Point(624, 444);
+            this.btnUsers.Location = new System.Drawing.Point(624, 474);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(164, 47);
             this.btnUsers.TabIndex = 23;
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 516);
+            this.ClientSize = new System.Drawing.Size(816, 555);
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dtpTime);

@@ -8,15 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace PresentationLayer
 {
-    public partial class frmProfil : Form
+    public partial class frmProfil : MaterialForm
     {
         private UserServices userServices = new UserServices();
+        MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
         public frmProfil()
         {
             InitializeComponent();
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
         private void frmProfil_Load(object sender, EventArgs e)
@@ -71,6 +78,20 @@ namespace PresentationLayer
         private void btnCancel_Click(object sender, EventArgs e)
         {
             RefreshGUI();
+        }
+
+        private void msChangeTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (msChangeTheme.Checked)
+            {
+                changeTheme.Theme = MaterialSkinManager.Themes.DARK;
+                //frmLogin.theme = MaterialSkinManager.Themes.DARK;
+            }
+            else
+            {
+                changeTheme.Theme = MaterialSkinManager.Themes.LIGHT;
+                //frmLogin.theme = MaterialSkinManager.Themes.LIGHT;
+            }
         }
     }
 }

@@ -36,15 +36,15 @@
             this.txtNewPassword2 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDarkTheme = new System.Windows.Forms.Button();
-            this.btnLight = new System.Windows.Forms.Button();
             this.btnDeleteAcc = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.msChangeTheme = new MaterialSkin.Controls.MaterialSwitch();
             this.SuspendLayout();
             // 
             // cbLanguage
             // 
             this.cbLanguage.FormattingEnabled = true;
-            this.cbLanguage.Location = new System.Drawing.Point(38, 13);
+            this.cbLanguage.Location = new System.Drawing.Point(12, 75);
             this.cbLanguage.Name = "cbLanguage";
             this.cbLanguage.Size = new System.Drawing.Size(121, 21);
             this.cbLanguage.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.label1.Location = new System.Drawing.Point(262, 50);
+            this.label1.Location = new System.Drawing.Point(262, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(254, 63);
             this.label1.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // txtKorime
             // 
-            this.txtKorime.Location = new System.Drawing.Point(273, 141);
+            this.txtKorime.Location = new System.Drawing.Point(273, 182);
             this.txtKorime.Name = "txtKorime";
             this.txtKorime.ReadOnly = true;
             this.txtKorime.Size = new System.Drawing.Size(222, 20);
@@ -70,28 +70,28 @@
             // 
             // txtOldPassword
             // 
-            this.txtOldPassword.Location = new System.Drawing.Point(273, 199);
+            this.txtOldPassword.Location = new System.Drawing.Point(273, 232);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.Size = new System.Drawing.Size(222, 20);
             this.txtOldPassword.TabIndex = 3;
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(273, 234);
+            this.txtNewPassword.Location = new System.Drawing.Point(273, 268);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(222, 20);
             this.txtNewPassword.TabIndex = 4;
             // 
             // txtNewPassword2
             // 
-            this.txtNewPassword2.Location = new System.Drawing.Point(273, 271);
+            this.txtNewPassword2.Location = new System.Drawing.Point(273, 305);
             this.txtNewPassword2.Name = "txtNewPassword2";
             this.txtNewPassword2.Size = new System.Drawing.Size(222, 20);
             this.txtNewPassword2.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(273, 316);
+            this.btnSave.Location = new System.Drawing.Point(273, 346);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 35);
             this.btnSave.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(398, 316);
+            this.btnCancel.Location = new System.Drawing.Point(398, 346);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 35);
             this.btnCancel.TabIndex = 7;
@@ -109,41 +109,48 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnDarkTheme
-            // 
-            this.btnDarkTheme.Location = new System.Drawing.Point(586, 13);
-            this.btnDarkTheme.Name = "btnDarkTheme";
-            this.btnDarkTheme.Size = new System.Drawing.Size(97, 35);
-            this.btnDarkTheme.TabIndex = 8;
-            this.btnDarkTheme.Text = "Dark";
-            this.btnDarkTheme.UseVisualStyleBackColor = true;
-            // 
-            // btnLight
-            // 
-            this.btnLight.Location = new System.Drawing.Point(689, 13);
-            this.btnLight.Name = "btnLight";
-            this.btnLight.Size = new System.Drawing.Size(97, 35);
-            this.btnLight.TabIndex = 9;
-            this.btnLight.Text = "Light";
-            this.btnLight.UseVisualStyleBackColor = true;
-            // 
             // btnDeleteAcc
             // 
-            this.btnDeleteAcc.Location = new System.Drawing.Point(586, 393);
+            this.btnDeleteAcc.Location = new System.Drawing.Point(586, 399);
             this.btnDeleteAcc.Name = "btnDeleteAcc";
             this.btnDeleteAcc.Size = new System.Drawing.Size(200, 29);
             this.btnDeleteAcc.TabIndex = 10;
             this.btnDeleteAcc.Text = "Obriši račun";
             this.btnDeleteAcc.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(557, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Promijeni temu: ";
+            // 
+            // msChangeTheme
+            // 
+            this.msChangeTheme.AutoSize = true;
+            this.msChangeTheme.Depth = 0;
+            this.msChangeTheme.Location = new System.Drawing.Point(706, 71);
+            this.msChangeTheme.Margin = new System.Windows.Forms.Padding(0);
+            this.msChangeTheme.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.msChangeTheme.MouseState = MaterialSkin.MouseState.HOVER;
+            this.msChangeTheme.Name = "msChangeTheme";
+            this.msChangeTheme.Ripple = true;
+            this.msChangeTheme.Size = new System.Drawing.Size(58, 37);
+            this.msChangeTheme.TabIndex = 12;
+            this.msChangeTheme.UseVisualStyleBackColor = true;
+            this.msChangeTheme.CheckedChanged += new System.EventHandler(this.msChangeTheme_CheckedChanged);
+            // 
             // frmProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.msChangeTheme);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDeleteAcc);
-            this.Controls.Add(this.btnLight);
-            this.Controls.Add(this.btnDarkTheme);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtNewPassword2);
@@ -170,8 +177,8 @@
         private System.Windows.Forms.TextBox txtNewPassword2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnDarkTheme;
-        private System.Windows.Forms.Button btnLight;
         private System.Windows.Forms.Button btnDeleteAcc;
+        private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialSwitch msChangeTheme;
     }
 }

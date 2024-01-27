@@ -1,5 +1,7 @@
 ﻿using BusinessLogicLayer.Services;
 using EntitiesLayer.Entities;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,14 +14,20 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MaterialForm
     {
         private UserServices userServices = new UserServices();
         public static korisnik user = null;
-        
+        MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
+        //public static MaterialSkinManager.Themes theme = MaterialSkinManager.Themes.LIGHT;
+
         public frmLogin()
         {
             InitializeComponent();
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e) 
@@ -39,9 +47,10 @@ namespace PresentationLayer
                 {
                     user = LoggedUser;
                     //MessageBox.Show("Prijavljen " + LoggedUser.ime);
-                    frmMain frmMain = new frmMain();
-                    frmMain.Show();
                     Hide();
+                    frmMain frmMain = new frmMain();
+                    frmMain.ShowDialog();
+                    Close();
                 }
                 else
                 {
