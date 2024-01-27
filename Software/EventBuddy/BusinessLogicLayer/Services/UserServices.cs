@@ -99,6 +99,19 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        /// <param name="selectedUser"></param>
+        /// <returns></returns>
+        public bool checkForAdminRole(korisnik selectedUser)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.checkForAdminRole(selectedUser);
+            }
+        }
+
         public bool updateUser(korisnik user)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))

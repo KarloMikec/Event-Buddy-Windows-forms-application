@@ -35,18 +35,27 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public IQueryable<string> GetLocations()
         {
             var query = from e in Entities select e.mjesto;
             return query.Distinct();
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public ICollection<korisnik> GetEventParticipants(dogadaj _event)
         {
             var query = Entities.FirstOrDefault(e => e.ID == _event.ID).korisnik1;
             return query;
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public bool RemoveUserFromEvent(dogadaj _event, korisnik user)
         {
             using(var context = new EventBuddyModel())
@@ -58,6 +67,9 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public bool BanUserFromEvent(dogadaj _event, korisnik user)
         {
             using (var context = new EventBuddyModel())
@@ -70,6 +82,9 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public bool DismissEvent(dogadaj _event)
         {
             using (var context = new EventBuddyModel())
