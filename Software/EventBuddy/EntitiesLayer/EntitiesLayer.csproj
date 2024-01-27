@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\dogadaj.cs" />
+    <Compile Include="Entities\dogadaj.Ext.cs" />
     <Compile Include="Entities\jezik.cs" />
     <Compile Include="Entities\kategorija.cs" />
     <Compile Include="Entities\kategorija.Ext.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Entities\uloga.cs" />
     <Compile Include="Entities\zahtjev_kategorija.cs" />
     <Compile Include="Entities\zahtjev_organizator.cs" />
+    <Compile Include="Exceptions\EventException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
