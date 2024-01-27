@@ -28,6 +28,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public List<string> GetLocations()
         {
             using(var repo = new EventRepository(new EventBuddyModel()))
@@ -36,6 +39,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public List<korisnik> GetEventParticipants(dogadaj _event)
         {
             using(var repo = new EventRepository(new EventBuddyModel()))
@@ -45,6 +51,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public bool RemoveUserFromEvent(dogadaj _event, korisnik user)
         {
             using (var repo = new EventRepository(new EventBuddyModel()))
@@ -53,6 +62,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public bool BanUserFromEvent(dogadaj _event, korisnik user)
         {
             using (var repo = new EventRepository(new EventBuddyModel()))
@@ -61,6 +73,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
         public bool DismissEvent(dogadaj _event)
         {
             using (var repo = new EventRepository(new EventBuddyModel()))

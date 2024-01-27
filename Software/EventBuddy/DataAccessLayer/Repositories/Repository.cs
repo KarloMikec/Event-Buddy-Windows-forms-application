@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
+    /// <summary>
+    /// <author>Dominik Josipović</author>
+    /// </summary>
     public abstract class Repository<T> : IDisposable where T : class
     {
         protected EventBuddyModel Context { get; set; }
