@@ -31,6 +31,13 @@ namespace PresentationLayer.forms
         {
             dgvUsers.DataSource = userService.getAllUsers();
             showRequests();
+            dgvUsers.Columns[6].Visible = false;
+            dgvUsers.Columns[7].Visible = false;
+            dgvUsers.Columns[8].Visible = false;
+            dgvUsers.Columns[9].Visible = false;
+            dgvUsers.Columns[10].Visible = false;
+            dgvUsers.Columns[11].Visible = false;
+            dgvUsers.Columns[12].Visible = false;
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
