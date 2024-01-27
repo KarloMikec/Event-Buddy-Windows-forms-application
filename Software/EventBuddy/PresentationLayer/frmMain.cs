@@ -78,7 +78,6 @@ namespace PresentationLayer
             dgvEvents.Columns[5].Visible = false;
             dgvEvents.Columns[6].Visible = false;
             dgvEvents.Columns[7].Visible = false;
-            dgvEvents.Columns[10].Visible = false;
             dgvEvents.Columns[11].Visible = false;
             dgvEvents.Columns[12].Visible = false;
         }

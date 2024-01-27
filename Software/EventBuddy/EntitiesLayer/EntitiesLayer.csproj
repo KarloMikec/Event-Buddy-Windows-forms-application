@@ -50,6 +50,7 @@
     <Compile Include="Entities\korisnik.Ext.cs" />
     <Compile Include="Entities\prijevodi.cs" />
     <Compile Include="Entities\status.cs" />
+    <Compile Include="Entities\status.Ext.cs" />
     <Compile Include="Entities\uloga.cs" />
     <Compile Include="Entities\zahtjev_kategorija.cs" />
     <Compile Include="Entities\zahtjev_organizator.cs" />
