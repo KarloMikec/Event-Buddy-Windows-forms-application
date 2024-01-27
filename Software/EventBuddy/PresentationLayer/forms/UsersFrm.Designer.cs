@@ -35,6 +35,8 @@
             this.btnDecline = new System.Windows.Forms.Button();
             this.dgvUserRequests = new System.Windows.Forms.DataGridView();
             this.btnAccept = new System.Windows.Forms.Button();
+            this.btnSaveAsPDFUsers = new System.Windows.Forms.Button();
+            this.btnSaveAsPDFRequests = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserRequests)).BeginInit();
             this.SuspendLayout();
@@ -108,11 +110,34 @@
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
+            // btnSaveAsPDFUsers
+            // 
+            this.btnSaveAsPDFUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAsPDFUsers.Location = new System.Drawing.Point(641, 9);
+            this.btnSaveAsPDFUsers.Name = "btnSaveAsPDFUsers";
+            this.btnSaveAsPDFUsers.Size = new System.Drawing.Size(147, 30);
+            this.btnSaveAsPDFUsers.TabIndex = 20;
+            this.btnSaveAsPDFUsers.Text = "Spremi kao PDF";
+            this.btnSaveAsPDFUsers.UseVisualStyleBackColor = true;
+            this.btnSaveAsPDFUsers.Click += new System.EventHandler(this.btnSaveAsPDFUsers_Click);
+            // 
+            // btnSaveAsPDFRequests
+            // 
+            this.btnSaveAsPDFRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAsPDFRequests.Location = new System.Drawing.Point(641, 313);
+            this.btnSaveAsPDFRequests.Name = "btnSaveAsPDFRequests";
+            this.btnSaveAsPDFRequests.Size = new System.Drawing.Size(147, 30);
+            this.btnSaveAsPDFRequests.TabIndex = 21;
+            this.btnSaveAsPDFRequests.Text = "Spremi kao PDF";
+            this.btnSaveAsPDFRequests.UseVisualStyleBackColor = true;
+            // 
             // UsersFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 539);
+            this.Controls.Add(this.btnSaveAsPDFRequests);
+            this.Controls.Add(this.btnSaveAsPDFUsers);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDecline);
@@ -139,5 +164,7 @@
         private System.Windows.Forms.Button btnDecline;
         private System.Windows.Forms.DataGridView dgvUserRequests;
         private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Button btnSaveAsPDFUsers;
+        private System.Windows.Forms.Button btnSaveAsPDFRequests;
     }
 }

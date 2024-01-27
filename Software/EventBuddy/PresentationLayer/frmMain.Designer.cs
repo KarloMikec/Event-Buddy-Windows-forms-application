@@ -209,6 +209,7 @@
             this.btnSaveAsPDF.TabIndex = 19;
             this.btnSaveAsPDF.Text = "Spremi kao PDF";
             this.btnSaveAsPDF.UseVisualStyleBackColor = true;
+            this.btnSaveAsPDF.Click += new System.EventHandler(this.btnSaveAsPDF_Click);
             // 
             // cmbLocation
             // 
