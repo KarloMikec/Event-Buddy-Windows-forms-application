@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -96,9 +97,46 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        /// <param name="_event"></param>
+        /// <returns></returns>
+        public bool DeleteEvent(dogadaj _event)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var selectedEvent = (from e in context.dogadaj select e).FirstOrDefault(e => e.ID == _event.ID);
+                if (selectedEvent != null)
+                {
+                    selectedEvent.korisnik1.Clear();
+                    selectedEvent.korisnik2.Clear();
+                    context.dogadaj.Remove(selectedEvent);
+                }
+                return context.SaveChanges() > 0;
+            }
+        }
+
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="saveChanges"></param>
+        /// <returns></returns>
         public override int Update(dogadaj entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            using (var context = new EventBuddyModel())
+            {
+                var selectedEvent = (from e in context.dogadaj select e).FirstOrDefault(e => e.ID == entity.ID);
+                if (selectedEvent != null)
+                {
+                    selectedEvent.datum = entity.datum;
+                    selectedEvent.mjesto = entity.mjesto;
+                    selectedEvent.naziv = entity.naziv;
+                    selectedEvent.opis = entity.opis;
+                }
+                return saveChanges ? context.SaveChanges() : 0;
+            }
         }
     }
 }

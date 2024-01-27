@@ -154,6 +154,7 @@
             this.btnDelete.Text = "Obriši događaj";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -166,6 +167,7 @@
             this.btnEdit.Text = "Izmjeni podatke";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Visible = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDismissEvent
             // 
