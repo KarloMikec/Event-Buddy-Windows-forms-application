@@ -62,6 +62,31 @@ namespace PresentationLayer
             cmbLocation.DataSource = eventServices.GetLocations();
             dgvEvents.DataSource = eventServices.GetAllEvents();
             HideFields();
+            ChangeTheme();
+        }
+
+        /// <summary>
+        /// <author>Dominik Josipović</author>
+        /// </summary>
+        private void ChangeTheme()
+        {
+            if (changeTheme.Theme == MaterialSkinManager.Themes.DARK)
+            {
+                foreach (DataGridViewRow row in dgvEvents.Rows)
+                    row.DefaultCellStyle.BackColor = Color.Black;
+                dgvEvents.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+                dgvEvents.EnableHeadersVisualStyles = false;
+                dgvEvents.RowHeadersDefaultCellStyle.BackColor = Color.Black;
+                dgvEvents.DefaultCellStyle.ForeColor = Color.White;
+            } else
+            {
+                foreach (DataGridViewRow row in dgvEvents.Rows)
+                    row.DefaultCellStyle.BackColor = Color.White;
+                dgvEvents.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+                dgvEvents.EnableHeadersVisualStyles = false;
+                dgvEvents.RowHeadersDefaultCellStyle.BackColor = Color.White;
+                dgvEvents.DefaultCellStyle.ForeColor = Color.Black;
+            }
         }
 
         /// <summary>
@@ -74,6 +99,7 @@ namespace PresentationLayer
             var date = dtpDate.Value.Date + dtpTime.Value.TimeOfDay;
             var filtered = await Task.Run(() => FilterEvents(searched, date, events));
             dgvEvents.DataSource = filtered;
+            ChangeTheme();
         }
 
         /// <summary>
@@ -111,6 +137,7 @@ namespace PresentationLayer
             var searched = txtSearch.Text;
             var date = dtpDate.Value.Date + dtpTime.Value.TimeOfDay;
             dgvEvents.DataSource = FilterEvents(location, searched, date, events);
+            ChangeTheme();
         }
 
         /// <summary>
@@ -151,7 +178,7 @@ namespace PresentationLayer
         {
             frmProfil frmProfil = new frmProfil();
             frmProfil.ShowDialog();
-
+            ChangeTheme();
         }
 
         private void btnHideEvent_Click(object sender, EventArgs e)

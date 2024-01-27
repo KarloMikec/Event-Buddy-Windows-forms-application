@@ -115,6 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvents.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvEvents.Location = new System.Drawing.Point(12, 156);
             this.dgvEvents.Name = "dgvEvents";
             this.dgvEvents.Size = new System.Drawing.Size(606, 387);

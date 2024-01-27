@@ -41,19 +41,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParticipants.Location = new System.Drawing.Point(16, 57);
-            this.dgvParticipants.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvParticipants.Location = new System.Drawing.Point(12, 103);
             this.dgvParticipants.Name = "dgvParticipants";
-            this.dgvParticipants.Size = new System.Drawing.Size(633, 308);
+            this.dgvParticipants.Size = new System.Drawing.Size(475, 253);
             this.dgvParticipants.TabIndex = 0;
             // 
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Location = new System.Drawing.Point(668, 169);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Location = new System.Drawing.Point(501, 194);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(161, 42);
+            this.btnRemove.Size = new System.Drawing.Size(121, 34);
             this.btnRemove.TabIndex = 1;
             this.btnRemove.Text = "Izbaci";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -62,10 +60,9 @@
             // btnBan
             // 
             this.btnBan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBan.Location = new System.Drawing.Point(668, 119);
-            this.btnBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBan.Location = new System.Drawing.Point(501, 154);
             this.btnBan.Name = "btnBan";
-            this.btnBan.Size = new System.Drawing.Size(161, 42);
+            this.btnBan.Size = new System.Drawing.Size(121, 34);
             this.btnBan.TabIndex = 2;
             this.btnBan.Text = "Zabrani pristup";
             this.btnBan.UseVisualStyleBackColor = true;
@@ -75,10 +72,9 @@
             // 
             this.btnSaveAsPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAsPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDF.Location = new System.Drawing.Point(453, 12);
-            this.btnSaveAsPDF.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveAsPDF.Location = new System.Drawing.Point(340, 67);
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
-            this.btnSaveAsPDF.Size = new System.Drawing.Size(196, 37);
+            this.btnSaveAsPDF.Size = new System.Drawing.Size(147, 30);
             this.btnSaveAsPDF.TabIndex = 20;
             this.btnSaveAsPDF.Text = "Spremi kao PDF";
             this.btnSaveAsPDF.UseVisualStyleBackColor = true;
@@ -86,15 +82,14 @@
             // 
             // frmParticipants
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 378);
+            this.ClientSize = new System.Drawing.Size(646, 367);
             this.Controls.Add(this.btnSaveAsPDF);
             this.Controls.Add(this.btnBan);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dgvParticipants);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(861, 417);
+            this.MinimumSize = new System.Drawing.Size(646, 367);
             this.Name = "frmParticipants";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmParticipants";

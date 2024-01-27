@@ -1,5 +1,7 @@
 ﻿using BusinessLogicLayer.Services;
 using EntitiesLayer.Entities;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,16 +17,21 @@ namespace PresentationLayer
     /// <summary>
     /// <author>Dominik Josipović</author>
     /// </summary>
-    public partial class frmParticipants : Form
+    public partial class frmParticipants : MaterialForm
     {
         private dogadaj Event { get; set; }
         private EventServices eventServices = new EventServices();
         PDFServices pDFServices = new PDFServices();
+        MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
+
         public frmParticipants(dogadaj _event)
         {
             InitializeComponent();
             Event = _event;
             Text = Event.naziv;
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
         }
 
         private void frmParticipants_Load(object sender, EventArgs e)
@@ -45,6 +52,24 @@ namespace PresentationLayer
             dgvParticipants.Columns[10].Visible = false;
             dgvParticipants.Columns[11].Visible = false;
             dgvParticipants.Columns[12].Visible = false;
+
+            if (changeTheme.Theme == MaterialSkinManager.Themes.DARK)
+            {
+                foreach (DataGridViewRow row in dgvParticipants.Rows)
+                    row.DefaultCellStyle.BackColor = Color.Black;
+                dgvParticipants.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+                dgvParticipants.EnableHeadersVisualStyles = false;
+                dgvParticipants.RowHeadersDefaultCellStyle.BackColor = Color.Black;
+                dgvParticipants.DefaultCellStyle.ForeColor = Color.White;
+            } else
+            {
+                foreach (DataGridViewRow row in dgvParticipants.Rows)
+                    row.DefaultCellStyle.BackColor = Color.White;
+                dgvParticipants.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+                dgvParticipants.EnableHeadersVisualStyles = false;
+                dgvParticipants.RowHeadersDefaultCellStyle.BackColor = Color.White;
+                dgvParticipants.DefaultCellStyle.ForeColor = Color.Black;
+            }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

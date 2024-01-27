@@ -19,7 +19,7 @@ namespace PresentationLayer
         private UserServices userServices = new UserServices();
         public static korisnik user = null;
         MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
-        //public static MaterialSkinManager.Themes theme = MaterialSkinManager.Themes.LIGHT;
+        public static MaterialSkinManager.Themes theme = MaterialSkinManager.Themes.LIGHT;
 
         public frmLogin()
         {
