@@ -45,12 +45,20 @@ namespace PresentationLayer
                 var LoggedUser = userServices.loginUser(txtUsername.Text, txtPassword.Text);
                 if(LoggedUser != null)
                 {
-                    user = LoggedUser;
-                    //MessageBox.Show("Prijavljen " + LoggedUser.ime);
-                    Hide();
-                    frmMain frmMain = new frmMain();
-                    frmMain.ShowDialog();
-                    Close();
+                    var isAdmin = userServices.checkForAdminRole(LoggedUser);
+                    var isMod = userServices.checkForModRole(LoggedUser);
+                    if(isAdmin || isMod)
+                    {
+                        user = LoggedUser;
+                        Hide();
+                        frmMain frmMain = new frmMain();
+                        frmMain.ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nemate dozvoljen pristup!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

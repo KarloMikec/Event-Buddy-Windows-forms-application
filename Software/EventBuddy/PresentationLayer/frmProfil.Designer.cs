@@ -36,7 +36,6 @@
             this.txtNewPassword2 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDeleteAcc = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.msChangeTheme = new MaterialSkin.Controls.MaterialSwitch();
             this.SuspendLayout();
@@ -109,15 +108,6 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnDeleteAcc
-            // 
-            this.btnDeleteAcc.Location = new System.Drawing.Point(586, 399);
-            this.btnDeleteAcc.Name = "btnDeleteAcc";
-            this.btnDeleteAcc.Size = new System.Drawing.Size(200, 29);
-            this.btnDeleteAcc.TabIndex = 10;
-            this.btnDeleteAcc.Text = "Obriši račun";
-            this.btnDeleteAcc.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -150,7 +140,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.msChangeTheme);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDeleteAcc);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtNewPassword2);
@@ -177,7 +166,6 @@
         private System.Windows.Forms.TextBox txtNewPassword2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnDeleteAcc;
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialSwitch msChangeTheme;
     }
