@@ -13,6 +13,7 @@ namespace BusinessLogicLayer.Services
     {
         private List<dogadaj> _eventList;
         private List<korisnik> _userList;
+        private List<zahtjev_organizator> _organizerRequestList;
         private int currentItemIndex;
         private korisnik _user;
         private EventServices eventServices = new EventServices();
@@ -125,6 +126,68 @@ namespace BusinessLogicLayer.Services
                 if (y > e.PageBounds.Height - 50)
                 {
                     if (currentItemIndex < _userList.Count)
+                    {
+                        e.HasMorePages = true;
+                        return;
+                    }
+                    else
+                    {
+                        e.HasMorePages = false;
+                        currentItemIndex = 0;
+                        return;
+                    }
+                }
+            }
+        }
+
+        public void saveOrganizerRequestsAsPDF(List<zahtjev_organizator> organizerRequestList, korisnik user = null)
+        {
+            _organizerRequestList = organizerRequestList;
+            _user = user;
+            PrintDocument document = new PrintDocument();
+            document.PrintPage += new PrintPageEventHandler(saveOrganizerRequestsAsPDFPrintPage);
+            currentItemIndex = 0;
+            document.Print();
+        }
+
+        private void saveOrganizerRequestsAsPDFPrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Font font = new Font("Arial", 12);
+            Font fontSmall = new Font("Arial", 10);
+            Font fontBig = new Font("Arial", 16);
+            int x = 50;
+            int y = 50;
+            int width = 50;
+            int height = 50;
+
+            graphics.DrawString("ID", fontBig, Brushes.Black, new PointF(x, y));
+            graphics.DrawString("ID_korisnik", fontBig, Brushes.Black, new PointF(x + width, y));
+            graphics.DrawString("Prihvacen", fontBig, Brushes.Black, new PointF(x + width * 4 - 20, y));
+            graphics.DrawString("Opis", fontBig, Brushes.Black, new PointF(x + width * 6, y));
+
+            graphics.DrawString("Kreirao: " + _user.ToString() + " na datum " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString(), fontSmall, Brushes.Black, new PointF(e.PageBounds.Width - 350, e.PageBounds.Height - 40));
+
+            y += 50;
+
+            while (currentItemIndex < _organizerRequestList.Count)
+            {
+                zahtjev_organizator oRE = _organizerRequestList[currentItemIndex];
+                graphics.DrawString(oRE.ID.ToString(), font, Brushes.Black, new PointF(x, y));
+                graphics.DrawString(oRE.ID_korisnik.ToString(), font, Brushes.Black, new PointF(x + width + 40, y));
+                var prihvacen = "NE";
+                if(oRE.prihvacen == true)
+                {
+                    prihvacen = "DA";
+                }
+                graphics.DrawString(prihvacen, font, Brushes.Black, new PointF(x + width * 4 + 10, y)); ;
+                graphics.DrawString(oRE.opis, font, Brushes.Black, new PointF(x + width * 6, y));
+                y += height;
+                currentItemIndex++;
+
+                if (y > e.PageBounds.Height - 50)
+                {
+                    if (currentItemIndex < _organizerRequestList.Count)
                     {
                         e.HasMorePages = true;
                         return;

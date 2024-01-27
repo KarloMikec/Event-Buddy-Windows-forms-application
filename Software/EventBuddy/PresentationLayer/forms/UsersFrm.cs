@@ -73,5 +73,10 @@ namespace PresentationLayer.forms
         {
             pDFServices.saveUsersAsPDF(dgvUsers.DataSource as List<korisnik>, frmLogin.user);
         }
+
+        private void btnSaveAsPDFRequests_Click(object sender, EventArgs e)
+        {
+            pDFServices.saveOrganizerRequestsAsPDF(dgvUserRequests.DataSource as List<zahtjev_organizator>, frmLogin.user);
+        }
     }
 }
