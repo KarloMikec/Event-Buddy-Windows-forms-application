@@ -35,7 +35,7 @@
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btnProfile = new System.Windows.Forms.Button();
             this.dgvEvents = new System.Windows.Forms.DataGridView();
-            this.Događaji = new System.Windows.Forms.Label();
+            this.lblEvent = new System.Windows.Forms.Label();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -121,15 +121,15 @@
             this.dgvEvents.Size = new System.Drawing.Size(606, 387);
             this.dgvEvents.TabIndex = 6;
             // 
-            // Događaji
+            // lblEvent
             // 
-            this.Događaji.AutoSize = true;
-            this.Događaji.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Događaji.Location = new System.Drawing.Point(8, 130);
-            this.Događaji.Name = "Događaji";
-            this.Događaji.Size = new System.Drawing.Size(72, 20);
-            this.Događaji.TabIndex = 7;
-            this.Događaji.Text = "Događaji";
+            this.lblEvent.AutoSize = true;
+            this.lblEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvent.Location = new System.Drawing.Point(8, 130);
+            this.lblEvent.Name = "lblEvent";
+            this.lblEvent.Size = new System.Drawing.Size(72, 20);
+            this.lblEvent.TabIndex = 7;
+            this.lblEvent.Text = "Događaji";
             // 
             // btnCategories
             // 
@@ -257,7 +257,6 @@
             this.btnUsers.TabIndex = 23;
             this.btnUsers.Text = "Korisnici";
             this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Visible = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // frmMain
@@ -276,7 +275,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCategories);
-            this.Controls.Add(this.Događaji);
+            this.Controls.Add(this.lblEvent);
             this.Controls.Add(this.dgvEvents);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.dtpDate);
@@ -304,7 +303,7 @@
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.DataGridView dgvEvents;
-        private System.Windows.Forms.Label Događaji;
+        private System.Windows.Forms.Label lblEvent;
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;

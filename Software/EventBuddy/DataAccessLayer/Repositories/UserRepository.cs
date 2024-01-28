@@ -47,12 +47,15 @@ namespace DataAccessLayer.Repositories
         public int warnUser(int userID, bool saveChanges = true)
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
-            user.upozorenja += 1;
-            if (user.upozorenja > 1)
+            if(user.upozorenja == 1 || user.upozorenja == -1)
             {
+                user.upozorenja = 2;
                 revokeOrganizerRole(userID);
             }
-
+            if (user.upozorenja == 0)
+            {
+                user.upozorenja = 1;
+            }
             if (saveChanges)
             {
                 return SaveChanges();
