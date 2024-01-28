@@ -9,10 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace PresentationLayer.forms
 {
-    public partial class UsersFrm : Form
+    public partial class UsersFrm : MaterialForm
     {
         UserServices userService = new UserServices();
         RequestOrganizerService requestOrganizerService = new RequestOrganizerService();
@@ -31,6 +33,37 @@ namespace PresentationLayer.forms
         {
             showRequests();
             showUsers();
+            RefreshGUI();
+        }
+
+        private void RefreshGUI()
+        {
+
+            lblUser.Text = "Korisnici";
+            lblAdministratorRequest.Text = "Zahtjev za organizatora";
+            btnRefreshUsers.Text = "Osvježi";
+            btnSaveAsPDFUsers.Text = "Spremi kao PDF";
+            btnRefreshRequests.Text = "Osvježi";
+            btnSaveAsPDFRequests.Text = "Spremi kao PDF";
+            btnEditUser.Text = "Uredi korisnika";
+            btnAccept.Text = "Prihvati";
+            btnDecline.Text = "Odbij";
+
+            UserServices userServices = new UserServices();
+            var user = frmLogin.user;
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                lblUser.Text = translations.First(t => t.ID_atributa == "lblUser").prijevod;
+                lblAdministratorRequest.Text = translations.First(t => t.ID_atributa == "lblAdministratorRequest").prijevod;
+                btnRefreshUsers.Text = translations.First(t => t.ID_atributa == "btnRefreshUsers").prijevod;
+                btnSaveAsPDFUsers.Text = translations.First(t => t.ID_atributa == "btnSaveAsPDFUsers").prijevod;
+                btnRefreshRequests.Text = translations.First(t => t.ID_atributa == "btnRefreshRequests").prijevod;
+                btnSaveAsPDFRequests.Text = translations.First(t => t.ID_atributa == "btnSaveAsPDFRequests").prijevod;
+                btnEditUser.Text = translations.First(t => t.ID_atributa == "btnEditUser").prijevod;
+                btnAccept.Text = translations.First(t => t.ID_atributa == "btnAccept").prijevod;
+                btnDecline.Text = translations.First(t => t.ID_atributa == "btnDecline").prijevod;
+            }
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)

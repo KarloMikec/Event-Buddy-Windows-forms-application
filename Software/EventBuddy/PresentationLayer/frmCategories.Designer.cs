@@ -36,7 +36,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRequest = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDeleteCategory = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +104,7 @@
             this.btnRequest.TabIndex = 20;
             this.btnRequest.Text = "Zahtjevi";
             this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // btnEdit
             // 
@@ -116,23 +117,23 @@
             this.btnEdit.Text = "Izmijeni podatke";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // btnDeleteCategory
+            // btnDelete
             // 
-            this.btnDeleteCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCategory.Location = new System.Drawing.Point(472, 283);
-            this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(169, 41);
-            this.btnDeleteCategory.TabIndex = 22;
-            this.btnDeleteCategory.Text = "Obriši kategoriju";
-            this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(472, 283);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(169, 41);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Obriši kategoriju";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // frmCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 450);
-            this.Controls.Add(this.btnDeleteCategory);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnRequest);
             this.Controls.Add(this.btnAdd);
@@ -143,6 +144,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "frmCategories";
             this.Text = "Kategorije";
+            this.Load += new System.EventHandler(this.frmCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,6 +161,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRequest;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDeleteCategory;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

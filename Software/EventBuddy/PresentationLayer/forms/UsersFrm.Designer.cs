@@ -30,8 +30,8 @@
         {
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnEditUser = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblAdministratorRequest = new System.Windows.Forms.Label();
             this.btnDecline = new System.Windows.Forms.Button();
             this.dgvUserRequests = new System.Windows.Forms.DataGridView();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -49,56 +49,51 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(16, 55);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUsers.Location = new System.Drawing.Point(12, 110);
             this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(1035, 315);
+            this.dgvUsers.Size = new System.Drawing.Size(776, 222);
             this.dgvUsers.TabIndex = 0;
             // 
             // btnEditUser
             // 
             this.btnEditUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnEditUser.Location = new System.Drawing.Point(1080, 311);
-            this.btnEditUser.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditUser.Location = new System.Drawing.Point(810, 291);
             this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(233, 50);
+            this.btnEditUser.Size = new System.Drawing.Size(175, 41);
             this.btnEditUser.TabIndex = 1;
             this.btnEditUser.Text = "Uredi korisnika";
             this.btnEditUser.UseVisualStyleBackColor = true;
             this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.Location = new System.Drawing.Point(16, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Korisnici";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblUser.Location = new System.Drawing.Point(12, 87);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(74, 20);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Korisnici";
             // 
-            // label2
+            // lblAdministratorRequest
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(16, 398);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Zahtjevi za organizatora";
+            this.lblAdministratorRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblAdministratorRequest.AutoSize = true;
+            this.lblAdministratorRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblAdministratorRequest.Location = new System.Drawing.Point(12, 359);
+            this.lblAdministratorRequest.Name = "lblAdministratorRequest";
+            this.lblAdministratorRequest.Size = new System.Drawing.Size(187, 20);
+            this.lblAdministratorRequest.TabIndex = 5;
+            this.lblAdministratorRequest.Text = "Zahtjevi za organizatora";
             // 
             // btnDecline
             // 
             this.btnDecline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDecline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnDecline.Location = new System.Drawing.Point(1080, 554);
-            this.btnDecline.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDecline.Location = new System.Drawing.Point(810, 446);
             this.btnDecline.Name = "btnDecline";
-            this.btnDecline.Size = new System.Drawing.Size(233, 50);
+            this.btnDecline.Size = new System.Drawing.Size(175, 41);
             this.btnDecline.TabIndex = 4;
             this.btnDecline.Text = "Odbij";
             this.btnDecline.UseVisualStyleBackColor = true;
@@ -109,20 +104,18 @@
             this.dgvUserRequests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUserRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserRequests.Location = new System.Drawing.Point(16, 426);
-            this.dgvUserRequests.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUserRequests.Location = new System.Drawing.Point(12, 382);
             this.dgvUserRequests.Name = "dgvUserRequests";
-            this.dgvUserRequests.Size = new System.Drawing.Size(1035, 206);
+            this.dgvUserRequests.Size = new System.Drawing.Size(776, 167);
             this.dgvUserRequests.TabIndex = 3;
             // 
             // btnAccept
             // 
             this.btnAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnAccept.Location = new System.Drawing.Point(1080, 455);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAccept.Location = new System.Drawing.Point(810, 382);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(233, 50);
+            this.btnAccept.Size = new System.Drawing.Size(175, 41);
             this.btnAccept.TabIndex = 6;
             this.btnAccept.Text = "Prihvati";
             this.btnAccept.UseVisualStyleBackColor = true;
@@ -132,10 +125,9 @@
             // 
             this.btnSaveAsPDFUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSaveAsPDFUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDFUsers.Location = new System.Drawing.Point(855, 11);
-            this.btnSaveAsPDFUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveAsPDFUsers.Location = new System.Drawing.Point(641, 74);
             this.btnSaveAsPDFUsers.Name = "btnSaveAsPDFUsers";
-            this.btnSaveAsPDFUsers.Size = new System.Drawing.Size(196, 37);
+            this.btnSaveAsPDFUsers.Size = new System.Drawing.Size(147, 30);
             this.btnSaveAsPDFUsers.TabIndex = 20;
             this.btnSaveAsPDFUsers.Text = "Spremi kao PDF";
             this.btnSaveAsPDFUsers.UseVisualStyleBackColor = true;
@@ -145,10 +137,9 @@
             // 
             this.btnSaveAsPDFRequests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSaveAsPDFRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDFRequests.Location = new System.Drawing.Point(855, 385);
-            this.btnSaveAsPDFRequests.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveAsPDFRequests.Location = new System.Drawing.Point(641, 349);
             this.btnSaveAsPDFRequests.Name = "btnSaveAsPDFRequests";
-            this.btnSaveAsPDFRequests.Size = new System.Drawing.Size(196, 37);
+            this.btnSaveAsPDFRequests.Size = new System.Drawing.Size(147, 30);
             this.btnSaveAsPDFRequests.TabIndex = 21;
             this.btnSaveAsPDFRequests.Text = "Spremi kao PDF";
             this.btnSaveAsPDFRequests.UseVisualStyleBackColor = true;
@@ -158,10 +149,9 @@
             // 
             this.btnRefreshRequests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRefreshRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefreshRequests.Location = new System.Drawing.Point(758, 385);
-            this.btnRefreshRequests.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefreshRequests.Location = new System.Drawing.Point(554, 347);
             this.btnRefreshRequests.Name = "btnRefreshRequests";
-            this.btnRefreshRequests.Size = new System.Drawing.Size(89, 36);
+            this.btnRefreshRequests.Size = new System.Drawing.Size(81, 29);
             this.btnRefreshRequests.TabIndex = 22;
             this.btnRefreshRequests.Text = "Osvježi";
             this.btnRefreshRequests.UseVisualStyleBackColor = true;
@@ -171,10 +161,9 @@
             // 
             this.btnRefreshUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRefreshUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefreshUsers.Location = new System.Drawing.Point(758, 11);
-            this.btnRefreshUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefreshUsers.Location = new System.Drawing.Point(554, 75);
             this.btnRefreshUsers.Name = "btnRefreshUsers";
-            this.btnRefreshUsers.Size = new System.Drawing.Size(89, 36);
+            this.btnRefreshUsers.Size = new System.Drawing.Size(81, 29);
             this.btnRefreshUsers.TabIndex = 23;
             this.btnRefreshUsers.Text = "Osvježi";
             this.btnRefreshUsers.UseVisualStyleBackColor = true;
@@ -182,22 +171,21 @@
             // 
             // UsersFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 663);
+            this.ClientSize = new System.Drawing.Size(1031, 578);
             this.Controls.Add(this.btnRefreshUsers);
             this.Controls.Add(this.btnRefreshRequests);
             this.Controls.Add(this.btnSaveAsPDFRequests);
             this.Controls.Add(this.btnSaveAsPDFUsers);
             this.Controls.Add(this.btnAccept);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblAdministratorRequest);
             this.Controls.Add(this.btnDecline);
             this.Controls.Add(this.dgvUserRequests);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.dgvUsers);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1369, 702);
+            this.MinimumSize = new System.Drawing.Size(1031, 578);
             this.Name = "UsersFrm";
             this.Text = "Prikaz korisnika i zahtjeva za organizatore";
             this.Load += new System.EventHandler(this.UsersFrm_Load);
@@ -212,8 +200,8 @@
 
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnEditUser;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblAdministratorRequest;
         private System.Windows.Forms.Button btnDecline;
         private System.Windows.Forms.DataGridView dgvUserRequests;
         private System.Windows.Forms.Button btnAccept;

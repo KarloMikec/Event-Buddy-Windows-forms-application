@@ -23,6 +23,7 @@ namespace PresentationLayer
         private EventServices eventServices = new EventServices();
         PDFServices pDFServices = new PDFServices();
         MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
+        UserServices userServices = new UserServices();
 
         public frmParticipants(dogadaj _event)
         {
@@ -69,6 +70,20 @@ namespace PresentationLayer
                 dgvParticipants.EnableHeadersVisualStyles = false;
                 dgvParticipants.RowHeadersDefaultCellStyle.BackColor = Color.White;
                 dgvParticipants.DefaultCellStyle.ForeColor = Color.Black;
+            }
+
+            btnSaveAsPDF.Text = "Spremi kao PDF";
+            btnBan.Text = "Zabrani pristup";
+            btnRemove.Text = "Izbaci";
+
+            var user = frmLogin.user;
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                btnSaveAsPDF.Text = translations.First(t => t.ID_atributa == "btnSaveAsPDF").prijevod;
+                btnBan.Text = translations.First(t => t.ID_atributa == "btnBan").prijevod;
+                btnRemove.Text = translations.First(t => t.ID_atributa == "btnRemove").prijevod;
+
             }
         }
 

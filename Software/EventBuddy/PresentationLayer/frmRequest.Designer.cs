@@ -110,6 +110,7 @@
             this.Controls.Add(this.dgvRequest);
             this.Name = "frmRequest";
             this.Text = "Zahtjev za kategoriju";
+            this.Load += new System.EventHandler(this.frmRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

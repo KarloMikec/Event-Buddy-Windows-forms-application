@@ -64,6 +64,43 @@ namespace PresentationLayer
             dgvEvents.DataSource = eventServices.GetAllEvents();
             HideFields();
             ChangeTheme();
+
+            lblEvent.Text = "Događaji";
+            btnSearch.Text = "Pretraži";
+            btnRefresh.Text = "Osvježi";
+            lblDate.Text = "Datum";
+            lblPlace.Text = "Mjesto";
+            btnSaveAsPDF.Text = "Spremi kao PDF";
+            btnProfile.Text = "Profil";
+            btnParticipants.Text = "Sudionici";
+            btnHideEvent.Text = "Sakrij događaj";
+            btnDismissEvent.Text = "Obustavi";
+            btnEdit.Text = "Izmijeni podatke";
+            btnDelete.Text = "Obriši događaj";
+            btnCategories.Text = "Kategorije";
+            btnUsers.Text = "Korisnici";
+            Text = "Glavna";
+
+            var user = frmLogin.user;
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                lblEvent.Text = translations.First(t => t.ID_atributa == "lblEvent").prijevod;
+                btnSearch.Text = translations.First(t => t.ID_atributa == "btnSearch").prijevod;
+                btnRefresh.Text = translations.First(t => t.ID_atributa == "btnRefresh").prijevod;
+                lblDate.Text = translations.First(t => t.ID_atributa == "lblDate").prijevod;
+                lblPlace.Text = translations.First(t => t.ID_atributa == "lblPlace").prijevod;
+                btnSaveAsPDF.Text = translations.First(t => t.ID_atributa == "btnSaveAsPDF").prijevod;
+                btnProfile.Text = translations.First(t => t.ID_atributa == "btnProfile").prijevod;
+                btnParticipants.Text = translations.First(t => t.ID_atributa == "btnParticipants").prijevod;
+                btnHideEvent.Text = translations.First(t => t.ID_atributa == "btnHideEvent").prijevod;
+                btnDismissEvent.Text = translations.First(t => t.ID_atributa == "btnDismissEvent").prijevod;
+                btnEdit.Text = translations.First(t => t.ID_atributa == "btnEdit").prijevod;
+                btnDelete.Text = translations.First(t => t.ID_atributa == "btnDelete").prijevod;
+                btnCategories.Text = translations.First(t => t.ID_atributa == "btnCategories").prijevod;
+                btnUsers.Text = translations.First(t => t.ID_atributa == "btnUsers").prijevod;
+                Text = translations.First(t => t.ID_atributa == "frmMain").prijevod;
+            }
         }
 
         /// <summary>
@@ -179,7 +216,7 @@ namespace PresentationLayer
         {
             Profil frmProfil = new Profil();
             frmProfil.ShowDialog();
-            ChangeTheme();
+            RefreshGUI();
         }
 
         private void btnHideEvent_Click(object sender, EventArgs e)
@@ -255,6 +292,12 @@ namespace PresentationLayer
                 RefreshGUI();
             }
             else MessageBox.Show("Morate odabrati događaj", "Izmjena", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            frmCategories frmCategories = new frmCategories();
+            frmCategories.ShowDialog();
         }
     }
 }

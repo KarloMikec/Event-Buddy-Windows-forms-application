@@ -9,10 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace PresentationLayer.forms
 {
-    public partial class EditUserFrm : Form
+    public partial class EditUserFrm : MaterialForm
     {
         korisnik _selectedUser;
         UserServices userService = new UserServices();
@@ -54,6 +56,44 @@ namespace PresentationLayer.forms
                 btnMod.Text = "Makni ulogu";
                 modRoleInit = true;
                 modRoleAfter = true;
+            }
+
+            RefreshGUI();
+        }
+
+        private void RefreshGUI()
+        {
+
+            lblName.Text = "Ime";
+            lblSurname.Text = "Prezime";
+            lblUsername.Text = "Korisničko ime";
+            lblAlertNumber.Text = "Broj upozorenja:";
+            lblRole.Text = "Uloge:";
+            btnOrganizerBox.Text = "Organizator";
+            btnModBox.Text = "Moderator";
+            btnOrganizer.Text = "Dodaj ulogu";
+            btnMod.Text = "Dodaj ulogu";
+            btnQuit.Text = "Odustani";
+            btnSave.Text = "Spremi";
+
+
+            UserServices userServices = new UserServices();
+            var user = frmLogin.user;
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                lblName.Text = translations.First(t => t.ID_atributa == "lblName").prijevod;
+                lblSurname.Text = translations.First(t => t.ID_atributa == "lblSurname").prijevod;
+                lblUsername.Text = translations.First(t => t.ID_atributa == "lblUsername").prijevod;
+                lblAlertNumber.Text = translations.First(t => t.ID_atributa == "lblAlertNumber").prijevod;
+                lblRole.Text = translations.First(t => t.ID_atributa == "lblRole").prijevod;
+                btnOrganizerBox.Text = translations.First(t => t.ID_atributa == "btnOrganizerBox").prijevod;
+                btnModBox.Text = translations.First(t => t.ID_atributa == "btnModBox").prijevod;
+                btnOrganizer.Text = translations.First(t => t.ID_atributa == "btnOrganizer").prijevod;
+                btnMod.Text = translations.First(t => t.ID_atributa == "btnMod").prijevod;
+                btnQuit.Text = translations.First(t => t.ID_atributa == "btnQuit").prijevod;
+                btnSave.Text = translations.First(t => t.ID_atributa == "btnSave").prijevod;
+
             }
         }
 

@@ -30,8 +30,8 @@
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblPlace = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btnProfile = new System.Windows.Forms.Button();
             this.dgvEvents = new System.Windows.Forms.DataGridView();
@@ -69,25 +69,25 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // label1
+            // lblDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(256, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Datum";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(256, 75);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(46, 16);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "Datum";
             // 
-            // label2
+            // lblPlace
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(495, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Mjesto";
+            this.lblPlace.AutoSize = true;
+            this.lblPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlace.Location = new System.Drawing.Point(495, 76);
+            this.lblPlace.Name = "lblPlace";
+            this.lblPlace.Size = new System.Drawing.Size(47, 16);
+            this.lblPlace.TabIndex = 3;
+            this.lblPlace.Text = "Mjesto";
             // 
             // dtpDate
             // 
@@ -142,6 +142,7 @@
             this.btnCategories.Text = "Kategorije";
             this.btnCategories.UseVisualStyleBackColor = true;
             this.btnCategories.Visible = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // btnDelete
             // 
@@ -279,8 +280,8 @@
             this.Controls.Add(this.dgvEvents);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.dtpDate);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPlace);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.MinimumSize = new System.Drawing.Size(816, 555);
@@ -298,8 +299,8 @@
 
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblPlace;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.DataGridView dgvEvents;

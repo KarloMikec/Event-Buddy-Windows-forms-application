@@ -30,12 +30,12 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPlace = new MaterialSkin.Controls.MaterialLabel();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblDate = new MaterialSkin.Controls.MaterialLabel();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblName = new MaterialSkin.Controls.MaterialLabel();
+            this.lblOverView = new MaterialSkin.Controls.MaterialLabel();
             this.txtName = new MaterialSkin.Controls.MaterialTextBox();
             this.txtDescription = new MaterialSkin.Controls.MaterialTextBox();
             this.txtLocation = new MaterialSkin.Controls.MaterialTextBox();
@@ -73,17 +73,17 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel3, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.dtpDate, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel4, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblDate, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.dtpTime, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblName, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblOverView, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtName, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtDescription, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtLocation, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnClose, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lblPlace, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(9, 54);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -97,18 +97,18 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 304);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // materialLabel3
+            // lblPlace
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel3.Location = new System.Drawing.Point(103, 80);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(63, 24);
-            this.materialLabel3.TabIndex = 4;
-            this.materialLabel3.Text = "Mjesto";
+            this.lblPlace.AutoSize = true;
+            this.lblPlace.Depth = 0;
+            this.lblPlace.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPlace.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblPlace.Location = new System.Drawing.Point(103, 80);
+            this.lblPlace.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPlace.Name = "lblPlace";
+            this.lblPlace.Size = new System.Drawing.Size(63, 24);
+            this.lblPlace.TabIndex = 4;
+            this.lblPlace.Text = "Mjesto";
             // 
             // dtpDate
             // 
@@ -119,18 +119,18 @@
             this.dtpDate.Size = new System.Drawing.Size(194, 29);
             this.dtpDate.TabIndex = 7;
             // 
-            // materialLabel4
+            // lblDate
             // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel4.Location = new System.Drawing.Point(103, 120);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(60, 24);
-            this.materialLabel4.TabIndex = 5;
-            this.materialLabel4.Text = "Datum";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Depth = 0;
+            this.lblDate.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblDate.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblDate.Location = new System.Drawing.Point(103, 120);
+            this.lblDate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(60, 24);
+            this.lblDate.TabIndex = 5;
+            this.lblDate.Text = "Datum";
             // 
             // dtpTime
             // 
@@ -140,31 +140,31 @@
             this.dtpTime.Size = new System.Drawing.Size(94, 29);
             this.dtpTime.TabIndex = 8;
             // 
-            // materialLabel1
+            // lblName
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel1.Location = new System.Drawing.Point(103, 0);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(51, 24);
-            this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "Naziv";
+            this.lblName.AutoSize = true;
+            this.lblName.Depth = 0;
+            this.lblName.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblName.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblName.Location = new System.Drawing.Point(103, 0);
+            this.lblName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(51, 24);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Naziv";
             // 
-            // materialLabel2
+            // lblOverView
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel2.Location = new System.Drawing.Point(103, 40);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(41, 24);
-            this.materialLabel2.TabIndex = 3;
-            this.materialLabel2.Text = "Opis";
+            this.lblOverView.AutoSize = true;
+            this.lblOverView.Depth = 0;
+            this.lblOverView.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblOverView.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblOverView.Location = new System.Drawing.Point(103, 40);
+            this.lblOverView.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblOverView.Name = "lblOverView";
+            this.lblOverView.Size = new System.Drawing.Size(41, 24);
+            this.lblOverView.TabIndex = 3;
+            this.lblOverView.Text = "Opis";
             // 
             // txtName
             // 
@@ -203,7 +203,7 @@
             this.txtLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tableLayoutPanel2.SetColumnSpan(this.txtLocation, 2);
             this.txtLocation.Depth = 0;
-            this.txtLocation.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtLocation.Location = new System.Drawing.Point(203, 83);
             this.txtLocation.MaxLength = 250;
             this.txtLocation.MouseState = MaterialSkin.MouseState.OUT;
@@ -278,10 +278,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MaterialSkin.Controls.MaterialTextBox txtName;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel lblName;
+        private MaterialSkin.Controls.MaterialLabel lblOverView;
+        private MaterialSkin.Controls.MaterialLabel lblPlace;
+        private MaterialSkin.Controls.MaterialLabel lblDate;
         private MaterialSkin.Controls.MaterialTextBox txtDescription;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.DateTimePicker dtpTime;

@@ -39,6 +39,34 @@ namespace PresentationLayer
             txtLocation.Text = Event.mjesto;
             dtpDate.Value = Event.datum;
             dtpTime.Value = Event.datum;
+
+            RefreshGUI();
+        }
+
+        private void RefreshGUI()
+        {
+
+            lblName.Text = "Naziv";
+            lblOverView.Text = "Opis";
+            lblPlace.Text = "Mjesto";
+            lblDate.Text = "Datum";
+            btnClose.Text = "Odustani";
+            btnSave.Text = "Spremi";
+           
+
+            UserServices userServices = new UserServices();
+            var user = frmLogin.user;
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                lblName.Text = translations.First(t => t.ID_atributa == "lblName").prijevod;
+                lblOverView.Text = translations.First(t => t.ID_atributa == "lblOverView").prijevod;
+                lblPlace.Text = translations.First(t => t.ID_atributa == "lblPlace").prijevod;
+                lblDate.Text = translations.First(t => t.ID_atributa == "lblDate").prijevod;
+                btnClose.Text = translations.First(t => t.ID_atributa == "btnClose").prijevod;
+                btnSave.Text = translations.First(t => t.ID_atributa == "btnSave").prijevod;
+
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)

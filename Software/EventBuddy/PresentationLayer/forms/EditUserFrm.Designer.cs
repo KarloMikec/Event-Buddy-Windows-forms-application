@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblAlertNumber = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
             this.txtNumberOfWarnings = new System.Windows.Forms.TextBox();
             this.btnOrganizerBox = new System.Windows.Forms.Button();
             this.btnModBox = new System.Windows.Forms.Button();
@@ -45,108 +45,98 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.Location = new System.Drawing.Point(76, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ime:";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblName.Location = new System.Drawing.Point(26, 76);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(41, 20);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Ime:";
             // 
-            // label2
+            // lblSurname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(76, 90);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Prezime:";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblSurname.Location = new System.Drawing.Point(26, 128);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(76, 20);
+            this.lblSurname.TabIndex = 1;
+            this.lblSurname.Text = "Prezime:";
             // 
-            // label3
+            // lblUsername
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label3.Location = new System.Drawing.Point(76, 156);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Korisničko ime:";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblUsername.Location = new System.Drawing.Point(26, 180);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(124, 20);
+            this.lblUsername.TabIndex = 2;
+            this.lblUsername.Text = "Korisničko ime:";
             // 
-            // label4
+            // lblAlertNumber
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label4.Location = new System.Drawing.Point(76, 225);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Broj upozorenja:";
+            this.lblAlertNumber.AutoSize = true;
+            this.lblAlertNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblAlertNumber.Location = new System.Drawing.Point(26, 241);
+            this.lblAlertNumber.Name = "lblAlertNumber";
+            this.lblAlertNumber.Size = new System.Drawing.Size(132, 20);
+            this.lblAlertNumber.TabIndex = 3;
+            this.lblAlertNumber.Text = "Broj upozorenja:";
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtName.Location = new System.Drawing.Point(64, 55);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(30, 99);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(327, 26);
+            this.txtName.Size = new System.Drawing.Size(296, 26);
             this.txtName.TabIndex = 4;
             // 
             // txtSurname
             // 
             this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtSurname.Location = new System.Drawing.Point(64, 119);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurname.Location = new System.Drawing.Point(30, 151);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.ReadOnly = true;
-            this.txtSurname.Size = new System.Drawing.Size(327, 26);
+            this.txtSurname.Size = new System.Drawing.Size(296, 26);
             this.txtSurname.TabIndex = 5;
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtUsername.Location = new System.Drawing.Point(64, 184);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(30, 203);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(327, 26);
+            this.txtUsername.Size = new System.Drawing.Size(296, 26);
             this.txtUsername.TabIndex = 6;
             // 
-            // label5
+            // lblRole
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label5.Location = new System.Drawing.Point(40, 266);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Uloge:";
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblRole.Location = new System.Drawing.Point(26, 286);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(57, 20);
+            this.lblRole.TabIndex = 7;
+            this.lblRole.Text = "Uloge:";
             // 
             // txtNumberOfWarnings
             // 
             this.txtNumberOfWarnings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtNumberOfWarnings.Location = new System.Drawing.Point(260, 223);
-            this.txtNumberOfWarnings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumberOfWarnings.Location = new System.Drawing.Point(272, 238);
             this.txtNumberOfWarnings.Name = "txtNumberOfWarnings";
             this.txtNumberOfWarnings.ReadOnly = true;
-            this.txtNumberOfWarnings.Size = new System.Drawing.Size(59, 26);
+            this.txtNumberOfWarnings.Size = new System.Drawing.Size(54, 26);
             this.txtNumberOfWarnings.TabIndex = 8;
             // 
             // btnOrganizerBox
             // 
             this.btnOrganizerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnOrganizerBox.Location = new System.Drawing.Point(40, 295);
-            this.btnOrganizerBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrganizerBox.Location = new System.Drawing.Point(30, 309);
             this.btnOrganizerBox.Name = "btnOrganizerBox";
-            this.btnOrganizerBox.Size = new System.Drawing.Size(184, 90);
+            this.btnOrganizerBox.Size = new System.Drawing.Size(138, 52);
             this.btnOrganizerBox.TabIndex = 9;
             this.btnOrganizerBox.Text = "Organizator";
             this.btnOrganizerBox.UseVisualStyleBackColor = true;
@@ -154,10 +144,9 @@
             // btnModBox
             // 
             this.btnModBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnModBox.Location = new System.Drawing.Point(250, 295);
-            this.btnModBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModBox.Location = new System.Drawing.Point(188, 309);
             this.btnModBox.Name = "btnModBox";
-            this.btnModBox.Size = new System.Drawing.Size(184, 90);
+            this.btnModBox.Size = new System.Drawing.Size(138, 52);
             this.btnModBox.TabIndex = 10;
             this.btnModBox.Text = "Moderator";
             this.btnModBox.UseVisualStyleBackColor = true;
@@ -165,10 +154,9 @@
             // btnOrganizer
             // 
             this.btnOrganizer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnOrganizer.Location = new System.Drawing.Point(40, 392);
-            this.btnOrganizer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrganizer.Location = new System.Drawing.Point(30, 376);
             this.btnOrganizer.Name = "btnOrganizer";
-            this.btnOrganizer.Size = new System.Drawing.Size(151, 49);
+            this.btnOrganizer.Size = new System.Drawing.Size(138, 28);
             this.btnOrganizer.TabIndex = 11;
             this.btnOrganizer.Text = "Dodaj ulogu";
             this.btnOrganizer.UseVisualStyleBackColor = true;
@@ -177,10 +165,9 @@
             // btnMod
             // 
             this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnMod.Location = new System.Drawing.Point(274, 392);
-            this.btnMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMod.Location = new System.Drawing.Point(188, 376);
             this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(160, 49);
+            this.btnMod.Size = new System.Drawing.Size(138, 28);
             this.btnMod.TabIndex = 12;
             this.btnMod.Text = "Dodaj ulogu";
             this.btnMod.UseVisualStyleBackColor = true;
@@ -189,10 +176,9 @@
             // btnQuit
             // 
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnQuit.Location = new System.Drawing.Point(40, 474);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuit.Location = new System.Drawing.Point(30, 432);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(184, 60);
+            this.btnQuit.Size = new System.Drawing.Size(138, 49);
             this.btnQuit.TabIndex = 13;
             this.btnQuit.Text = "Odustani";
             this.btnQuit.UseVisualStyleBackColor = true;
@@ -201,10 +187,9 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnSave.Location = new System.Drawing.Point(250, 474);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(188, 432);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(184, 60);
+            this.btnSave.Size = new System.Drawing.Size(138, 49);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -212,9 +197,9 @@
             // 
             // EditUserFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 607);
+            this.ClientSize = new System.Drawing.Size(361, 493);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnQuit);
@@ -223,16 +208,15 @@
             this.Controls.Add(this.btnModBox);
             this.Controls.Add(this.btnOrganizerBox);
             this.Controls.Add(this.txtNumberOfWarnings);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblRole);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAlertNumber);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.lblName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditUserFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izmjena podataka korisnika";
@@ -244,14 +228,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblAlertNumber;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.TextBox txtNumberOfWarnings;
         private System.Windows.Forms.Button btnOrganizerBox;
         private System.Windows.Forms.Button btnModBox;

@@ -9,10 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace PresentationLayer.forms
 {
-    public partial class HideEventFrm : Form
+    public partial class HideEventFrm : MaterialForm
     {
         dogadaj _selectedEvent = null;
         EventServices eventServices = new EventServices();
@@ -36,9 +38,30 @@ namespace PresentationLayer.forms
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
-        {   
+        {
             Close();
         }
 
+        private void HideEventFrm_Load(object sender, EventArgs e)
+        {
+            RefreshGUI();
+        }
+
+        private void RefreshGUI()
+        {
+
+            btnHideEvent.Text = "Sakrij događaj sa slanjem upozorenja";
+            btnRemoveRole.Text = "Makni ulogu organizatora";
+            btnQuit.Text = "Odustani od sakrivanja";
+
+            var user = frmLogin.user;
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                btnHideEvent.Text = translations.First(t => t.ID_atributa == "btnHideEvent").prijevod;
+                btnRemoveRole.Text = translations.First(t => t.ID_atributa == "btnRemoveRole").prijevod;
+                btnQuit.Text = translations.First(t => t.ID_atributa == "btnQuit").prijevod;
+            }
+        }
     }
 }

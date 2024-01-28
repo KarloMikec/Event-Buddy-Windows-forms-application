@@ -82,6 +82,7 @@ namespace PresentationLayer
         /// </summary>
         private void RefreshGUI()
         {
+            msChangeTheme.Checked = frmLogin.theme == MaterialSkinManager.Themes.DARK;
             var user = frmLogin.user;
             txtKorime.Text = user.korime;
             txtNewPassword.Text = "";
@@ -135,10 +136,12 @@ namespace PresentationLayer
             if (msChangeTheme.Checked)
             {
                 changeTheme.Theme = MaterialSkinManager.Themes.DARK;
+                frmLogin.theme = MaterialSkinManager.Themes.DARK;
             }
             else
             {
                 changeTheme.Theme = MaterialSkinManager.Themes.LIGHT;
+                frmLogin.theme = MaterialSkinManager.Themes.LIGHT;
             }
         }
 
