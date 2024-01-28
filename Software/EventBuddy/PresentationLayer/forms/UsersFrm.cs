@@ -29,15 +29,8 @@ namespace PresentationLayer.forms
 
         private void UsersFrm_Load(object sender, EventArgs e)
         {
-            dgvUsers.DataSource = userService.getAllUsers();
             showRequests();
-            dgvUsers.Columns[6].Visible = false;
-            dgvUsers.Columns[7].Visible = false;
-            dgvUsers.Columns[8].Visible = false;
-            dgvUsers.Columns[9].Visible = false;
-            dgvUsers.Columns[10].Visible = false;
-            dgvUsers.Columns[11].Visible = false;
-            dgvUsers.Columns[12].Visible = false;
+            showUsers();
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
@@ -53,6 +46,18 @@ namespace PresentationLayer.forms
         private void showRequests()
         {
             dgvUserRequests.DataSource = requestOrganizerService.getAllRequests();
+        }
+
+        private void showUsers()
+        {
+            dgvUsers.DataSource = userService.getAllUsers();
+            dgvUsers.Columns[6].Visible = false;
+            dgvUsers.Columns[7].Visible = false;
+            dgvUsers.Columns[8].Visible = false;
+            dgvUsers.Columns[9].Visible = false;
+            dgvUsers.Columns[10].Visible = false;
+            dgvUsers.Columns[11].Visible = false;
+            dgvUsers.Columns[12].Visible = false;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -84,6 +89,16 @@ namespace PresentationLayer.forms
         private void btnSaveAsPDFRequests_Click(object sender, EventArgs e)
         {
             pDFServices.saveOrganizerRequestsAsPDF(dgvUserRequests.DataSource as List<zahtjev_organizator>, frmLogin.user);
+        }
+
+        private void btnRefreshUsers_Click(object sender, EventArgs e)
+        {
+            showUsers();
+        }
+
+        private void btnRefreshRequests_Click(object sender, EventArgs e)
+        {
+            showRequests();
         }
     }
 }

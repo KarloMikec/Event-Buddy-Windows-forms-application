@@ -37,6 +37,8 @@
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnSaveAsPDFUsers = new System.Windows.Forms.Button();
             this.btnSaveAsPDFRequests = new System.Windows.Forms.Button();
+            this.btnRefreshRequests = new System.Windows.Forms.Button();
+            this.btnRefreshUsers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserRequests)).BeginInit();
             this.SuspendLayout();
@@ -152,11 +154,39 @@
             this.btnSaveAsPDFRequests.UseVisualStyleBackColor = true;
             this.btnSaveAsPDFRequests.Click += new System.EventHandler(this.btnSaveAsPDFRequests_Click);
             // 
+            // btnRefreshRequests
+            // 
+            this.btnRefreshRequests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnRefreshRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefreshRequests.Location = new System.Drawing.Point(758, 385);
+            this.btnRefreshRequests.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefreshRequests.Name = "btnRefreshRequests";
+            this.btnRefreshRequests.Size = new System.Drawing.Size(89, 36);
+            this.btnRefreshRequests.TabIndex = 22;
+            this.btnRefreshRequests.Text = "Osvježi";
+            this.btnRefreshRequests.UseVisualStyleBackColor = true;
+            this.btnRefreshRequests.Click += new System.EventHandler(this.btnRefreshRequests_Click);
+            // 
+            // btnRefreshUsers
+            // 
+            this.btnRefreshUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRefreshUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefreshUsers.Location = new System.Drawing.Point(758, 11);
+            this.btnRefreshUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefreshUsers.Name = "btnRefreshUsers";
+            this.btnRefreshUsers.Size = new System.Drawing.Size(89, 36);
+            this.btnRefreshUsers.TabIndex = 23;
+            this.btnRefreshUsers.Text = "Osvježi";
+            this.btnRefreshUsers.UseVisualStyleBackColor = true;
+            this.btnRefreshUsers.Click += new System.EventHandler(this.btnRefreshUsers_Click);
+            // 
             // UsersFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 663);
+            this.Controls.Add(this.btnRefreshUsers);
+            this.Controls.Add(this.btnRefreshRequests);
             this.Controls.Add(this.btnSaveAsPDFRequests);
             this.Controls.Add(this.btnSaveAsPDFUsers);
             this.Controls.Add(this.btnAccept);
@@ -189,5 +219,7 @@
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnSaveAsPDFUsers;
         private System.Windows.Forms.Button btnSaveAsPDFRequests;
+        private System.Windows.Forms.Button btnRefreshRequests;
+        private System.Windows.Forms.Button btnRefreshUsers;
     }
 }
