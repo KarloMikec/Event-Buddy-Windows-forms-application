@@ -18,6 +18,7 @@ namespace PresentationLayer
     {
         public UserServices userServices = new UserServices();
         public RequestCategoryServices requestCategoryServices = new RequestCategoryServices();
+        public PDFServices pDFServices = new PDFServices();
         public frmRequest()
         {
             InitializeComponent();
@@ -137,6 +138,11 @@ namespace PresentationLayer
             btnSaveAsPDF.Visible = true;
             dgvRequest.Visible = true;
             txtNameOfCategory.Visible = false;
+        }
+
+        private void btnSaveAsPDF_Click(object sender, EventArgs e)
+        {
+            pDFServices.saveCategoryRequestsAsPDF(dgvRequest.DataSource as List<zahtjev_kategorija>, frmLogin.user);
         }
     }
 }

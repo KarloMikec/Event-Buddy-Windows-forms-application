@@ -18,6 +18,7 @@ namespace PresentationLayer
     {
         public UserServices userServices = new UserServices();
         public CategoryServices categoryServices = new CategoryServices();
+        public PDFServices pDFServices = new PDFServices();
         public frmCategories()
         {
             InitializeComponent();
@@ -101,6 +102,11 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Naziv kategorije ne smije biti prazan");
             }
+        }
+
+        private void btnSaveAsPDF_Click(object sender, EventArgs e)
+        {
+            pDFServices.saveCategoriesAsPDF(dgvCategory.DataSource as List<kategorija>, frmLogin.user);
         }
     }
 }

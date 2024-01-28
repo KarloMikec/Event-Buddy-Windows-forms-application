@@ -13,6 +13,8 @@ namespace BusinessLogicLayer.Services
     {
         private List<dogadaj> _eventList;
         private List<korisnik> _userList;
+        private List<kategorija> _categoryList;
+        private List<zahtjev_kategorija> _categoryRequests;
         private List<zahtjev_organizator> _organizerRequestList;
         private int currentItemIndex;
         private korisnik _user;
@@ -271,6 +273,116 @@ namespace BusinessLogicLayer.Services
                 if (y > e.PageBounds.Height - 50)
                 {
                     if (currentItemIndex < _userList.Count)
+                    {
+                        e.HasMorePages = true;
+                        return;
+                    }
+                    else
+                    {
+                        e.HasMorePages = false;
+                        currentItemIndex = 0;
+                        return;
+                    }
+                }
+            }
+        }
+
+        public void saveCategoriesAsPDF(List<kategorija> categories, korisnik user)
+        {
+            _categoryList = categories;
+            _user = user;
+            PrintDocument document = new PrintDocument();
+            document.PrintPage += new PrintPageEventHandler(saveCategoriesAsPDFPrintPage);
+            currentItemIndex = 0;
+            document.Print();
+        }
+
+        private void saveCategoriesAsPDFPrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Font font = new Font("Arial", 12);
+            Font fontSmall = new Font("Arial", 10);
+            Font fontBig = new Font("Arial", 16);
+            int x = 50;
+            int y = 50;
+            int width = 50;
+            int height = 50;
+
+            graphics.DrawString("ID", fontBig, Brushes.Black, new PointF(x, y));
+            graphics.DrawString("Naziv", fontBig, Brushes.Black, new PointF(x + width, y));
+
+            graphics.DrawString("Kreirao: " + _user.ToString() + " na datum " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString(), fontSmall, Brushes.Black, new PointF(e.PageBounds.Width - 350, e.PageBounds.Height - 40));
+
+            y += 50;
+
+            while (currentItemIndex < _categoryList.Count)
+            {
+                kategorija oRE = _categoryList[currentItemIndex];
+                graphics.DrawString(oRE.ID.ToString(), font, Brushes.Black, new PointF(x, y));
+                graphics.DrawString(oRE.naziv.ToString(), font, Brushes.Black, new PointF(x + width, y));
+
+                y += height;
+                currentItemIndex++;
+
+                if (y > e.PageBounds.Height - 50)
+                {
+                    if (currentItemIndex < _categoryList.Count)
+                    {
+                        e.HasMorePages = true;
+                        return;
+                    }
+                    else
+                    {
+                        e.HasMorePages = false;
+                        currentItemIndex = 0;
+                        return;
+                    }
+                }
+            }
+        }
+
+        public void saveCategoryRequestsAsPDF(List<zahtjev_kategorija> categoryRequests, korisnik user)
+        {
+            _categoryRequests = categoryRequests;
+            _user = user;
+            PrintDocument document = new PrintDocument();
+            document.PrintPage += new PrintPageEventHandler(saveCategoryRequestsAsPDFPrintPage);
+            currentItemIndex = 0;
+            document.Print();
+        }
+
+        private void saveCategoryRequestsAsPDFPrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Font font = new Font("Arial", 12);
+            Font fontSmall = new Font("Arial", 10);
+            Font fontBig = new Font("Arial", 16);
+            int x = 50;
+            int y = 50;
+            int width = 50;
+            int height = 50;
+
+            graphics.DrawString("ID", fontBig, Brushes.Black, new PointF(x, y));
+            graphics.DrawString("Naziv", fontBig, Brushes.Black, new PointF(x + width, y));
+            graphics.DrawString("Opis", fontBig, Brushes.Black, new PointF(x + width * 4, y));
+
+            graphics.DrawString("Kreirao: " + _user.ToString() + " na datum " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString(), fontSmall, Brushes.Black, new PointF(e.PageBounds.Width - 350, e.PageBounds.Height - 40));
+
+            y += 50;
+
+            while (currentItemIndex < _categoryRequests.Count)
+            {
+                zahtjev_kategorija oRE = _categoryRequests[currentItemIndex];
+                graphics.DrawString(oRE.ID.ToString(), font, Brushes.Black, new PointF(x, y));
+                graphics.DrawString(oRE.naslov.ToString(), font, Brushes.Black, new PointF(x + width, y));
+                graphics.DrawString(oRE.opis.ToString(), font, Brushes.Black, new PointF(x + width * 4, y));
+
+                y += height;
+                currentItemIndex++;
+
+                if (y > e.PageBounds.Height - 50)
+                {
+                    if (currentItemIndex < _categoryRequests.Count)
                     {
                         e.HasMorePages = true;
                         return;

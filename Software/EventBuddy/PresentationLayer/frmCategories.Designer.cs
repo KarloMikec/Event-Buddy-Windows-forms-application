@@ -43,16 +43,18 @@
             // dgvCategory
             // 
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategory.Location = new System.Drawing.Point(27, 142);
+            this.dgvCategory.Location = new System.Drawing.Point(36, 175);
+            this.dgvCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCategory.Name = "dgvCategory";
-            this.dgvCategory.Size = new System.Drawing.Size(417, 260);
+            this.dgvCategory.Size = new System.Drawing.Size(556, 320);
             this.dgvCategory.TabIndex = 2;
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCategory.Location = new System.Drawing.Point(23, 119);
+            this.lblCategory.Location = new System.Drawing.Point(31, 146);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(80, 20);
             this.lblCategory.TabIndex = 3;
@@ -60,20 +62,23 @@
             // 
             // btnSaveAsPDF
             // 
-            this.btnSaveAsPDF.Location = new System.Drawing.Point(327, 109);
+            this.btnSaveAsPDF.Location = new System.Drawing.Point(436, 134);
+            this.btnSaveAsPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
-            this.btnSaveAsPDF.Size = new System.Drawing.Size(117, 27);
+            this.btnSaveAsPDF.Size = new System.Drawing.Size(156, 33);
             this.btnSaveAsPDF.TabIndex = 4;
             this.btnSaveAsPDF.Text = "Spremi kao PDF";
             this.btnSaveAsPDF.UseVisualStyleBackColor = true;
+            this.btnSaveAsPDF.Click += new System.EventHandler(this.btnSaveAsPDF_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(522, 142);
+            this.btnAdd.Location = new System.Drawing.Point(696, 175);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(169, 41);
+            this.btnAdd.Size = new System.Drawing.Size(225, 50);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -83,9 +88,10 @@
             // 
             this.btnRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequest.Location = new System.Drawing.Point(522, 189);
+            this.btnRequest.Location = new System.Drawing.Point(696, 233);
+            this.btnRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(169, 41);
+            this.btnRequest.Size = new System.Drawing.Size(225, 50);
             this.btnRequest.TabIndex = 20;
             this.btnRequest.Text = "Zahtjevi";
             this.btnRequest.UseVisualStyleBackColor = true;
@@ -93,9 +99,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(599, 313);
+            this.btnSave.Location = new System.Drawing.Point(799, 385);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 28;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -104,9 +111,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(482, 313);
+            this.btnCancel.Location = new System.Drawing.Point(643, 385);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -115,28 +123,30 @@
             // 
             // txtNameOfCategory
             // 
-            this.txtNameOfCategory.Location = new System.Drawing.Point(482, 272);
+            this.txtNameOfCategory.Location = new System.Drawing.Point(643, 335);
+            this.txtNameOfCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNameOfCategory.MaxLength = 20;
             this.txtNameOfCategory.Name = "txtNameOfCategory";
-            this.txtNameOfCategory.Size = new System.Drawing.Size(192, 20);
+            this.txtNameOfCategory.Size = new System.Drawing.Size(255, 22);
             this.txtNameOfCategory.TabIndex = 26;
             this.txtNameOfCategory.Visible = false;
             // 
             // lblNewCategory2
             // 
             this.lblNewCategory2.AutoSize = true;
-            this.lblNewCategory2.Location = new System.Drawing.Point(482, 253);
+            this.lblNewCategory2.Location = new System.Drawing.Point(643, 311);
+            this.lblNewCategory2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewCategory2.Name = "lblNewCategory2";
-            this.lblNewCategory2.Size = new System.Drawing.Size(85, 13);
+            this.lblNewCategory2.Size = new System.Drawing.Size(106, 16);
             this.lblNewCategory2.TabIndex = 29;
             this.lblNewCategory2.Text = "Nova kategorija:";
             this.lblNewCategory2.Visible = false;
             // 
             // frmCategories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 434);
+            this.ClientSize = new System.Drawing.Size(937, 534);
             this.Controls.Add(this.lblNewCategory2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -146,6 +156,7 @@
             this.Controls.Add(this.btnSaveAsPDF);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.dgvCategory);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Kategorije";
