@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer
 {
-    partial class frmProfil
+    partial class Profil
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,26 @@
         private void InitializeComponent()
         {
             this.cbLanguage = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtKorime = new System.Windows.Forms.TextBox();
             this.txtOldPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword2 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTheme = new System.Windows.Forms.Label();
             this.msChangeTheme = new MaterialSkin.Controls.MaterialSwitch();
+            this.lblMyProfile = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // cbLanguage
             // 
+            this.cbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLanguage.FormattingEnabled = true;
             this.cbLanguage.Location = new System.Drawing.Point(12, 75);
             this.cbLanguage.Name = "cbLanguage";
             this.cbLanguage.Size = new System.Drawing.Size(121, 21);
             this.cbLanguage.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.label1.Location = new System.Drawing.Point(262, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 63);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Moj Profil";
+            this.cbLanguage.DropDownClosed += new System.EventHandler(this.cbLanguage_DropDownClosed);
             // 
             // txtKorime
             // 
@@ -108,15 +100,15 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label2
+            // lblTheme
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(557, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Promijeni temu: ";
+            this.lblTheme.AutoSize = true;
+            this.lblTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblTheme.Location = new System.Drawing.Point(557, 77);
+            this.lblTheme.Name = "lblTheme";
+            this.lblTheme.Size = new System.Drawing.Size(121, 20);
+            this.lblTheme.TabIndex = 11;
+            this.lblTheme.Text = "Promijeni temu: ";
             // 
             // msChangeTheme
             // 
@@ -133,22 +125,35 @@
             this.msChangeTheme.UseVisualStyleBackColor = true;
             this.msChangeTheme.CheckedChanged += new System.EventHandler(this.msChangeTheme_CheckedChanged);
             // 
-            // frmProfil
+            // lblMyProfile
+            // 
+            this.lblMyProfile.AutoSize = true;
+            this.lblMyProfile.Depth = 0;
+            this.lblMyProfile.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblMyProfile.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
+            this.lblMyProfile.Location = new System.Drawing.Point(288, 109);
+            this.lblMyProfile.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblMyProfile.Name = "lblMyProfile";
+            this.lblMyProfile.Size = new System.Drawing.Size(207, 58);
+            this.lblMyProfile.TabIndex = 13;
+            this.lblMyProfile.Text = "Moj Profil";
+            // 
+            // Profil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMyProfile);
             this.Controls.Add(this.msChangeTheme);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTheme);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtNewPassword2);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.txtOldPassword);
             this.Controls.Add(this.txtKorime);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbLanguage);
-            this.Name = "frmProfil";
+            this.Name = "Profil";
             this.Text = "frmProfil";
             this.Load += new System.EventHandler(this.frmProfil_Load);
             this.ResumeLayout(false);
@@ -159,14 +164,14 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbLanguage;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtKorime;
         private System.Windows.Forms.TextBox txtOldPassword;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtNewPassword2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTheme;
         private MaterialSkin.Controls.MaterialSwitch msChangeTheme;
+        private MaterialSkin.Controls.MaterialLabel lblMyProfile;
     }
 }

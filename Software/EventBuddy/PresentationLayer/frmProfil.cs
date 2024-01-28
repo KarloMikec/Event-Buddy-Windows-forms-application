@@ -10,14 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using EntitiesLayer.Entities;
 
 namespace PresentationLayer
 {
-    public partial class frmProfil : MaterialForm
+    public partial class Profil : MaterialForm
     {
         private UserServices userServices = new UserServices();
         MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
-        public frmProfil()
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public Profil()
         {
             InitializeComponent();
 
@@ -26,11 +31,17 @@ namespace PresentationLayer
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void frmProfil_Load(object sender, EventArgs e)
         {
             RefreshGUI();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
         {
             var newPassword = txtNewPassword.Text;
@@ -66,6 +77,9 @@ namespace PresentationLayer
 
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void RefreshGUI()
         {
             var user = frmLogin.user;
@@ -73,25 +87,70 @@ namespace PresentationLayer
             txtNewPassword.Text = "";
             txtNewPassword2.Text = "";
             txtOldPassword.Text = "";
+
+            cbLanguage.DataSource = userServices.getLanguages();
+            var userLanguage = userServices.getUserLanguage(user);
+
+            if (userLanguage != null)
+            {
+                for(int i = 0; i < cbLanguage.Items.Count; i++)
+                {
+                    var item = cbLanguage.Items[i] as jezik;
+                    if (item.ID == userLanguage.ID)
+                    {
+                        cbLanguage.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            lblMyProfile.Text = "Moj Profil";
+            lblTheme.Text = "Promijeni temu:";
+            btnCancel.Text = "Odustani";
+            btnSave.Text = "Spremi";
+
+            var translations = userServices.getUserTranslations(user);
+            if (translations.Count > 0)
+            {
+                lblMyProfile.Text = translations.First(t => t.ID_atributa == "lblMyProfile").prijevod;
+                lblTheme.Text = translations.First(t => t.ID_atributa == "lblTheme").prijevod;
+                btnCancel.Text = translations.First(t => t.ID_atributa == "btnCancel").prijevod;
+                btnSave.Text = translations.First(t => t.ID_atributa == "btnSave").prijevod;
+            }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             RefreshGUI();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void msChangeTheme_CheckedChanged(object sender, EventArgs e)
         {
             if (msChangeTheme.Checked)
             {
                 changeTheme.Theme = MaterialSkinManager.Themes.DARK;
-                //frmLogin.theme = MaterialSkinManager.Themes.DARK;
             }
             else
             {
                 changeTheme.Theme = MaterialSkinManager.Themes.LIGHT;
-                //frmLogin.theme = MaterialSkinManager.Themes.LIGHT;
             }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        private void cbLanguage_DropDownClosed(object sender, EventArgs e)
+        {
+            var user = frmLogin.user;
+            var language = cbLanguage.SelectedItem as jezik;
+            userServices.setUserLanguage(user, language);
+            RefreshGUI();
         }
     }
 }

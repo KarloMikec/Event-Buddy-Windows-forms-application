@@ -40,6 +40,7 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto Light", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H2;
             this.materialLabel1.Location = new System.Drawing.Point(220, 80);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -78,7 +79,7 @@
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtPassword.Hint = "Lozinka";
             this.txtPassword.Location = new System.Drawing.Point(279, 310);
             this.txtPassword.MaxLength = 50;
@@ -87,7 +88,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Password = true;
             this.txtPassword.Size = new System.Drawing.Size(201, 36);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.TabIndex = 17;
             this.txtPassword.Text = "";
             this.txtPassword.UseTallSize = false;
             // 
@@ -95,7 +96,7 @@
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Depth = 0;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsername.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtUsername.Hint = "Korisničko ime";
             this.txtUsername.Location = new System.Drawing.Point(279, 258);
             this.txtUsername.MaxLength = 50;
@@ -103,7 +104,7 @@
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(201, 36);
-            this.txtUsername.TabIndex = 9;
+            this.txtUsername.TabIndex = 15;
             this.txtUsername.Text = "";
             this.txtUsername.UseTallSize = false;
             // 
@@ -119,7 +120,7 @@
             this.btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(96, 36);
-            this.btnSignIn.TabIndex = 10;
+            this.btnSignIn.TabIndex = 19;
             this.btnSignIn.Text = "Prijavi se";
             this.btnSignIn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSignIn.UseAccentColor = false;

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,12 +22,18 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public korisnik loginUser(string username, string password)
         {
             var user = Entities.SingleOrDefault(u => u.korime == username && u.lozinka == password);
             return user;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public override int Update(korisnik entity, bool saveChanges = true)
         {
             var user = Entities.First(e => e.ID == entity.ID);
@@ -41,7 +48,7 @@ namespace DataAccessLayer.Repositories
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
             user.upozorenja += 1;
-            if(user.upozorenja > 1)
+            if (user.upozorenja > 1)
             {
                 revokeOrganizerRole(userID);
             }
@@ -70,7 +77,7 @@ namespace DataAccessLayer.Repositories
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
             var uloga = user.uloga.FirstOrDefault(x => x.Naziv == roleName) as uloga;
-            if(uloga != null)
+            if (uloga != null)
             {
                 user.uloga.Remove(uloga);
 
@@ -110,6 +117,67 @@ namespace DataAccessLayer.Repositories
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public List<prijevodi> getTranslations(korisnik user)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var translations = new List<prijevodi>();
+                var selectedUser = Entities.SingleOrDefault(u => u.korime == user.korime);
+                if (selectedUser.jezik.Count() > 0)
+                {
+                    var language = selectedUser.jezik.ToList()[0];
+                    translations = context.prijevodi.ToList().FindAll(x => x.ID_jezika == language.ID);
+                }
+                return translations;
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public List<jezik> getLanguages()
+        {
+            using (var context = new EventBuddyModel())
+            {
+                return context.jezik.ToList();
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public void setUserLanguage(korisnik user, jezik language)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var selectedUser = context.korisnik.SingleOrDefault(u => u.korime == user.korime);
+                var selectedLanguage = context.jezik.SingleOrDefault(u => u.ID == language.ID);
+                selectedUser.jezik.Clear();
+                selectedUser.jezik.Add(selectedLanguage);
+                context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public jezik getUserLanguage(korisnik user)
+        {
+            using (var context = new EventBuddyModel())
+            {
+                var selectedUser = context.korisnik.SingleOrDefault(u => u.korime == user.korime);
+                if (selectedUser.jezik.Count() > 0)
+                {
+                    return selectedUser.jezik.ToArray()[0];
+                }
+
+                return context.jezik.ToList().Find(x => x.naziv == "Hrvatski");
+            }
         }
     }
 }

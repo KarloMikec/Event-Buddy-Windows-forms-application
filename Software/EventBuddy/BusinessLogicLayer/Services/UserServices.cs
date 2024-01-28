@@ -65,6 +65,9 @@ namespace BusinessLogicLayer.Services
                 return context.SaveChanges();
             }
         }
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public List<korisnik> getAllUsers()
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -74,6 +77,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public korisnik loginUser(string username, string password)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -117,6 +123,50 @@ namespace BusinessLogicLayer.Services
             using (var repo = new UserRepository(new EventBuddyModel()))
             {
                 return repo.Update(user) > 0;
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public List<prijevodi> getUserTranslations(korisnik user)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.getTranslations(user);
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public List<jezik> getLanguages()
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.getLanguages();
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public void setUserLanguage(korisnik user, jezik language)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                repo.setUserLanguage(user, language);
+            }
+        }
+
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
+        public jezik getUserLanguage(korisnik user)
+        {
+            using (var repo = new UserRepository(new EventBuddyModel()))
+            {
+                return repo.getUserLanguage(user);
             }
         }
     }

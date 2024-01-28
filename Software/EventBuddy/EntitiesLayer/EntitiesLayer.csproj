@@ -45,6 +45,7 @@
     <Compile Include="Entities\dogadaj.cs" />
     <Compile Include="Entities\dogadaj.Ext.cs" />
     <Compile Include="Entities\jezik.cs" />
+    <Compile Include="Entities\jezik.Ext.cs" />
     <Compile Include="Entities\kategorija.cs" />
     <Compile Include="Entities\kategorija.Ext.cs" />
     <Compile Include="Entities\korisnik.cs" />

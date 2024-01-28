@@ -51,6 +51,7 @@ namespace PresentationLayer
                 btnCategories.Visible = true;
                 btnUsers.Visible = true;
             }
+            //MessageBox.Show(userServices.getUserTranslations(loggedInUser).Count().ToString());
             RefreshGUI();
         }
 
@@ -176,7 +177,7 @@ namespace PresentationLayer
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            frmProfil frmProfil = new frmProfil();
+            Profil frmProfil = new Profil();
             frmProfil.ShowDialog();
             ChangeTheme();
         }

@@ -21,6 +21,9 @@ namespace PresentationLayer
         MaterialSkinManager changeTheme = MaterialSkinManager.Instance;
         public static MaterialSkinManager.Themes theme = MaterialSkinManager.Themes.LIGHT;
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public frmLogin()
         {
             InitializeComponent();
@@ -30,6 +33,9 @@ namespace PresentationLayer
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnSignIn_Click(object sender, EventArgs e) 
         {
             if (txtUsername.Text == "")
@@ -53,7 +59,7 @@ namespace PresentationLayer
                         Hide();
                         frmMain frmMain = new frmMain();
                         frmMain.ShowDialog();
-                        Close();
+                        System.Environment.Exit(0);
                     }
                     else
                     {
