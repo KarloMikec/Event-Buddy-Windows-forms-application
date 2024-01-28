@@ -17,14 +17,11 @@ namespace EntitiesLayer.Entities
 
         public int ID { get; set; }
 
-        [Required]
         [StringLength(25)]
         public string naziv { get; set; }
 
-        [Required]
         public string opis { get; set; }
 
-        [Required]
         [StringLength(30)]
         public string mjesto { get; set; }
 
