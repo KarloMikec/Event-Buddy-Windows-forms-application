@@ -24,6 +24,11 @@ namespace PresentationLayer.forms
         {
             InitializeComponent();
             _selectedUser = selectedUser;
+            btnMod.Visible = false;
+            if (userService.checkForAdminRole(frmLogin.user))
+            {
+                btnMod.Visible = true;
+            }
         }
 
         private void EditUserFrm_Load(object sender, EventArgs e)
@@ -46,7 +51,7 @@ namespace PresentationLayer.forms
             if (userService.checkForModRole(_selectedUser))
             {
                 btnModBox.BackColor = Color.LightGreen;
-                btnOrganizer.Text = "Makni ulogu";
+                btnMod.Text = "Makni ulogu";
                 modRoleInit = true;
                 modRoleAfter = true;
             }
