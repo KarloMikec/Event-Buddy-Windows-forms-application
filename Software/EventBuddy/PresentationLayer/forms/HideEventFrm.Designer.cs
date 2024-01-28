@@ -77,7 +77,7 @@
             this.Controls.Add(this.btnHideEvent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "HideEventFrm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.HideEventFrm_Load);
             this.ResumeLayout(false);
 

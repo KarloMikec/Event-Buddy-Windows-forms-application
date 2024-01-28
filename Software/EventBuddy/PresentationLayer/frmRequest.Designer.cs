@@ -34,6 +34,9 @@
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnModifyData = new System.Windows.Forms.Button();
+            this.txtNameOfCategory = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +77,7 @@
             this.btnAccept.TabIndex = 20;
             this.btnAccept.Text = "Prihvati";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnReject
             // 
@@ -85,6 +89,7 @@
             this.btnReject.TabIndex = 21;
             this.btnReject.Text = "Odbaciti";
             this.btnReject.UseVisualStyleBackColor = true;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
             // btnModifyData
             // 
@@ -96,12 +101,47 @@
             this.btnModifyData.TabIndex = 22;
             this.btnModifyData.Text = "Izmijeniti podatke";
             this.btnModifyData.UseVisualStyleBackColor = true;
+            this.btnModifyData.Click += new System.EventHandler(this.btnModifyData_Click);
+            // 
+            // txtNameOfCategory
+            // 
+            this.txtNameOfCategory.Location = new System.Drawing.Point(453, 325);
+            this.txtNameOfCategory.MaxLength = 20;
+            this.txtNameOfCategory.Name = "txtNameOfCategory";
+            this.txtNameOfCategory.Size = new System.Drawing.Size(192, 20);
+            this.txtNameOfCategory.TabIndex = 23;
+            this.txtNameOfCategory.Visible = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(453, 366);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Odustani";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(570, 366);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 25;
+            this.btnSave.Text = "Spremi";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 450);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtNameOfCategory);
             this.Controls.Add(this.btnModifyData);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnAccept);
@@ -109,6 +149,7 @@
             this.Controls.Add(this.lblNewCategory);
             this.Controls.Add(this.dgvRequest);
             this.Name = "frmRequest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Zahtjev za kategoriju";
             this.Load += new System.EventHandler(this.frmRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).EndInit();
@@ -125,5 +166,8 @@
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.Button btnModifyData;
+        private System.Windows.Forms.TextBox txtNameOfCategory;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
     }
 }

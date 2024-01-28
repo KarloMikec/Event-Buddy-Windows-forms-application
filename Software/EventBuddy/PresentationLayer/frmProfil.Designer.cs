@@ -154,6 +154,7 @@
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.cbLanguage);
             this.Name = "Profil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfil";
             this.Load += new System.EventHandler(this.frmProfil_Load);
             this.ResumeLayout(false);

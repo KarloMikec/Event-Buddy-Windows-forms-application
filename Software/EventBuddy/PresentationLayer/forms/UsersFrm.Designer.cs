@@ -187,6 +187,7 @@
             this.Controls.Add(this.dgvUsers);
             this.MinimumSize = new System.Drawing.Size(1031, 578);
             this.Name = "UsersFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Prikaz korisnika i zahtjeva za organizatore";
             this.Load += new System.EventHandler(this.UsersFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();

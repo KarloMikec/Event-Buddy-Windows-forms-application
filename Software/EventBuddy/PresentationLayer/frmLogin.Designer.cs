@@ -139,6 +139,7 @@
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
             this.ResumeLayout(false);
             this.PerformLayout();

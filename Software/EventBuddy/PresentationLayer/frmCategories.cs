@@ -17,6 +17,7 @@ namespace PresentationLayer
     public partial class frmCategories : MaterialForm
     {
         public UserServices userServices = new UserServices();
+        public CategoryServices categoryServices = new CategoryServices();
         public frmCategories()
         {
             InitializeComponent();
@@ -25,18 +26,24 @@ namespace PresentationLayer
         private void frmCategories_Load(object sender, EventArgs e)
         {
             RefreshGUI();
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            dgvCategory.DataSource = categoryServices.getAllRequests();
+            dgvCategory.Columns[2].Visible = false;
         }
 
         private void RefreshGUI()
         {
-
             lblCategory.Text = "Kategorije";
             btnSaveAsPDF.Text = "Spremi kao PDF";
-            btnSearch.Text = "Pretraži";
             btnAdd.Text = "Dodaj";
             btnRequest.Text = "Zahtjevi";
-            btnEdit.Text = "Izmijeni podatke";
-            btnDelete.Text = "Obriši kategoriju";
+            btnCancel.Text = "Odustani";
+            btnSave.Text = "Spremi";
+            lblNewCategory2.Text = "Nova kategorija:";
 
             var user = frmLogin.user;
             var translations = userServices.getUserTranslations(user);
@@ -44,18 +51,56 @@ namespace PresentationLayer
             {
                 lblCategory.Text = translations.First(t => t.ID_atributa == "lblCategory").prijevod;
                 btnSaveAsPDF.Text = translations.First(t => t.ID_atributa == "btnSaveAsPDF").prijevod;
-                btnSearch.Text = translations.First(t => t.ID_atributa == "btnSearch").prijevod;
                 btnAdd.Text = translations.First(t => t.ID_atributa == "btnAdd").prijevod;
                 btnRequest.Text = translations.First(t => t.ID_atributa == "btnRequest").prijevod;
-                btnEdit.Text = translations.First(t => t.ID_atributa == "btnEdit").prijevod;
-                btnDelete.Text = translations.First(t => t.ID_atributa == "btnDelete").prijevod;
+                btnCancel.Text = translations.First(t => t.ID_atributa == "btnCancel").prijevod;
+                btnSave.Text = translations.First(t => t.ID_atributa == "btnSave").prijevod;
+                lblNewCategory2.Text = translations.First(t => t.ID_atributa == "lblNewCategory").prijevod;
             }
+            
         }
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
             frmRequest frmRequest = new frmRequest();
             frmRequest.ShowDialog();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            lblNewCategory2.Visible = true;
+            btnAdd.Visible = false;
+            btnRequest.Visible = false;
+            btnSave.Visible = true;
+            btnCancel.Visible = true;
+            txtNameOfCategory.Visible = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            lblNewCategory2.Visible = false;
+            btnAdd.Visible = true;
+            btnRequest.Visible = true;
+            btnSave.Visible = false;
+            btnCancel.Visible = false;
+            txtNameOfCategory.Visible = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtNameOfCategory.Text  != "")
+            {
+                kategorija newCategory = new kategorija
+                {
+                    naziv = txtNameOfCategory.Text
+                };
+                categoryServices.addNewCategory(newCategory);
+                RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("Naziv kategorije ne smije biti prazan");
+            }
         }
     }
 }

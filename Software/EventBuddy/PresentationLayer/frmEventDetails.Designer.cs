@@ -30,7 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblPlace = new MaterialSkin.Controls.MaterialLabel();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new MaterialSkin.Controls.MaterialLabel();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
@@ -41,6 +40,7 @@
             this.txtLocation = new MaterialSkin.Controls.MaterialTextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblPlace = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -96,19 +96,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 304);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // lblPlace
-            // 
-            this.lblPlace.AutoSize = true;
-            this.lblPlace.Depth = 0;
-            this.lblPlace.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblPlace.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblPlace.Location = new System.Drawing.Point(103, 80);
-            this.lblPlace.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPlace.Name = "lblPlace";
-            this.lblPlace.Size = new System.Drawing.Size(63, 24);
-            this.lblPlace.TabIndex = 4;
-            this.lblPlace.Text = "Mjesto";
             // 
             // dtpDate
             // 
@@ -203,7 +190,7 @@
             this.txtLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tableLayoutPanel2.SetColumnSpan(this.txtLocation, 2);
             this.txtLocation.Depth = 0;
-            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLocation.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtLocation.Location = new System.Drawing.Point(203, 83);
             this.txtLocation.MaxLength = 250;
             this.txtLocation.MouseState = MaterialSkin.MouseState.OUT;
@@ -239,6 +226,19 @@
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblPlace
+            // 
+            this.lblPlace.AutoSize = true;
+            this.lblPlace.Depth = 0;
+            this.lblPlace.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPlace.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblPlace.Location = new System.Drawing.Point(103, 80);
+            this.lblPlace.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPlace.Name = "lblPlace";
+            this.lblPlace.Size = new System.Drawing.Size(63, 24);
+            this.lblPlace.TabIndex = 4;
+            this.lblPlace.Text = "Mjesto";
             // 
             // materialTextBox2
             // 

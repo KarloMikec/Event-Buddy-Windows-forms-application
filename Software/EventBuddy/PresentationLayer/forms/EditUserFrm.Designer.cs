@@ -218,7 +218,7 @@
             this.Controls.Add(this.lblName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditUserFrm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Izmjena podataka korisnika";
             this.Load += new System.EventHandler(this.EditUserFrm_Load);
             this.ResumeLayout(false);
