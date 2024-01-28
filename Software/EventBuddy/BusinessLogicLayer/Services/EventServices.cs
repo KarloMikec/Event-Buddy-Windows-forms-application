@@ -107,10 +107,14 @@ namespace BusinessLogicLayer.Services
         {
             if (_event.naziv.Trim() == "")
                 throw new EventException("Ime ne smije biti prazno!");
+            if (_event.naziv.Trim().Length > 25)
+                throw new EventException("Ime ne smije biti dulje od 25 znakova!");
             if (_event.opis.Trim() == "")
                 throw new EventException("Opis ne smije biti prazan!");
             if (_event.mjesto.Trim() == "")
                 throw new EventException("Mjesto ne smije biti prazno!");
+            if (_event.mjesto.Trim().Length > 30)
+                throw new EventException("Mjesto ne smije biti dulje od 30 znakova!");
             using (var repo = new EventRepository(new EventBuddyModel()))
             {
                 return repo.Update(_event) > 0;
