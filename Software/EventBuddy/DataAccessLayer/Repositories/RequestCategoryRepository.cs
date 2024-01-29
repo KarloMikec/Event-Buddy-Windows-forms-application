@@ -14,11 +14,6 @@ namespace DataAccessLayer.Repositories
         {
         }
 
-        public override int Update(zahtjev_kategorija entity, bool saveChanges = true)
-        {
-            throw new NotImplementedException();
-        }
-
         public void declineCategoryRequest(zahtjev_kategorija selectedRequst)
         {
             Remove(selectedRequst);

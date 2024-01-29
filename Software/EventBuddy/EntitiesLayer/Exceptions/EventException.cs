@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer.Exceptions
 {
+    /// <summary>
+    /// <author>Dominik Josipović</author>
+    /// </summary>
     public class EventException : ApplicationException
     {
         public string Message { get; set; }

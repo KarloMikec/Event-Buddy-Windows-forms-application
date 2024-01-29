@@ -23,7 +23,7 @@ namespace DataAccessLayer.Repositories
 
             return saveChanges ? SaveChanges() : 0;
         }
-        public override int Update(kategorija entity, bool saveChanges = true)
+        public int Update(kategorija entity, bool saveChanges = true)
         {
             throw new NotImplementedException();
         }

@@ -129,7 +129,7 @@ namespace DataAccessLayer.Repositories
         /// <param name="entity"></param>
         /// <param name="saveChanges"></param>
         /// <returns></returns>
-        public override int Update(dogadaj entity, bool saveChanges = true)
+        public int Update(dogadaj entity, bool saveChanges = true)
         {
             using (var context = new EventBuddyModel())
             {

@@ -37,7 +37,7 @@ namespace DataAccessLayer.Repositories
         /// <summary>
         /// <author>Karlo Mikec</author>
         /// </summary>
-        public override int Update(korisnik entity, bool saveChanges = true)
+        public int Update(korisnik entity, bool saveChanges = true)
         {
             var user = Entities.First(e => e.ID == entity.ID);
             if (user != null)

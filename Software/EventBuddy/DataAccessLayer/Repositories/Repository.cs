@@ -38,8 +38,6 @@ namespace DataAccessLayer.Repositories
             return saveChanges ? SaveChanges() : 0;
         }
 
-        public abstract int Update(T entity, bool saveChanges = true);
-
         public virtual int Remove(T entity, bool saveChanges = true)
         {
             Entities.Attach(entity);

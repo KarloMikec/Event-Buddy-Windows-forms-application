@@ -16,10 +16,5 @@ namespace DataAccessLayer.Repositories
         public RoleRepository(EventBuddyModel context) : base(context)
         {
         }
-
-        public override int Update(uloga entity, bool saveChanges = true)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

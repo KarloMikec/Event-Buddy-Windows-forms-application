@@ -54,17 +54,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 679F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 509F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 80);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 65);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 382F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 310F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(695, 508);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(521, 413);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -87,8 +86,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 3, 5);
             this.tableLayoutPanel2.Controls.Add(this.lblPlace, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 67);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(9, 54);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
@@ -97,17 +95,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(671, 374);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 304);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dtpDate
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.dtpDate, 2);
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(272, 151);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDate.Location = new System.Drawing.Point(203, 123);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(257, 29);
+            this.dtpDate.Size = new System.Drawing.Size(194, 29);
             this.dtpDate.TabIndex = 7;
             // 
             // lblDate
@@ -116,8 +113,7 @@
             this.lblDate.Depth = 0;
             this.lblDate.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblDate.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblDate.Location = new System.Drawing.Point(138, 147);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Location = new System.Drawing.Point(103, 120);
             this.lblDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(60, 24);
@@ -127,10 +123,9 @@
             // dtpTime
             // 
             this.dtpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTime.Location = new System.Drawing.Point(272, 200);
-            this.dtpTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpTime.Location = new System.Drawing.Point(203, 163);
             this.dtpTime.Name = "dtpTime";
-            this.dtpTime.Size = new System.Drawing.Size(124, 29);
+            this.dtpTime.Size = new System.Drawing.Size(94, 29);
             this.dtpTime.TabIndex = 8;
             // 
             // lblName
@@ -139,8 +134,7 @@
             this.lblName.Depth = 0;
             this.lblName.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblName.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblName.Location = new System.Drawing.Point(138, 0);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(103, 0);
             this.lblName.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(51, 24);
@@ -153,8 +147,7 @@
             this.lblOverView.Depth = 0;
             this.lblOverView.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblOverView.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblOverView.Location = new System.Drawing.Point(138, 49);
-            this.lblOverView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOverView.Location = new System.Drawing.Point(103, 40);
             this.lblOverView.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblOverView.Name = "lblOverView";
             this.lblOverView.Size = new System.Drawing.Size(41, 24);
@@ -167,13 +160,12 @@
             this.tableLayoutPanel2.SetColumnSpan(this.txtName, 2);
             this.txtName.Depth = 0;
             this.txtName.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtName.Location = new System.Drawing.Point(272, 4);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(203, 3);
             this.txtName.MaxLength = 50;
             this.txtName.MouseState = MaterialSkin.MouseState.OUT;
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(259, 36);
+            this.txtName.Size = new System.Drawing.Size(194, 36);
             this.txtName.TabIndex = 0;
             this.txtName.Text = "";
             this.txtName.UseTallSize = false;
@@ -184,13 +176,12 @@
             this.tableLayoutPanel2.SetColumnSpan(this.txtDescription, 2);
             this.txtDescription.Depth = 0;
             this.txtDescription.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtDescription.Location = new System.Drawing.Point(272, 53);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Location = new System.Drawing.Point(203, 43);
             this.txtDescription.MaxLength = 250;
             this.txtDescription.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDescription.Multiline = false;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(259, 36);
+            this.txtDescription.Size = new System.Drawing.Size(194, 36);
             this.txtDescription.TabIndex = 6;
             this.txtDescription.Text = "";
             this.txtDescription.UseTallSize = false;
@@ -201,13 +192,12 @@
             this.tableLayoutPanel2.SetColumnSpan(this.txtLocation, 2);
             this.txtLocation.Depth = 0;
             this.txtLocation.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtLocation.Location = new System.Drawing.Point(272, 102);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLocation.Location = new System.Drawing.Point(203, 83);
             this.txtLocation.MaxLength = 250;
             this.txtLocation.MouseState = MaterialSkin.MouseState.OUT;
             this.txtLocation.Multiline = false;
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(259, 36);
+            this.txtLocation.Size = new System.Drawing.Size(194, 36);
             this.txtLocation.TabIndex = 9;
             this.txtLocation.Text = "";
             this.txtLocation.UseTallSize = false;
@@ -217,10 +207,9 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(138, 326);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(103, 265);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(126, 44);
+            this.btnClose.Size = new System.Drawing.Size(94, 36);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Odustani";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -231,10 +220,9 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(406, 326);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(303, 265);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(126, 44);
+            this.btnSave.Size = new System.Drawing.Size(94, 36);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -246,8 +234,7 @@
             this.lblPlace.Depth = 0;
             this.lblPlace.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPlace.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblPlace.Location = new System.Drawing.Point(138, 98);
-            this.lblPlace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlace.Location = new System.Drawing.Point(103, 80);
             this.lblPlace.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPlace.Name = "lblPlace";
             this.lblPlace.Size = new System.Drawing.Size(63, 24);
@@ -271,13 +258,12 @@
             // 
             // frmEventDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 603);
+            this.ClientSize = new System.Drawing.Size(545, 490);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(727, 603);
+            this.MinimumSize = new System.Drawing.Size(545, 490);
             this.Name = "frmEventDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEventDetails";

@@ -47,10 +47,5 @@ namespace DataAccessLayer.Repositories
                         select e;
             return query;
         }
-
-        public override int Update(zahtjev_organizator entity, bool saveChanges = true)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
