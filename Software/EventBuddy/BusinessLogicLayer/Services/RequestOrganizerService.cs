@@ -9,8 +9,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
+    /// <summary>
+    /// <author>Sebastijan Vinko</author>
+    /// </summary>
     public class RequestOrganizerService
     {
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void acceptOrganizerRequest(zahtjev_organizator selectedRequst)
         {
             using (var repo = new RequestOrganizerRepository(new EventBuddyModel()))
@@ -19,6 +25,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void declineOrganizerRequest(zahtjev_organizator selectedRequst)
         {
             using (var repo = new RequestOrganizerRepository(new EventBuddyModel()))
@@ -27,6 +36,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public List<zahtjev_organizator> getAllRequests()
         {
             using (var repo = new RequestOrganizerRepository(new EventBuddyModel()))

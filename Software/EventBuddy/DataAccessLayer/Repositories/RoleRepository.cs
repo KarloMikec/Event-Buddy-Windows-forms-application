@@ -9,6 +9,10 @@ namespace DataAccessLayer.Repositories
 {
     public class RoleRepository : Repository<uloga>
     {
+
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public RoleRepository(EventBuddyModel context) : base(context)
         {
         }

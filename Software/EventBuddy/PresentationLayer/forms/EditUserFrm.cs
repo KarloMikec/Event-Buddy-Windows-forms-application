@@ -22,6 +22,10 @@ namespace PresentationLayer.forms
         bool organizerRoleAfter = false;
         bool modRoleInit = false;
         bool modRoleAfter = false;
+
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public EditUserFrm(korisnik selectedUser)
         {
             InitializeComponent();
@@ -33,6 +37,9 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void EditUserFrm_Load(object sender, EventArgs e)
         {
             txtName.Text = _selectedUser.ime;
@@ -97,11 +104,17 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnOrganizer_Click(object sender, EventArgs e)
         {
             if(btnOrganizerBox.BackColor == Color.LightGreen)
@@ -118,6 +131,9 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnMod_Click(object sender, EventArgs e)
         {
             if (btnModBox.BackColor == Color.LightGreen)
@@ -134,6 +150,9 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (organizerRoleInit != organizerRoleAfter)

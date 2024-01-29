@@ -12,6 +12,9 @@ namespace BusinessLogicLayer.Services
 {
     public class UserServices
     {
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int warnUser(int userID)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -20,6 +23,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int revokeOrganizerRole(int userID)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -28,6 +34,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int revokeModRole(int userID)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -36,6 +45,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int addOrganizerRole(int userID)
         {
             using (var context = new EventBuddyModel())
@@ -51,6 +63,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int addModRole(int userID)
         {
             using (var context = new EventBuddyModel())
@@ -89,6 +104,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public bool checkForOrganizerRole(korisnik user)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))
@@ -97,6 +115,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public bool checkForModRole(korisnik selectedUser)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))

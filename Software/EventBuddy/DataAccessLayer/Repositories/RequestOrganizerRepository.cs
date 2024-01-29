@@ -8,12 +8,21 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
+    /// <summary>
+    /// <author>Sebastijan Vinko</author>
+    /// </summary>
     public class RequestOrganizerRepository : Repository<zahtjev_organizator>
     {
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public RequestOrganizerRepository(EventBuddyModel context) : base(context)
         {
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void acceptOrganizerRequest(zahtjev_organizator selectedRequst)
         {
             selectedRequst.prihvacen = true;
@@ -21,11 +30,17 @@ namespace DataAccessLayer.Repositories
             SaveChanges();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void declineOrganizerRequest(zahtjev_organizator selectedRequst)
         {
             Remove(selectedRequst);
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public override IQueryable<zahtjev_organizator> GetAll()
         {
             var query = from e in Entities.Include("korisnik")

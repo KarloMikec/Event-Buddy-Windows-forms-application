@@ -15,6 +15,9 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public override IQueryable<korisnik> GetAll()
         {
             var query = from e in Entities.Include("dogadaj").Include("zahtjev_organizator").Include("zahtjev_kategorija")
@@ -44,6 +47,9 @@ namespace DataAccessLayer.Repositories
             return saveChanges ? SaveChanges() : 0;
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int warnUser(int userID, bool saveChanges = true)
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
@@ -66,16 +72,25 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int revokeOrganizerRole(int userID, bool saveChanges = true)
         {
             return revokeRole(userID, "Organizator");
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int revokeModRole(int userID, bool saveChanges = true)
         {
             return revokeRole(userID, "Moderator");
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int revokeRole(int userID, string roleName, bool saveChanges = true)
         {
             var user = Entities.SingleOrDefault(d => d.ID == userID);
@@ -92,11 +107,17 @@ namespace DataAccessLayer.Repositories
             return 0;
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public bool checkForOrganizerRole(korisnik selectedUser)
         {
             return checkForRole("Organizator", selectedUser);
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public bool checkForModRole(korisnik selectedUser)
         {
             return checkForRole("Moderator", selectedUser);
@@ -110,6 +131,9 @@ namespace DataAccessLayer.Repositories
             return checkForRole("Administrator", selectedUser);
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public bool checkForRole(string roleName, korisnik selectedUser)
         {
             var user = Entities.SingleOrDefault(d => d.ID == selectedUser.ID);

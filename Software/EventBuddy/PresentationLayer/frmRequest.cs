@@ -140,6 +140,9 @@ namespace PresentationLayer
             txtNameOfCategory.Visible = false;
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnSaveAsPDF_Click(object sender, EventArgs e)
         {
             pDFServices.saveCategoryRequestsAsPDF(dgvRequest.DataSource as List<zahtjev_kategorija>, frmLogin.user);

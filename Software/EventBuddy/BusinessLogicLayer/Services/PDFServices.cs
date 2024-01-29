@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
+    /// <summary>
+    /// <author>Sebastijan Vinko</author>
+    /// </summary>
     public class PDFServices
     {
         private List<dogadaj> _eventList;
@@ -31,6 +34,9 @@ namespace BusinessLogicLayer.Services
             document.Print();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void saveEventsAsPDFPrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -84,6 +90,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void saveUsersAsPDF(List<korisnik> userList, korisnik user)
         {
             _userList = userList;
@@ -94,6 +103,9 @@ namespace BusinessLogicLayer.Services
             document.Print();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void saveUsersAsPDFPrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -143,6 +155,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void saveOrganizerRequestsAsPDF(List<zahtjev_organizator> organizerRequestList, korisnik user = null)
         {
             _organizerRequestList = organizerRequestList;
@@ -153,6 +168,9 @@ namespace BusinessLogicLayer.Services
             document.Print();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void saveOrganizerRequestsAsPDFPrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -205,6 +223,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void saveParticipantsAsPDF(List<korisnik> userList, korisnik user, dogadaj selectedEvent)
         {
             _userList = userList;
@@ -217,6 +238,9 @@ namespace BusinessLogicLayer.Services
             document.Print();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void saveParticipantsAsPDFPrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -287,6 +311,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void saveCategoriesAsPDF(List<kategorija> categories, korisnik user)
         {
             _categoryList = categories;
@@ -297,6 +324,9 @@ namespace BusinessLogicLayer.Services
             document.Print();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void saveCategoriesAsPDFPrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -341,6 +371,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public void saveCategoryRequestsAsPDF(List<zahtjev_kategorija> categoryRequests, korisnik user)
         {
             _categoryRequests = categoryRequests;
@@ -351,6 +384,9 @@ namespace BusinessLogicLayer.Services
             document.Print();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void saveCategoryRequestsAsPDFPrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;

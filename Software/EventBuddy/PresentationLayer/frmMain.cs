@@ -219,6 +219,9 @@ namespace PresentationLayer
             RefreshGUI();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnHideEvent_Click(object sender, EventArgs e)
         {
             if (dgvEvents.SelectedRows != null)
@@ -230,6 +233,9 @@ namespace PresentationLayer
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnUsers_Click(object sender, EventArgs e)
         {
             UsersFrm usersFrm = new UsersFrm();
@@ -238,6 +244,9 @@ namespace PresentationLayer
             Show();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnSaveAsPDF_Click(object sender, EventArgs e)
         {
             pDFServices.saveEventsAsPDF(dgvEvents.DataSource as List<dogadaj>, frmLogin.user);

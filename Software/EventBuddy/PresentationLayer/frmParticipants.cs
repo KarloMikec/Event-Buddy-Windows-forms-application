@@ -125,6 +125,9 @@ namespace PresentationLayer
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnSaveAsPDF_Click(object sender, EventArgs e)
         {
             pDFServices.saveParticipantsAsPDF(dgvParticipants.DataSource as List<korisnik>, frmLogin.user ,Event);

@@ -19,11 +19,19 @@ namespace PresentationLayer.forms
         dogadaj _selectedEvent = null;
         EventServices eventServices = new EventServices();
         UserServices userServices = new UserServices();
+
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public HideEventFrm(dogadaj selectedEvent)
         {
             _selectedEvent = selectedEvent;
             InitializeComponent();
         }
+
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnHideEvent_Click(object sender, EventArgs e)
         {
             eventServices.hideEvent(_selectedEvent);
@@ -31,12 +39,18 @@ namespace PresentationLayer.forms
             Close();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnRemoveRole_Click(object sender, EventArgs e)
         {
             userServices.revokeOrganizerRole(_selectedEvent.ID_korisnik);
             Close();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();

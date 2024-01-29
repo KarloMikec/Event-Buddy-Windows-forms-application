@@ -14,6 +14,9 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public override IQueryable<dogadaj> GetAll()
         {
             var query = from e in Entities.Include("status").Include("korisnik").Include("kategorija")
@@ -21,6 +24,9 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int hideEvent(dogadaj entity, bool saveChanges = true)
         {
             var selectedEvent = Entities.SingleOrDefault(d => d.ID == entity.ID);

@@ -12,6 +12,9 @@ namespace BusinessLogicLayer.Services
 {
     public class EventServices
     {
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public List<dogadaj> GetAllEvents()
         {
             using (var repo = new EventRepository(new EventBuddyModel()))
@@ -21,6 +24,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public int hideEvent(dogadaj selectedEvent)
         {
             using (var repo = new EventRepository(new EventBuddyModel()))

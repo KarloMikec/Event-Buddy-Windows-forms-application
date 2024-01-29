@@ -19,16 +19,26 @@ namespace PresentationLayer.forms
         UserServices userService = new UserServices();
         RequestOrganizerService requestOrganizerService = new RequestOrganizerService();
         PDFServices pDFServices = new PDFServices();
+
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         public UsersFrm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnShowEvents_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void UsersFrm_Load(object sender, EventArgs e)
         {
             showRequests();
@@ -66,6 +76,9 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnEditUser_Click(object sender, EventArgs e)
         {
             var selectedUser = dgvUsers.CurrentRow?.DataBoundItem as korisnik;
@@ -76,11 +89,17 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void showRequests()
         {
             dgvUserRequests.DataSource = requestOrganizerService.getAllRequests();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void showUsers()
         {
             dgvUsers.DataSource = userService.getAllUsers();
@@ -93,6 +112,9 @@ namespace PresentationLayer.forms
             dgvUsers.Columns[12].Visible = false;
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnAccept_Click(object sender, EventArgs e)
         {
             var selectedRequst = dgvUserRequests.CurrentRow?.DataBoundItem as zahtjev_organizator;
@@ -104,6 +126,9 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnDecline_Click(object sender, EventArgs e)
         {
             var selectedRequst = dgvUserRequests.CurrentRow?.DataBoundItem as zahtjev_organizator;
@@ -114,21 +139,33 @@ namespace PresentationLayer.forms
             }
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnSaveAsPDFUsers_Click(object sender, EventArgs e)
         {
             pDFServices.saveUsersAsPDF(dgvUsers.DataSource as List<korisnik>, frmLogin.user);
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnSaveAsPDFRequests_Click(object sender, EventArgs e)
         {
             pDFServices.saveOrganizerRequestsAsPDF(dgvUserRequests.DataSource as List<zahtjev_organizator>, frmLogin.user);
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnRefreshUsers_Click(object sender, EventArgs e)
         {
             showUsers();
         }
 
+        /// <summary>
+        /// <author>Sebastijan Vinko</author>
+        /// </summary>
         private void btnRefreshRequests_Click(object sender, EventArgs e)
         {
             showRequests();
