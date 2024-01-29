@@ -9,8 +9,12 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
+
     public class CategoryServices
     {
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public void addNewCategory(kategorija newCategory)
         {
             using (var repo = new CategoryRepository(new EventBuddyModel()))
@@ -19,6 +23,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public List<kategorija> getAllRequests()
         {
             using (var repo = new CategoryRepository(new EventBuddyModel()))

@@ -29,12 +29,18 @@ namespace PresentationLayer
             helpProvider1.HelpNamespace = relativePath;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void frmRequest_Load(object sender, EventArgs e)
         {
             RefreshGUI();
             RefreshData();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void RefreshGUI()
         {
 
@@ -63,10 +69,16 @@ namespace PresentationLayer
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void RefreshData()
         {
             dgvRequest.DataSource = requestCategoryServices.getAllRequests();
         }
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnAccept_Click(object sender, EventArgs e)
         {
             var selectedRequst = dgvRequest.CurrentRow?.DataBoundItem as zahtjev_kategorija;
@@ -77,6 +89,9 @@ namespace PresentationLayer
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnReject_Click(object sender, EventArgs e)
         {
             var selectedRequst = dgvRequest.CurrentRow?.DataBoundItem as zahtjev_kategorija;
@@ -87,6 +102,9 @@ namespace PresentationLayer
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnModifyData_Click(object sender, EventArgs e)
         {
             var selectedRequst = dgvRequest.CurrentRow?.DataBoundItem as zahtjev_kategorija;
@@ -107,6 +125,9 @@ namespace PresentationLayer
 
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
         {
             var selectedRequst = dgvRequest.CurrentRow?.DataBoundItem as zahtjev_kategorija;
@@ -126,11 +147,17 @@ namespace PresentationLayer
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             showMainData();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void showMainData()
         {
 

@@ -14,6 +14,9 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public void declineCategoryRequest(zahtjev_kategorija selectedRequst)
         {
             Remove(selectedRequst);
