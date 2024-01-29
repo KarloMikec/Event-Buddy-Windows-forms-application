@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersFrm));
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnEditUser = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
@@ -49,18 +50,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(12, 110);
+            this.dgvUsers.Location = new System.Drawing.Point(16, 135);
+            this.dgvUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(776, 222);
+            this.dgvUsers.Size = new System.Drawing.Size(1035, 273);
             this.dgvUsers.TabIndex = 0;
             // 
             // btnEditUser
             // 
             this.btnEditUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnEditUser.Location = new System.Drawing.Point(810, 291);
+            this.btnEditUser.Location = new System.Drawing.Point(1080, 358);
+            this.btnEditUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(175, 41);
+            this.btnEditUser.Size = new System.Drawing.Size(233, 50);
             this.btnEditUser.TabIndex = 1;
             this.btnEditUser.Text = "Uredi korisnika";
             this.btnEditUser.UseVisualStyleBackColor = true;
@@ -70,7 +73,8 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblUser.Location = new System.Drawing.Point(12, 87);
+            this.lblUser.Location = new System.Drawing.Point(16, 107);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(74, 20);
             this.lblUser.TabIndex = 2;
@@ -81,7 +85,8 @@
             this.lblAdministratorRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAdministratorRequest.AutoSize = true;
             this.lblAdministratorRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblAdministratorRequest.Location = new System.Drawing.Point(12, 359);
+            this.lblAdministratorRequest.Location = new System.Drawing.Point(16, 442);
+            this.lblAdministratorRequest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdministratorRequest.Name = "lblAdministratorRequest";
             this.lblAdministratorRequest.Size = new System.Drawing.Size(187, 20);
             this.lblAdministratorRequest.TabIndex = 5;
@@ -91,9 +96,10 @@
             // 
             this.btnDecline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDecline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnDecline.Location = new System.Drawing.Point(810, 446);
+            this.btnDecline.Location = new System.Drawing.Point(1080, 549);
+            this.btnDecline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDecline.Name = "btnDecline";
-            this.btnDecline.Size = new System.Drawing.Size(175, 41);
+            this.btnDecline.Size = new System.Drawing.Size(233, 50);
             this.btnDecline.TabIndex = 4;
             this.btnDecline.Text = "Odbij";
             this.btnDecline.UseVisualStyleBackColor = true;
@@ -104,18 +110,20 @@
             this.dgvUserRequests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUserRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserRequests.Location = new System.Drawing.Point(12, 382);
+            this.dgvUserRequests.Location = new System.Drawing.Point(16, 470);
+            this.dgvUserRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUserRequests.Name = "dgvUserRequests";
-            this.dgvUserRequests.Size = new System.Drawing.Size(776, 167);
+            this.dgvUserRequests.Size = new System.Drawing.Size(1035, 206);
             this.dgvUserRequests.TabIndex = 3;
             // 
             // btnAccept
             // 
             this.btnAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnAccept.Location = new System.Drawing.Point(810, 382);
+            this.btnAccept.Location = new System.Drawing.Point(1080, 470);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(175, 41);
+            this.btnAccept.Size = new System.Drawing.Size(233, 50);
             this.btnAccept.TabIndex = 6;
             this.btnAccept.Text = "Prihvati";
             this.btnAccept.UseVisualStyleBackColor = true;
@@ -125,9 +133,10 @@
             // 
             this.btnSaveAsPDFUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSaveAsPDFUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDFUsers.Location = new System.Drawing.Point(641, 74);
+            this.btnSaveAsPDFUsers.Location = new System.Drawing.Point(855, 91);
+            this.btnSaveAsPDFUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAsPDFUsers.Name = "btnSaveAsPDFUsers";
-            this.btnSaveAsPDFUsers.Size = new System.Drawing.Size(147, 30);
+            this.btnSaveAsPDFUsers.Size = new System.Drawing.Size(196, 37);
             this.btnSaveAsPDFUsers.TabIndex = 20;
             this.btnSaveAsPDFUsers.Text = "Spremi kao PDF";
             this.btnSaveAsPDFUsers.UseVisualStyleBackColor = true;
@@ -137,9 +146,10 @@
             // 
             this.btnSaveAsPDFRequests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSaveAsPDFRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDFRequests.Location = new System.Drawing.Point(641, 349);
+            this.btnSaveAsPDFRequests.Location = new System.Drawing.Point(855, 430);
+            this.btnSaveAsPDFRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAsPDFRequests.Name = "btnSaveAsPDFRequests";
-            this.btnSaveAsPDFRequests.Size = new System.Drawing.Size(147, 30);
+            this.btnSaveAsPDFRequests.Size = new System.Drawing.Size(196, 37);
             this.btnSaveAsPDFRequests.TabIndex = 21;
             this.btnSaveAsPDFRequests.Text = "Spremi kao PDF";
             this.btnSaveAsPDFRequests.UseVisualStyleBackColor = true;
@@ -149,9 +159,10 @@
             // 
             this.btnRefreshRequests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRefreshRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefreshRequests.Location = new System.Drawing.Point(554, 347);
+            this.btnRefreshRequests.Location = new System.Drawing.Point(739, 427);
+            this.btnRefreshRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefreshRequests.Name = "btnRefreshRequests";
-            this.btnRefreshRequests.Size = new System.Drawing.Size(81, 29);
+            this.btnRefreshRequests.Size = new System.Drawing.Size(108, 36);
             this.btnRefreshRequests.TabIndex = 22;
             this.btnRefreshRequests.Text = "Osvježi";
             this.btnRefreshRequests.UseVisualStyleBackColor = true;
@@ -161,9 +172,10 @@
             // 
             this.btnRefreshUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRefreshUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefreshUsers.Location = new System.Drawing.Point(554, 75);
+            this.btnRefreshUsers.Location = new System.Drawing.Point(739, 92);
+            this.btnRefreshUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefreshUsers.Name = "btnRefreshUsers";
-            this.btnRefreshUsers.Size = new System.Drawing.Size(81, 29);
+            this.btnRefreshUsers.Size = new System.Drawing.Size(108, 36);
             this.btnRefreshUsers.TabIndex = 23;
             this.btnRefreshUsers.Text = "Osvježi";
             this.btnRefreshUsers.UseVisualStyleBackColor = true;
@@ -171,9 +183,9 @@
             // 
             // UsersFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 578);
+            this.ClientSize = new System.Drawing.Size(1375, 711);
             this.Controls.Add(this.btnRefreshUsers);
             this.Controls.Add(this.btnRefreshRequests);
             this.Controls.Add(this.btnSaveAsPDFRequests);
@@ -185,7 +197,9 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.dgvUsers);
-            this.MinimumSize = new System.Drawing.Size(1031, 578);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1375, 711);
             this.Name = "UsersFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Prikaz korisnika i zahtjeva za organizatore";

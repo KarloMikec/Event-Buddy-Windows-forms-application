@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
@@ -53,17 +54,19 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(15, 71);
+            this.txtSearch.Location = new System.Drawing.Point(20, 87);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(144, 26);
+            this.txtSearch.Size = new System.Drawing.Size(191, 26);
             this.txtSearch.TabIndex = 0;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(165, 71);
+            this.btnSearch.Location = new System.Drawing.Point(220, 87);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 26);
+            this.btnSearch.Size = new System.Drawing.Size(100, 32);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Pretraži";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -73,7 +76,8 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(256, 75);
+            this.lblDate.Location = new System.Drawing.Point(341, 92);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(46, 16);
             this.lblDate.TabIndex = 2;
@@ -83,7 +87,8 @@
             // 
             this.lblPlace.AutoSize = true;
             this.lblPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlace.Location = new System.Drawing.Point(495, 76);
+            this.lblPlace.Location = new System.Drawing.Point(660, 94);
+            this.lblPlace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlace.Name = "lblPlace";
             this.lblPlace.Size = new System.Drawing.Size(47, 16);
             this.lblPlace.TabIndex = 3;
@@ -92,18 +97,20 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(308, 71);
+            this.dtpDate.Location = new System.Drawing.Point(411, 87);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(181, 26);
+            this.dtpDate.Size = new System.Drawing.Size(240, 26);
             this.dtpDate.TabIndex = 4;
             // 
             // btnProfile
             // 
             this.btnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Location = new System.Drawing.Point(693, 71);
+            this.btnProfile.Location = new System.Drawing.Point(924, 87);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(98, 39);
+            this.btnProfile.Size = new System.Drawing.Size(131, 48);
             this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Profil";
             this.btnProfile.UseVisualStyleBackColor = true;
@@ -116,16 +123,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvents.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvEvents.Location = new System.Drawing.Point(12, 156);
+            this.dgvEvents.Location = new System.Drawing.Point(16, 192);
+            this.dgvEvents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEvents.Name = "dgvEvents";
-            this.dgvEvents.Size = new System.Drawing.Size(606, 387);
+            this.dgvEvents.Size = new System.Drawing.Size(808, 476);
             this.dgvEvents.TabIndex = 6;
             // 
             // lblEvent
             // 
             this.lblEvent.AutoSize = true;
             this.lblEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEvent.Location = new System.Drawing.Point(8, 130);
+            this.lblEvent.Location = new System.Drawing.Point(11, 160);
+            this.lblEvent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEvent.Name = "lblEvent";
             this.lblEvent.Size = new System.Drawing.Size(72, 20);
             this.lblEvent.TabIndex = 7;
@@ -135,9 +144,10 @@
             // 
             this.btnCategories.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategories.Location = new System.Drawing.Point(624, 421);
+            this.btnCategories.Location = new System.Drawing.Point(832, 518);
+            this.btnCategories.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCategories.Name = "btnCategories";
-            this.btnCategories.Size = new System.Drawing.Size(164, 47);
+            this.btnCategories.Size = new System.Drawing.Size(219, 58);
             this.btnCategories.TabIndex = 13;
             this.btnCategories.Text = "Kategorije";
             this.btnCategories.UseVisualStyleBackColor = true;
@@ -148,9 +158,10 @@
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(624, 368);
+            this.btnDelete.Location = new System.Drawing.Point(832, 453);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(164, 47);
+            this.btnDelete.Size = new System.Drawing.Size(219, 58);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Obriši događaj";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -161,9 +172,10 @@
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(624, 315);
+            this.btnEdit.Location = new System.Drawing.Point(832, 388);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(164, 47);
+            this.btnEdit.Size = new System.Drawing.Size(219, 58);
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Izmjeni podatke";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -174,9 +186,10 @@
             // 
             this.btnDismissEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDismissEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDismissEvent.Location = new System.Drawing.Point(624, 262);
+            this.btnDismissEvent.Location = new System.Drawing.Point(832, 322);
+            this.btnDismissEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDismissEvent.Name = "btnDismissEvent";
-            this.btnDismissEvent.Size = new System.Drawing.Size(164, 47);
+            this.btnDismissEvent.Size = new System.Drawing.Size(219, 58);
             this.btnDismissEvent.TabIndex = 16;
             this.btnDismissEvent.Text = "Obustavi";
             this.btnDismissEvent.UseVisualStyleBackColor = true;
@@ -186,9 +199,10 @@
             // 
             this.btnHideEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHideEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHideEvent.Location = new System.Drawing.Point(624, 209);
+            this.btnHideEvent.Location = new System.Drawing.Point(832, 257);
+            this.btnHideEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHideEvent.Name = "btnHideEvent";
-            this.btnHideEvent.Size = new System.Drawing.Size(164, 47);
+            this.btnHideEvent.Size = new System.Drawing.Size(219, 58);
             this.btnHideEvent.TabIndex = 17;
             this.btnHideEvent.Text = "Sakrij događaj";
             this.btnHideEvent.UseVisualStyleBackColor = true;
@@ -198,9 +212,10 @@
             // 
             this.btnParticipants.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParticipants.Location = new System.Drawing.Point(624, 156);
+            this.btnParticipants.Location = new System.Drawing.Point(832, 192);
+            this.btnParticipants.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnParticipants.Name = "btnParticipants";
-            this.btnParticipants.Size = new System.Drawing.Size(164, 47);
+            this.btnParticipants.Size = new System.Drawing.Size(219, 58);
             this.btnParticipants.TabIndex = 18;
             this.btnParticipants.Text = "Sudionici";
             this.btnParticipants.UseVisualStyleBackColor = true;
@@ -210,9 +225,10 @@
             // 
             this.btnSaveAsPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAsPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAsPDF.Location = new System.Drawing.Point(471, 120);
+            this.btnSaveAsPDF.Location = new System.Drawing.Point(628, 148);
+            this.btnSaveAsPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
-            this.btnSaveAsPDF.Size = new System.Drawing.Size(147, 30);
+            this.btnSaveAsPDF.Size = new System.Drawing.Size(196, 37);
             this.btnSaveAsPDF.TabIndex = 19;
             this.btnSaveAsPDF.Text = "Spremi kao PDF";
             this.btnSaveAsPDF.UseVisualStyleBackColor = true;
@@ -223,26 +239,29 @@
             this.cmbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLocation.FormattingEnabled = true;
-            this.cmbLocation.Location = new System.Drawing.Point(548, 69);
+            this.cmbLocation.Location = new System.Drawing.Point(731, 85);
+            this.cmbLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbLocation.Name = "cmbLocation";
-            this.cmbLocation.Size = new System.Drawing.Size(127, 28);
+            this.cmbLocation.Size = new System.Drawing.Size(168, 28);
             this.cmbLocation.TabIndex = 20;
             this.cmbLocation.SelectedIndexChanged += new System.EventHandler(this.cmbLocation_SelectedIndexChanged);
             // 
             // dtpTime
             // 
             this.dtpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTime.Location = new System.Drawing.Point(308, 103);
+            this.dtpTime.Location = new System.Drawing.Point(411, 127);
+            this.dtpTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpTime.Name = "dtpTime";
-            this.dtpTime.Size = new System.Drawing.Size(111, 26);
+            this.dtpTime.Size = new System.Drawing.Size(147, 26);
             this.dtpTime.TabIndex = 21;
             // 
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(165, 103);
+            this.btnRefresh.Location = new System.Drawing.Point(220, 127);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 26);
+            this.btnRefresh.Size = new System.Drawing.Size(100, 32);
             this.btnRefresh.TabIndex = 22;
             this.btnRefresh.Text = "Osvježi";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -252,9 +271,10 @@
             // 
             this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.Location = new System.Drawing.Point(624, 474);
+            this.btnUsers.Location = new System.Drawing.Point(832, 583);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(164, 47);
+            this.btnUsers.Size = new System.Drawing.Size(219, 58);
             this.btnUsers.TabIndex = 23;
             this.btnUsers.Text = "Korisnici";
             this.btnUsers.UseVisualStyleBackColor = true;
@@ -262,9 +282,9 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 555);
+            this.ClientSize = new System.Drawing.Size(1088, 683);
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dtpTime);
@@ -284,7 +304,9 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.MinimumSize = new System.Drawing.Size(816, 555);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1088, 683);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Glavna";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategories));
             this.dgvCategory = new System.Windows.Forms.DataGridView();
             this.lblCategory = new System.Windows.Forms.Label();
             this.btnSaveAsPDF = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             // 
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Location = new System.Drawing.Point(36, 175);
-            this.dgvCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCategory.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.Size = new System.Drawing.Size(556, 320);
             this.dgvCategory.TabIndex = 2;
@@ -63,7 +64,7 @@
             // btnSaveAsPDF
             // 
             this.btnSaveAsPDF.Location = new System.Drawing.Point(436, 134);
-            this.btnSaveAsPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveAsPDF.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
             this.btnSaveAsPDF.Size = new System.Drawing.Size(156, 33);
             this.btnSaveAsPDF.TabIndex = 4;
@@ -76,7 +77,7 @@
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(696, 175);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(225, 50);
             this.btnAdd.TabIndex = 19;
@@ -89,7 +90,7 @@
             this.btnRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequest.Location = new System.Drawing.Point(696, 233);
-            this.btnRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRequest.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequest.Name = "btnRequest";
             this.btnRequest.Size = new System.Drawing.Size(225, 50);
             this.btnRequest.TabIndex = 20;
@@ -100,7 +101,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(799, 385);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 28;
@@ -112,7 +113,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(643, 385);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 27;
@@ -124,7 +125,7 @@
             // txtNameOfCategory
             // 
             this.txtNameOfCategory.Location = new System.Drawing.Point(643, 335);
-            this.txtNameOfCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNameOfCategory.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameOfCategory.MaxLength = 20;
             this.txtNameOfCategory.Name = "txtNameOfCategory";
             this.txtNameOfCategory.Size = new System.Drawing.Size(255, 22);
@@ -156,7 +157,8 @@
             this.Controls.Add(this.btnSaveAsPDF);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.dgvCategory);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Kategorije";

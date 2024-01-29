@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -42,7 +43,8 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto Light", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H2;
-            this.materialLabel1.Location = new System.Drawing.Point(220, 80);
+            this.materialLabel1.Location = new System.Drawing.Point(293, 98);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(147, 72);
@@ -55,7 +57,8 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto Light", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H2;
-            this.materialLabel2.Location = new System.Drawing.Point(373, 80);
+            this.materialLabel2.Location = new System.Drawing.Point(497, 98);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(166, 72);
@@ -68,7 +71,8 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel3.Location = new System.Drawing.Point(323, 193);
+            this.materialLabel3.Location = new System.Drawing.Point(431, 238);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(104, 41);
@@ -81,13 +85,14 @@
             this.txtPassword.Depth = 0;
             this.txtPassword.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtPassword.Hint = "Lozinka";
-            this.txtPassword.Location = new System.Drawing.Point(279, 310);
+            this.txtPassword.Location = new System.Drawing.Point(372, 382);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Password = true;
-            this.txtPassword.Size = new System.Drawing.Size(201, 36);
+            this.txtPassword.Size = new System.Drawing.Size(268, 36);
             this.txtPassword.TabIndex = 17;
             this.txtPassword.Text = "";
             this.txtPassword.UseTallSize = false;
@@ -98,12 +103,13 @@
             this.txtUsername.Depth = 0;
             this.txtUsername.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtUsername.Hint = "Korisničko ime";
-            this.txtUsername.Location = new System.Drawing.Point(279, 258);
+            this.txtUsername.Location = new System.Drawing.Point(372, 318);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.MaxLength = 50;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(201, 36);
+            this.txtUsername.Size = new System.Drawing.Size(268, 36);
             this.txtUsername.TabIndex = 15;
             this.txtUsername.Text = "";
             this.txtUsername.UseTallSize = false;
@@ -115,8 +121,8 @@
             this.btnSignIn.DrawShadows = true;
             this.btnSignIn.HighEmphasis = true;
             this.btnSignIn.Icon = null;
-            this.btnSignIn.Location = new System.Drawing.Point(331, 366);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSignIn.Location = new System.Drawing.Point(441, 450);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(96, 36);
@@ -129,15 +135,17 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
