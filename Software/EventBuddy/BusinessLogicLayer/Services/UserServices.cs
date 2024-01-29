@@ -139,6 +139,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public bool updateUser(korisnik user)
         {
             using (var repo = new UserRepository(new EventBuddyModel()))

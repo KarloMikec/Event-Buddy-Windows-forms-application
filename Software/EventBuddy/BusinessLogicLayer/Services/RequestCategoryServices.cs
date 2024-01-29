@@ -11,6 +11,9 @@ namespace BusinessLogicLayer.Services
 {
     public class RequestCategoryServices
     {
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public List<zahtjev_kategorija> getAllRequests()
         {
             using (var repo = new RequestCategoryRepository(new EventBuddyModel()))
@@ -20,6 +23,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public void acceptCategoryRequest(zahtjev_kategorija selectedRequst)
         {
             using (var repo = new EventBuddyModel())
@@ -39,6 +45,9 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public void declineCategoryRequest(zahtjev_kategorija selectedRequst)
         {
             using (var repo = new RequestCategoryRepository(new EventBuddyModel()))

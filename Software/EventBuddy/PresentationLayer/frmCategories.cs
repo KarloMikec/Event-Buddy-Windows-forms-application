@@ -24,18 +24,27 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void frmCategories_Load(object sender, EventArgs e)
         {
             RefreshGUI();
             RefreshData();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void RefreshData()
         {
             dgvCategory.DataSource = categoryServices.getAllRequests();
             dgvCategory.Columns[2].Visible = false;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void RefreshGUI()
         {
             lblCategory.Text = "Kategorije";
@@ -61,12 +70,18 @@ namespace PresentationLayer
             
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnRequest_Click(object sender, EventArgs e)
         {
             frmRequest frmRequest = new frmRequest();
             frmRequest.ShowDialog();
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             lblNewCategory2.Visible = true;
@@ -77,6 +92,9 @@ namespace PresentationLayer
             txtNameOfCategory.Visible = true;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             lblNewCategory2.Visible = false;
@@ -87,6 +105,9 @@ namespace PresentationLayer
             txtNameOfCategory.Visible = false;
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
         {
             if(txtNameOfCategory.Text  != "")

@@ -13,6 +13,9 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public override int Add(kategorija entity, bool saveChanges = true)
         {
             var exists = Entities.FirstOrDefault(x => x.naziv == entity.naziv);
@@ -23,6 +26,9 @@ namespace DataAccessLayer.Repositories
 
             return saveChanges ? SaveChanges() : 0;
         }
+        /// <summary>
+        /// <author>Karlo Mikec</author>
+        /// </summary>
         public int Update(kategorija entity, bool saveChanges = true)
         {
             throw new NotImplementedException();
