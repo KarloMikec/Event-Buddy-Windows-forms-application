@@ -118,7 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EditUserFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EditUserFrm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmCategories" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmCategories.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmEventDetails" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmEventDetails.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmLogin.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmMain.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmParticipants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmParticipants.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmProfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmProfil.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frmRequest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmRequest.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HideEventFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HideEventFrm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="icons8_ticket_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_ticket_96.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UsersFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UsersFrm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

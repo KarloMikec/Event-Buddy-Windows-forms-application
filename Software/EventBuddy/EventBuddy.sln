@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesLayer", "EntitiesLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{018C5225-CD2A-4472-A68B-75C02BB08CBE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{21AF89C0-C979-4438-99C6-0ACE09F16939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{018C5225-CD2A-4472-A68B-75C02BB08CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{018C5225-CD2A-4472-A68B-75C02BB08CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{018C5225-CD2A-4472-A68B-75C02BB08CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AF89C0-C979-4438-99C6-0ACE09F16939}.Debug|Any CPU.ActiveCfg = Debug
+		{21AF89C0-C979-4438-99C6-0ACE09F16939}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

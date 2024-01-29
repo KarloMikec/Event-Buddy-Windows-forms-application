@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using System.IO;
 
 namespace PresentationLayer.forms
 {
@@ -27,6 +28,10 @@ namespace PresentationLayer.forms
         {
             _selectedEvent = selectedEvent;
             InitializeComponent();
+
+            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+            string relativePath = Path.Combine(exeDirectory, "Resources", "HideEventFrm.pdf");
+            helpProvider1.HelpNamespace = relativePath;
         }
 
         /// <summary>

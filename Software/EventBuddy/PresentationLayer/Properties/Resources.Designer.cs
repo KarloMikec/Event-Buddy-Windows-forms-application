@@ -61,12 +61,112 @@ namespace PresentationLayer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] EditUserFrm {
+            get {
+                object obj = ResourceManager.GetObject("EditUserFrm", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmCategories {
+            get {
+                object obj = ResourceManager.GetObject("frmCategories", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmEventDetails {
+            get {
+                object obj = ResourceManager.GetObject("frmEventDetails", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmLogin {
+            get {
+                object obj = ResourceManager.GetObject("frmLogin", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmMain {
+            get {
+                object obj = ResourceManager.GetObject("frmMain", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmParticipants {
+            get {
+                object obj = ResourceManager.GetObject("frmParticipants", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmProfil {
+            get {
+                object obj = ResourceManager.GetObject("frmProfil", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] frmRequest {
+            get {
+                object obj = ResourceManager.GetObject("frmRequest", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] HideEventFrm {
+            get {
+                object obj = ResourceManager.GetObject("HideEventFrm", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icons8_ticket_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8_ticket_96", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UsersFrm {
+            get {
+                object obj = ResourceManager.GetObject("UsersFrm", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

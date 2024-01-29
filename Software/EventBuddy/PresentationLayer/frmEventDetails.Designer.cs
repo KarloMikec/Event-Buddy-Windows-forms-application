@@ -43,6 +43,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.lblPlace = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -265,6 +266,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(545, 490);
             this.Name = "frmEventDetails";
+            this.helpProvider1.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEventDetails";
             this.Load += new System.EventHandler(this.frmEventDetails_Load);
@@ -290,5 +292,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtLocation;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

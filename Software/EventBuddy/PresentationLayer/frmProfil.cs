@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using EntitiesLayer.Entities;
+using System.IO;
 
 namespace PresentationLayer
 {
@@ -29,6 +30,10 @@ namespace PresentationLayer
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
+            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+            string relativePath = Path.Combine(exeDirectory, "Resources", "frmProfil.pdf");
+            helpProvider1.HelpNamespace = relativePath;
         }
 
         /// <summary>

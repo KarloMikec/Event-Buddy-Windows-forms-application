@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,10 @@ namespace PresentationLayer
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
+
+            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+            string relativePath = Path.Combine(exeDirectory, "Resources", "frmMain.pdf");
+            helpProvider1.HelpNamespace = relativePath;
         }
 
         /// <summary>

@@ -32,15 +32,15 @@
             this.btnHideEvent = new System.Windows.Forms.Button();
             this.btnRemoveRole = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // btnHideEvent
             // 
             this.btnHideEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnHideEvent.Location = new System.Drawing.Point(64, 92);
-            this.btnHideEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHideEvent.Location = new System.Drawing.Point(48, 75);
             this.btnHideEvent.Name = "btnHideEvent";
-            this.btnHideEvent.Size = new System.Drawing.Size(249, 87);
+            this.btnHideEvent.Size = new System.Drawing.Size(187, 71);
             this.btnHideEvent.TabIndex = 1;
             this.btnHideEvent.Text = "Sakrij događaj sa slanjem upozorenja";
             this.btnHideEvent.UseVisualStyleBackColor = true;
@@ -49,10 +49,9 @@
             // btnRemoveRole
             // 
             this.btnRemoveRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnRemoveRole.Location = new System.Drawing.Point(64, 187);
-            this.btnRemoveRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveRole.Location = new System.Drawing.Point(48, 152);
             this.btnRemoveRole.Name = "btnRemoveRole";
-            this.btnRemoveRole.Size = new System.Drawing.Size(249, 86);
+            this.btnRemoveRole.Size = new System.Drawing.Size(187, 70);
             this.btnRemoveRole.TabIndex = 2;
             this.btnRemoveRole.Text = "Makni ulogu organizatora";
             this.btnRemoveRole.UseVisualStyleBackColor = true;
@@ -61,10 +60,9 @@
             // btnQuit
             // 
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnQuit.Location = new System.Drawing.Point(64, 281);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuit.Location = new System.Drawing.Point(48, 228);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(249, 86);
+            this.btnQuit.Size = new System.Drawing.Size(187, 70);
             this.btnQuit.TabIndex = 3;
             this.btnQuit.Text = "Odustani od sakrivanja";
             this.btnQuit.UseVisualStyleBackColor = true;
@@ -72,17 +70,17 @@
             // 
             // HideEventFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 444);
+            this.ClientSize = new System.Drawing.Size(292, 361);
             this.ControlBox = false;
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnRemoveRole);
             this.Controls.Add(this.btnHideEvent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HideEventFrm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.HideEventFrm_Load);
             this.ResumeLayout(false);
@@ -93,5 +91,6 @@
         private System.Windows.Forms.Button btnHideEvent;
         private System.Windows.Forms.Button btnRemoveRole;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
