@@ -777,9 +777,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:EventBuddySetup_x64"
+        "ProductName" = "8:EventBuddy"
         "ProductCode" = "8:{10B06F17-A8AB-4264-A8C5-C2FA0BAD27AC}"
-        "PackageCode" = "8:{D99272B8-F308-430E-98E1-B9C2862243E4}"
+        "PackageCode" = "8:{3A29FE9E-C18C-43BA-BEB9-581C03925AFB}"
         "UpgradeCode" = "8:{3143EF8B-FE19-4D80-9092-070D2C63C014}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
